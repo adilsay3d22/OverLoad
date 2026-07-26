@@ -1,16 +1,21 @@
-# React + Vite
+Overload
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A beginner-friendly workout tracker. Start from a built-in program template or build your own from a real exercise library, then log sets and reps session after session — with progress tracking, PRs, and charts along the way.
 
-Currently, two official plugins are available:
+"Overload" = progressive overload, the core principle that drives all training progress.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Status
 
-## React Compiler
+Early build, in progress. Currently working:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Home page with a placeholder login/logout flow (local session only — no real backend yet)
+Logged-in dashboard: Create Program, Progress, Reset Data
+Create Program flow: select the built-in Upper/Lower Split template (stored as the active program) or preview the upcoming custom builder
+Progress page (placeholder — charts, PRs, and calendar view land here later)
 
-## Expanding the Oxlint configuration
+Not built yet:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Real authentication
+The custom program builder + exercise library (free-exercise-db)
+Day-by-day session logging (sets, reps, ghost data, rest timers)
+PR detection, per-exercise charts, progress bar, calendar view
