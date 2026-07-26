@@ -1,0 +1,36 @@
+.ol-meter {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 40px;
+}
+
+.ol-meter-bar {
+  width: 5px;
+  border-radius: 2px 2px 0 0;
+  background: var(--border2);
+  height: calc(14% + (var(--i) / var(--n)) * 78%);
+  transform-origin: bottom;
+  animation: olRise 1.4s cubic-bezier(.4, 0, .2, 1) both;
+  animation-delay: calc(var(--i) * 35ms);
+}
+
+.ol-meter-bar:nth-last-child(-n+2) {
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(255, 78, 26, 0.45);
+}
+
+.ol-meter-bar:last-child {
+  animation: olRise 1.4s cubic-bezier(.4, 0, .2, 1) both,
+             olClip 1.8s ease-in-out .9s infinite;
+}
+
+@keyframes olRise {
+  from { transform: scaleY(0); opacity: 0; }
+  to   { transform: scaleY(1); opacity: 1; }
+}
+
+@keyframes olClip {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .4; }
+}
