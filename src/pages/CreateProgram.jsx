@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TopBar from '../components/TopBar';
-import './CreateProgram.css';
 
 const TEMPLATES = [
   {
@@ -26,12 +25,16 @@ export default function CreateProgram() {
 
   if (confirmed) {
     return (
-      <div className="app-shell">
+      <div className="min-h-screen flex flex-col">
         <TopBar back="/" />
-        <div className="cp-confirm">
-          <p className="cp-eyebrow">Program set</p>
-          <h1 className="cp-confirm-title">{confirmed}</h1>
-          <p className="cp-confirm-sub">
+        <div className="flex-1 flex flex-col justify-center px-5 pb-8 max-w-[480px] w-full mx-auto">
+          <p className="font-mono text-[10px] font-semibold tracking-[3px] uppercase text-accent">
+            Program set
+          </p>
+          <h1 className="font-display text-[34px] font-black uppercase tracking-[-0.5px] leading-[1.05] mt-1 mb-3.5">
+            {confirmed}
+          </h1>
+          <p className="text-sm text-text-2 leading-relaxed mb-7">
             This is set as your active program. Day-by-day logging, the exercise library,
             and full week/day editing are next — this screen is just the starting point.
           </p>
@@ -44,26 +47,53 @@ export default function CreateProgram() {
   }
 
   return (
-    <div className="app-shell">
+    <div className="min-h-screen flex flex-col">
       <TopBar back="/" />
-      <div className="cp">
-        <p className="cp-eyebrow">Step 1</p>
-        <h1 className="cp-title">Create a program</h1>
-        <p className="cp-sub">Start from a template, or build your own from scratch.</p>
+      <div className="flex-1 px-5 pb-8 pt-2 max-w-[480px] w-full mx-auto">
+        <p className="font-mono text-[10px] font-semibold tracking-[3px] uppercase text-accent">
+          Step 1
+        </p>
+        <h1 className="font-display text-4xl font-black uppercase tracking-[-0.5px] leading-none mt-1">
+          Create a program
+        </h1>
+        <p className="text-text-2 text-sm mt-2 mb-7">
+          Start from a template, or build your own from scratch.
+        </p>
 
-        <div className="cp-section-label">Templates</div>
+        <div className="font-mono text-[10px] font-bold tracking-[2px] uppercase text-text-3 mb-2.5 mt-[22px]">
+          Templates
+        </div>
         {TEMPLATES.map((t) => (
-          <button key={t.id} className="cp-card" onClick={() => selectTemplate(t)}>
-            <div className="cp-card-name">{t.name}</div>
-            <div className="cp-card-meta">{t.meta}</div>
-            <p className="cp-card-blurb">{t.blurb}</p>
+          <button
+            key={t.id}
+            className="block w-full text-left bg-surface border-[1.5px] border-border rounded-card p-[18px]
+                       transition-colors active:scale-[0.98] hover:border-accent-bd"
+            onClick={() => selectTemplate(t)}
+          >
+            <div className="font-display text-xl font-extrabold uppercase tracking-[-0.2px]">
+              {t.name}
+            </div>
+            <div className="font-mono text-[11px] text-text-3 mt-1 tracking-[0.3px]">
+              {t.meta}
+            </div>
+            <p className="text-[13px] text-text-2 mt-2.5 leading-relaxed">
+              {t.blurb}
+            </p>
           </button>
         ))}
 
-        <div className="cp-section-label">Or</div>
-        <button className="cp-card cp-card-custom" disabled>
-          <div className="cp-card-name">Build a custom program</div>
-          <p className="cp-card-blurb">
+        <div className="font-mono text-[10px] font-bold tracking-[2px] uppercase text-text-3 mb-2.5 mt-[22px]">
+          Or
+        </div>
+        <button
+          className="block w-full text-left bg-surface border-[1.5px] border-border rounded-card p-[18px]
+                     opacity-55 cursor-not-allowed"
+          disabled
+        >
+          <div className="font-display text-xl font-extrabold uppercase tracking-[-0.2px]">
+            Build a custom program
+          </div>
+          <p className="text-[13px] text-text-2 mt-2.5 leading-relaxed">
             Pick your own exercises from the library and set your own weeks and days.
             Coming up next.
           </p>

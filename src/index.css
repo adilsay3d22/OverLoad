@@ -1,77 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+@theme {
+  --color-bg: #F7F7F5;
+  --color-bg-2: #EFEFED;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #F2F2F0;
+  --color-border: #E4E4E2;
+  --color-border-2: #D8D8D6;
+  --color-text: #111110;
+  --color-text-2: #555553;
+  --color-text-3: #999997;
 
-:root {
-  --bg: #F7F7F5;
-  --bg2: #EFEFED;
-  --surface: #FFFFFF;
-  --surface2: #F2F2F0;
-  --border: #E4E4E2;
-  --border2: #D8D8D6;
-  --text: #111110;
-  --text2: #555553;
-  --text3: #999997;
+  --color-accent: #FF4E1A;
+  --color-accent-2: #E84415;
+  --color-accent-dim: rgba(255, 78, 26, 0.08);
+  --color-accent-bd: rgba(255, 78, 26, 0.22);
 
-  --accent: #FF4E1A;
-  --accent2: #E84415;
-  --accent-dim: rgba(255, 78, 26, 0.08);
-  --accent-bd: rgba(255, 78, 26, 0.22);
+  --color-danger: #D3452E;
+  --color-danger-dim: rgba(211, 69, 46, 0.08);
 
-  --danger: #D3452E;
-  --danger-dim: rgba(211, 69, 46, 0.08);
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --font-display: 'Barlow Condensed', sans-serif;
 
-  --sans: 'DM Sans', system-ui, sans-serif;
-  --mono: 'DM Mono', monospace;
-  --display: 'Barlow Condensed', sans-serif;
-
-  --r: 16px;
-  --r-sm: 10px;
-  --safe-t: env(safe-area-inset-top, 0px);
-  --safe-b: env(safe-area-inset-bottom, 0px);
+  --radius-card: 16px;
+  --radius-field: 10px;
 }
 
-html, body, #root { height: 100%; }
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
 
-html { background: var(--bg); }
+  html {
+    background: var(--color-bg);
+  }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--sans);
-  font-size: 15px;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
 
-button, input { font-family: inherit; }
+  button, input {
+    font-family: inherit;
+  }
 
-button {
-  font: inherit;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
+  button {
+    cursor: pointer;
+  }
 
-button:focus-visible,
-a:focus-visible,
-input:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
   }
 }
 
-.app-shell {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+@layer components {
+  .btn {
+    @apply w-full h-[54px] rounded-card flex items-center justify-center gap-2.5
+           font-display text-sm font-extrabold uppercase tracking-wider
+           transition-transform active:scale-[0.97];
+  }
+
+  .btn-primary {
+    @apply bg-accent text-white active:bg-accent-2;
+  }
+
+  .btn-secondary {
+    @apply bg-surface text-text border-[1.5px] border-border-2 active:bg-bg-2;
+  }
+
+  .btn-ghost-danger {
+    @apply bg-transparent text-danger border-[1.5px] border-transparent active:bg-danger-dim;
+  }
+}
+
+/* Safe-area insets used directly (no Tailwind utility for env()) */
+.pt-safe { padding-top: calc(16px + env(safe-area-inset-top, 0px)); }
+.pb-safe { padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px)); }
+
+@keyframes scrimIn { from { opacity: 0; } to { opacity: 1; } }
+
+@keyframes cardUp {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
 }
