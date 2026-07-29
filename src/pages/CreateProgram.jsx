@@ -87,15 +87,14 @@ export default function CreateProgram() {
         </div>
         <button
           className="block w-full text-left bg-surface border-[1.5px] border-border rounded-card p-[18px]
-                     opacity-55 cursor-not-allowed"
-          disabled
+                     transition-colors active:scale-[0.98] hover:border-accent-bd"
+          onClick={() => navigate('/create-program/custom')}
         >
           <div className="font-display text-xl font-extrabold uppercase tracking-[-0.2px]">
             Build a custom program
           </div>
           <p className="text-[13px] text-text-2 mt-2.5 leading-relaxed">
-            Pick your own exercises from the library and set your own weeks and days.
-            Coming up next.
+            Pick your training days and add your own exercises, sets, and rep ranges.
           </p>
         </button>
       </div>

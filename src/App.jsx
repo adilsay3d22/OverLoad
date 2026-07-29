@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import CreateProgram from './pages/CreateProgram';
+import CustomBuilder from './pages/CustomBuilder';
 import Progress from './pages/Progress';
 import RequireAuth from './components/RequireAuth';
 
@@ -13,6 +14,14 @@ export default function App() {
         element={
           <RequireAuth>
             <CreateProgram />
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/create-program/custom"
+        element={
+          <RequireAuth>
+            <CustomBuilder />
           </RequireAuth>
         }
       />
