@@ -1,0 +1,4252 @@
+[
+  {
+    "id": 1,
+    "slug": "bench-press",
+    "name": "Bench Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/bench-press.webp"
+  },
+  {
+    "id": 2,
+    "slug": "incline-bench-press",
+    "name": "Incline Bench Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Upper Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/incline-bench-press.webp"
+  },
+  {
+    "id": 3,
+    "slug": "decline-bench-press",
+    "name": "Decline Bench Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Lower Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/decline-bench-press.webp"
+  },
+  {
+    "id": 4,
+    "slug": "machine-chest-press",
+    "name": "Machine Chest Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [
+      "Chest Press",
+      "Mach. Chest Press"
+    ],
+    "image": "/images/exercises/machine-chest-press.webp"
+  },
+  {
+    "id": 5,
+    "slug": "cable-fly",
+    "name": "Cable Fly",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Inner Chest",
+    "secondaryMuscles": [
+      "Deltoid"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "Fly"
+    ],
+    "image": "/images/exercises/cable-fly.webp"
+  },
+  {
+    "id": 6,
+    "slug": "pec-deck",
+    "name": "Pec Deck",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Inner Chest",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/pec-deck.webp"
+  },
+  {
+    "id": 7,
+    "slug": "dips",
+    "name": "Dips",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Dip Bars"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/dips.webp"
+  },
+  {
+    "id": 8,
+    "slug": "push-up",
+    "name": "Push-up",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/push-up.webp"
+  },
+  {
+    "id": 9,
+    "slug": "incline-db-press",
+    "name": "Incline DB Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Upper Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/incline-db-press.webp"
+  },
+  {
+    "id": 10,
+    "slug": "flat-db-press",
+    "name": "Flat DB Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/flat-db-press.webp"
+  },
+  {
+    "id": 11,
+    "slug": "decline-db-press",
+    "name": "Decline DB Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Lower Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/decline-db-press.webp"
+  },
+  {
+    "id": 12,
+    "slug": "smith-bench",
+    "name": "Smith Bench",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/smith-bench.webp"
+  },
+  {
+    "id": 13,
+    "slug": "floor-press",
+    "name": "Floor Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Triceps Brachii",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Pectoralis Major",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/floor-press.webp"
+  },
+  {
+    "id": 14,
+    "slug": "hex-press",
+    "name": "Hex Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Advanced",
+    "compound": true,
+    "unilateral": false,
+    "tier": "D",
+    "tierRank": 3,
+    "aliases": [],
+    "image": "/images/exercises/hex-press.webp"
+  },
+  {
+    "id": 15,
+    "slug": "plate-press",
+    "name": "Plate Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Brachioradialis",
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Other"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "F",
+    "tierRank": 2,
+    "aliases": [],
+    "image": "/images/exercises/plate-press.webp"
+  },
+  {
+    "id": 16,
+    "slug": "pull-up",
+    "name": "Pull-up",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Lats",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Rhomboids"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Vertical Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/pull-up.webp"
+  },
+  {
+    "id": 17,
+    "slug": "chin-up",
+    "name": "Chin-up",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Lats",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Brachioradialis",
+      "Rhomboids"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Vertical Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/chin-up.webp"
+  },
+  {
+    "id": 18,
+    "slug": "lat-pulldown",
+    "name": "Lat Pulldown",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Lats",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Rhomboids",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Vertical Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/lat-pulldown.webp"
+  },
+  {
+    "id": 19,
+    "slug": "cable-row",
+    "name": "Cable Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Rhomboids",
+    "region": "Mid Back",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Latissimus Dorsi",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "Row"
+    ],
+    "image": "/images/exercises/cable-row.webp"
+  },
+  {
+    "id": 20,
+    "slug": "chest-supported-row",
+    "name": "Chest Supported Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Mid Back",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Smith Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Advanced",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/chest-supported-row.webp"
+  },
+  {
+    "id": 21,
+    "slug": "barbell-row",
+    "name": "Barbell Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Rhomboids",
+    "region": "Mid Back",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Latissimus Dorsi",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [
+      "BB Row",
+      "Row"
+    ],
+    "image": "/images/exercises/barbell-row.webp"
+  },
+  {
+    "id": 22,
+    "slug": "t-bar-row",
+    "name": "T-Bar Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Rhomboids",
+    "region": "Mid Back",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Latissimus Dorsi"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/t-bar-row.webp"
+  },
+  {
+    "id": 23,
+    "slug": "meadows-row",
+    "name": "Meadows Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Mid Back",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Advanced",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/meadows-row.webp"
+  },
+  {
+    "id": 24,
+    "slug": "one-arm-db-row",
+    "name": "One Arm DB Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Rhomboids",
+    "region": "Mid Back",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Latissimus Dorsi",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": true,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/one-arm-db-row.webp"
+  },
+  {
+    "id": 25,
+    "slug": "deadlift",
+    "name": "Deadlift",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Erector Spinae",
+    "region": "Lower Back",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Brachioradialis",
+      "Gluteus Maximus",
+      "Biceps Femoris",
+      "Latissimus Dorsi",
+      "Rhomboids",
+      "Quadriceps Femoris",
+      "Trapezius"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Hip Hinge",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/deadlift.webp"
+  },
+  {
+    "id": 26,
+    "slug": "rack-pull",
+    "name": "Rack Pull",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Erector Spinae",
+    "region": "Lower Back",
+    "secondaryMuscles": [
+      "Brachioradialis",
+      "Gluteus Maximus",
+      "Biceps Femoris",
+      "Trapezius"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Hip Hinge",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/rack-pull.webp"
+  },
+  {
+    "id": 27,
+    "slug": "straight-arm-pulldown",
+    "name": "Straight Arm Pulldown",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Lats",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Vertical Pull",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/straight-arm-pulldown.webp"
+  },
+  {
+    "id": 28,
+    "slug": "machine-row",
+    "name": "Machine Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Lats",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [
+      "Mach. Row",
+      "Row"
+    ],
+    "image": "/images/exercises/machine-row.webp"
+  },
+  {
+    "id": 29,
+    "slug": "seal-row",
+    "name": "Seal Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Mid Back",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Advanced",
+    "compound": true,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/seal-row.webp"
+  },
+  {
+    "id": 30,
+    "slug": "renegade-row",
+    "name": "Renegade Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Rhomboids",
+    "region": "Mid Back",
+    "secondaryMuscles": [
+      "Rectus Abdominis",
+      "Biceps Brachii",
+      "Pectoralis Major",
+      "Latissimus Dorsi",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Kettlebell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Expert",
+    "compound": true,
+    "unilateral": false,
+    "tier": "F",
+    "tierRank": 2,
+    "aliases": [],
+    "image": "/images/exercises/renegade-row.webp"
+  },
+  {
+    "id": 31,
+    "slug": "bayesian-curl",
+    "name": "Bayesian Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": ["cable Curl"],
+    "image": "/images/exercises/bayesian-curl.webp"
+  },
+  {
+    "id": 32,
+    "slug": "ez-curl",
+    "name": "EZ Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "EZ Bar"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/ez-curl.webp"
+  },
+  {
+    "id": 33,
+    "slug": "barbell-curl",
+    "name": "Barbell Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [
+      "Brachioradialis"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [
+      "BB Curl",
+      "Curl"
+    ],
+    "image": "/images/exercises/barbell-curl.webp"
+  },
+  {
+    "id": 34,
+    "slug": "db-curl",
+    "name": "DB Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [
+      "Brachioradialis"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/db-curl.webp"
+  },
+  {
+    "id": 35,
+    "slug": "incline-curl",
+    "name": "Incline Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/incline-curl.webp"
+  },
+  {
+    "id": 36,
+    "slug": "spider-curl",
+    "name": "Spider Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Short Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "EZ Bar"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/spider-curl.webp"
+  },
+  {
+    "id": 37,
+    "slug": "preacher-curl",
+    "name": "Preacher Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Short Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/preacher-curl.webp"
+  },
+  {
+    "id": 38,
+    "slug": "machine-preacher",
+    "name": "Machine Preacher",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Short Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "Mach. Preacher",
+      "Preacher"
+    ],
+    "image": "/images/exercises/machine-preacher.webp"
+  },
+  {
+    "id": 39,
+    "slug": "hammer-curl",
+    "name": "Hammer Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Brachialis",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/hammer-curl.webp"
+  },
+  {
+    "id": 40,
+    "slug": "reverse-curl",
+    "name": "Reverse Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [
+      "Brachioradialis",
+      "Forearms"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/reverse-curl.webp"
+  },
+  {
+    "id": 41,
+    "slug": "concentration-curl",
+    "name": "Concentration Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Short Head",
+    "secondaryMuscles": [
+      "Brachioradialis"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/concentration-curl.webp"
+  },
+  {
+    "id": 42,
+    "slug": "cable-curl",
+    "name": "Cable Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [
+      "Curl"
+    ],
+    "image": "/images/exercises/cable-curl.webp"
+  },
+  {
+    "id": 43,
+    "slug": "overhead-cable-extension",
+    "name": "Overhead Cable Extension",
+    "category": "Triceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Triceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Vertical Push",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "Overhead Extension"
+    ],
+    "image": "/images/exercises/overhead-cable-extension.webp"
+  },
+  {
+    "id": 44,
+    "slug": "skull-crusher",
+    "name": "Skull Crusher",
+    "category": "Triceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Triceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [
+      "Brachioradialis"
+    ],
+    "equipment": [
+      "EZ Bar"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Extension",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/skull-crusher.webp"
+  },
+  {
+    "id": 45,
+    "slug": "pressdown",
+    "name": "Pressdown",
+    "category": "Triceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Triceps Brachii",
+    "region": "Lateral Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Extension",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/pressdown.webp"
+  },
+  {
+    "id": 46,
+    "slug": "rope-pressdown",
+    "name": "Rope Pressdown",
+    "category": "Triceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Triceps Brachii",
+    "region": "Lateral Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Extension",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/rope-pressdown.webp"
+  },
+  {
+    "id": 47,
+    "slug": "kickback",
+    "name": "Kickback",
+    "category": "Triceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Triceps Brachii",
+    "region": "Lateral Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Extension",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/kickback.webp"
+  },
+  {
+    "id": 48,
+    "slug": "close-grip-bench",
+    "name": "Close Grip Bench",
+    "category": "Triceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Triceps Brachii",
+    "region": "Medial Head",
+    "secondaryMuscles": [
+      "Pectoralis Major",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/close-grip-bench.webp"
+  },
+  {
+    "id": 49,
+    "slug": "dip",
+    "name": "Dip",
+    "category": "Triceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Triceps Brachii",
+    "region": "Medial Head",
+    "secondaryMuscles": [
+      "Pectoralis Major",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Dip Bars"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/dip.webp"
+  },
+  {
+    "id": 50,
+    "slug": "jm-press",
+    "name": "JM Press",
+    "category": "Triceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Triceps Brachii",
+    "region": "Medial Head",
+    "secondaryMuscles": [
+      "Pectoralis Major",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Elbow Extension",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/jm-press.webp"
+  },
+  {
+    "id": 51,
+    "slug": "katana-extension",
+    "name": "Katana Extension",
+    "category": "Triceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Triceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Extension",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/katana-extension.webp"
+  },
+  {
+    "id": 52,
+    "slug": "reverse-pressdown",
+    "name": "Reverse Pressdown",
+    "category": "Triceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Triceps Brachii",
+    "region": "Lateral Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Extension",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/reverse-pressdown.webp"
+  },
+  {
+    "id": 53,
+    "slug": "cable-lateral-raise",
+    "name": "Cable Lateral Raise",
+    "category": "Shoulders",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Deltoid",
+    "region": "Lateral Delts",
+    "secondaryMuscles": [
+      "Rhomboids",
+      "Trapezius"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Shoulder Abduction",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [
+      "Lateral Raise"
+    ],
+    "image": "/images/exercises/cable-lateral-raise.webp"
+  },
+  {
+    "id": 54,
+    "slug": "db-lateral-raise",
+    "name": "DB Lateral Raise",
+    "category": "Shoulders",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Deltoid",
+    "region": "Lateral Delts",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Shoulder Abduction",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/db-lateral-raise.webp"
+  },
+  {
+    "id": 55,
+    "slug": "machine-press",
+    "name": "Machine Press",
+    "category": "Shoulders",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Deltoid",
+    "region": "Front Delts",
+    "secondaryMuscles": [
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Vertical Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [
+      "Mach. Press",
+      "Press"
+    ],
+    "image": "/images/exercises/machine-press.webp"
+  },
+  {
+    "id": 56,
+    "slug": "ohp",
+    "name": "OHP",
+    "category": "Shoulders",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Deltoid",
+    "region": "Front Delts",
+    "secondaryMuscles": [
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Vertical Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/ohp.webp"
+  },
+  {
+    "id": 57,
+    "slug": "face-pull",
+    "name": "Face Pull",
+    "category": "Shoulders",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Deltoid",
+    "region": "Rear Delts",
+    "secondaryMuscles": [
+      "Rhomboids"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/face-pull.webp"
+  },
+  {
+    "id": 58,
+    "slug": "rear-delt-fly",
+    "name": "Rear Delt Fly",
+    "category": "Shoulders",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Deltoid",
+    "region": "Rear Delts",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/rear-delt-fly.webp"
+  },
+  {
+    "id": 59,
+    "slug": "arnold-press",
+    "name": "Arnold Press",
+    "category": "Shoulders",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Deltoid",
+    "region": "Front Delts",
+    "secondaryMuscles": [
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Vertical Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/arnold-press.webp"
+  },
+  {
+    "id": 60,
+    "slug": "front-raise",
+    "name": "Front Raise",
+    "category": "Shoulders",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Deltoid",
+    "region": "Front Delts",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Shoulder Flexion",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "D",
+    "tierRank": 3,
+    "aliases": [],
+    "image": "/images/exercises/front-raise.webp"
+  },
+  {
+    "id": 61,
+    "slug": "upright-row",
+    "name": "Upright Row",
+    "category": "Shoulders",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Deltoid",
+    "region": "Lateral Delts",
+    "secondaryMuscles": [
+      "Trapezius"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/upright-row.webp"
+  },
+  {
+    "id": 62,
+    "slug": "reverse-cable-crossover",
+    "name": "Reverse Cable Crossover",
+    "category": "Shoulders",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Deltoid",
+    "region": "Rear Delts",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "Reverse Crossover"
+    ],
+    "image": "/images/exercises/reverse-cable-crossover.webp"
+  },
+  {
+    "id": 63,
+    "slug": "hack-squat",
+    "name": "Hack Squat",
+    "category": "Quads",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Quadriceps Femoris",
+    "region": "Vastus Lateralis",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Gluteus Maximus",
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Squat",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/hack-squat.webp"
+  },
+  {
+    "id": 64,
+    "slug": "back-squat",
+    "name": "Back Squat",
+    "category": "Quads",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Quadriceps Femoris",
+    "region": "Overall Quads",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Gluteus Maximus",
+      "Biceps Femoris",
+      "Erector Spinae"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Squat",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/back-squat.webp"
+  },
+  {
+    "id": 65,
+    "slug": "front-squat",
+    "name": "Front Squat",
+    "category": "Quads",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Quadriceps Femoris",
+    "region": "Rectus Femoris",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Gluteus Maximus",
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Squat",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Expert",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/front-squat.webp"
+  },
+  {
+    "id": 66,
+    "slug": "leg-press",
+    "name": "Leg Press",
+    "category": "Quads",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Quadriceps Femoris",
+    "region": "Vastus Lateralis",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Gluteus Maximus",
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Squat",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/leg-press.webp"
+  },
+  {
+    "id": 67,
+    "slug": "leg-extension",
+    "name": "Leg Extension",
+    "category": "Quads",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Quadriceps Femoris",
+    "region": "Overall Quads",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Knee Extension",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/leg-extension.webp"
+  },
+  {
+    "id": 68,
+    "slug": "smith-squat",
+    "name": "Smith Squat",
+    "category": "Quads",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Quadriceps Femoris",
+    "region": "Overall Quads",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Gluteus Maximus",
+      "Biceps Femoris",
+      "Erector Spinae"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Squat",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/smith-squat.webp"
+  },
+  {
+    "id": 69,
+    "slug": "pendulum-squat",
+    "name": "Pendulum Squat",
+    "category": "Quads",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Quadriceps Femoris",
+    "region": "Overall Quads",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Smith Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Squat",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/pendulum-squat.webp"
+  },
+  {
+    "id": 70,
+    "slug": "bulgarian-split-squat",
+    "name": "Bulgarian Split Squat",
+    "category": "Quads",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Quadriceps Femoris",
+    "region": "Overall Quads",
+    "secondaryMuscles": [
+      "Gluteus Medius",
+      "Adductor Magnus",
+      "Gastrocnemius",
+      "Gluteus Maximus",
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Suspension Trainer"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Squat",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": true,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/bulgarian-split-squat.webp"
+  },
+  {
+    "id": 71,
+    "slug": "reverse-nordic",
+    "name": "Reverse Nordic",
+    "category": "Quads",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Quadriceps Femoris",
+    "region": "Overall Quads",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Knee Extension",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Advanced",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/reverse-nordic.webp"
+  },
+  {
+    "id": 72,
+    "slug": "lunge",
+    "name": "Lunge",
+    "category": "Quads",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Quadriceps Femoris",
+    "region": "Overall Quads",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Gluteus Maximus",
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Lunge",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/lunge.webp"
+  },
+  {
+    "id": 73,
+    "slug": "romanian-deadlift",
+    "name": "Romanian Deadlift",
+    "category": "Hamstrings",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Biceps Femoris",
+    "region": "Semitendinosus",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Gluteus Maximus",
+      "Erector Spinae"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Hip Hinge",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/romanian-deadlift.webp"
+  },
+  {
+    "id": 74,
+    "slug": "lying-leg-curl",
+    "name": "Lying Leg Curl",
+    "category": "Hamstrings",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Biceps Femoris",
+    "region": "Biceps Femoris",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Knee Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/lying-leg-curl.webp"
+  },
+  {
+    "id": 75,
+    "slug": "seated-leg-curl",
+    "name": "Seated Leg Curl",
+    "category": "Hamstrings",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Biceps Femoris",
+    "region": "Biceps Femoris",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Knee Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/seated-leg-curl.webp"
+  },
+  {
+    "id": 76,
+    "slug": "good-morning",
+    "name": "Good Morning",
+    "category": "Hamstrings",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Biceps Femoris",
+    "region": "Semitendinosus",
+    "secondaryMuscles": [
+      "Rectus Abdominis",
+      "Gluteus Maximus",
+      "Erector Spinae"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Hip Hinge",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/good-morning.webp"
+  },
+  {
+    "id": 77,
+    "slug": "nordic-curl",
+    "name": "Nordic Curl",
+    "category": "Hamstrings",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Biceps Femoris",
+    "region": "Biceps Femoris",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Knee Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Advanced",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/nordic-curl.webp"
+  },
+  {
+    "id": 78,
+    "slug": "single-leg-rdl",
+    "name": "Single Leg RDL",
+    "category": "Hamstrings",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Biceps Femoris",
+    "region": "Semimembranosus",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Hip Hinge",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": true,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/single-leg-rdl.webp"
+  },
+  {
+    "id": 79,
+    "slug": "glute-ham-raise",
+    "name": "Glute Ham Raise",
+    "category": "Hamstrings",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Biceps Femoris",
+    "region": "Semimembranosus",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Gluteus Maximus"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Knee Flexion",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/glute-ham-raise.webp"
+  },
+  {
+    "id": 80,
+    "slug": "cable-leg-curl",
+    "name": "Cable Leg Curl",
+    "category": "Hamstrings",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Biceps Femoris",
+    "region": "Biceps Femoris",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Knee Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Advanced",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [
+      "Leg Curl"
+    ],
+    "image": "/images/exercises/cable-leg-curl.webp"
+  },
+  {
+    "id": 81,
+    "slug": "hip-thrust",
+    "name": "Hip Thrust",
+    "category": "Glutes",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gluteus Maximus",
+    "region": "Glute Maximus",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Hip Extension",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/hip-thrust.webp"
+  },
+  {
+    "id": 82,
+    "slug": "machine-hip-thrust",
+    "name": "Machine Hip Thrust",
+    "category": "Glutes",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gluteus Maximus",
+    "region": "Glute Maximus",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Hip Extension",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [
+      "Hip Thrust",
+      "Mach. Hip Thrust"
+    ],
+    "image": "/images/exercises/machine-hip-thrust.webp"
+  },
+  {
+    "id": 83,
+    "slug": "walking-lunge",
+    "name": "Walking Lunge",
+    "category": "Glutes",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Quadriceps Femoris",
+    "region": "Glute Maximus",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Gluteus Maximus",
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Lunge",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/walking-lunge.webp"
+  },
+  {
+    "id": 84,
+    "slug": "back-extension",
+    "name": "Back Extension",
+    "category": "Glutes",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Erector Spinae",
+    "region": "Glute Maximus",
+    "secondaryMuscles": [
+      "Gluteus Maximus",
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Other"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Hip Hinge",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/back-extension.webp"
+  },
+  {
+    "id": 85,
+    "slug": "hip-abduction",
+    "name": "Hip Abduction",
+    "category": "Glutes",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gluteus Maximus",
+    "region": "Glute Medius",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Hip Abduction",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/hip-abduction.webp"
+  },
+  {
+    "id": 86,
+    "slug": "cable-kickback",
+    "name": "Cable Kickback",
+    "category": "Glutes",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gluteus Maximus",
+    "region": "Glute Maximus",
+    "secondaryMuscles": [
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Hip Extension",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "Kickback"
+    ],
+    "image": "/images/exercises/cable-kickback.webp"
+  },
+  {
+    "id": 87,
+    "slug": "donkey-kick",
+    "name": "Donkey Kick",
+    "category": "Glutes",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gluteus Maximus",
+    "region": "Glute Maximus",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Hip Extension",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "D",
+    "tierRank": 3,
+    "aliases": [],
+    "image": "/images/exercises/donkey-kick.webp"
+  },
+  {
+    "id": 88,
+    "slug": "step-up",
+    "name": "Step Up",
+    "category": "Glutes",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Quadriceps Femoris",
+    "region": "Glute Maximus",
+    "secondaryMuscles": [
+      "Gastrocnemius",
+      "Gluteus Maximus",
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Lunge",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/step-up.webp"
+  },
+  {
+    "id": 89,
+    "slug": "frog-pump",
+    "name": "Frog Pump",
+    "category": "Glutes",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gluteus Maximus",
+    "region": "Glute Maximus",
+    "secondaryMuscles": [],
+    "equipment": [
+      "EZ Bar"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Hip Extension",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Advanced",
+    "compound": false,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/frog-pump.webp"
+  },
+  {
+    "id": 90,
+    "slug": "sumo-deadlift",
+    "name": "Sumo Deadlift",
+    "category": "Glutes",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Biceps Femoris",
+    "region": "Glute Maximus",
+    "secondaryMuscles": [
+      "Adductor Magnus",
+      "Brachioradialis",
+      "Gluteus Maximus",
+      "Erector Spinae",
+      "Rhomboids",
+      "Quadriceps Femoris",
+      "Trapezius"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Hip Hinge",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/sumo-deadlift.webp"
+  },
+  {
+    "id": 91,
+    "slug": "standing-calf-raise",
+    "name": "Standing Calf Raise",
+    "category": "Calves",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gastrocnemius",
+    "region": "Gastrocnemius",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Calf Plantar Flexion",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/standing-calf-raise.webp"
+  },
+  {
+    "id": 92,
+    "slug": "seated-calf-raise",
+    "name": "Seated Calf Raise",
+    "category": "Calves",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gastrocnemius",
+    "region": "Soleus",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Calf Plantar Flexion",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/seated-calf-raise.webp"
+  },
+  {
+    "id": 93,
+    "slug": "leg-press-calf-raise",
+    "name": "Leg Press Calf Raise",
+    "category": "Calves",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gastrocnemius",
+    "region": "Gastrocnemius",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Calf Plantar Flexion",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/leg-press-calf-raise.webp"
+  },
+  {
+    "id": 94,
+    "slug": "single-leg-calf-raise",
+    "name": "Single Leg Calf Raise",
+    "category": "Calves",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gastrocnemius",
+    "region": "Gastrocnemius",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Calf Plantar Flexion",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": false,
+    "unilateral": true,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/single-leg-calf-raise.webp"
+  },
+  {
+    "id": 95,
+    "slug": "donkey-calf-raise",
+    "name": "Donkey Calf Raise",
+    "category": "Calves",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gastrocnemius",
+    "region": "Gastrocnemius",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Other"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Calf Plantar Flexion",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/donkey-calf-raise.webp"
+  },
+  {
+    "id": 96,
+    "slug": "cable-crunch",
+    "name": "Cable Crunch",
+    "category": "Abs",
+    "bodyRegion": "Core",
+    "primaryMuscle": "Rectus Abdominis",
+    "region": "Upper Abs",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Core Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 7,
+    "aliases": [
+      "Crunch"
+    ],
+    "image": "/images/exercises/cable-crunch.webp"
+  },
+  {
+    "id": 97,
+    "slug": "decline-crunch",
+    "name": "Decline Crunch",
+    "category": "Abs",
+    "bodyRegion": "Core",
+    "primaryMuscle": "Rectus Abdominis",
+    "region": "Upper Abs",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Core Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/decline-crunch.webp"
+  },
+  {
+    "id": 98,
+    "slug": "v-up",
+    "name": "V-Up",
+    "category": "Abs",
+    "bodyRegion": "Core",
+    "primaryMuscle": "Rectus Abdominis",
+    "region": "Lower Abs",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Core Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Advanced",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/v-up.webp"
+  },
+  {
+    "id": 99,
+    "slug": "leg-raise",
+    "name": "Leg Raise",
+    "category": "Abs",
+    "bodyRegion": "Core",
+    "primaryMuscle": "Rectus Abdominis",
+    "region": "Lower Abs",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Core Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/leg-raise.webp"
+  },
+  {
+    "id": 100,
+    "slug": "hanging-leg-raise",
+    "name": "Hanging Leg Raise",
+    "category": "Abs",
+    "bodyRegion": "Core",
+    "primaryMuscle": "Rectus Abdominis",
+    "region": "Lower Abs",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Core Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Expert",
+    "compound": false,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/hanging-leg-raise.webp"
+  },
+  {
+    "id": 101,
+    "slug": "ab-wheel",
+    "name": "Ab Wheel",
+    "category": "Abs",
+    "bodyRegion": "Core",
+    "primaryMuscle": "Rectus Abdominis",
+    "region": "Upper Abs",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Core Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Advanced",
+    "compound": false,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/ab-wheel.webp"
+  },
+  {
+    "id": 102,
+    "slug": "plank",
+    "name": "Plank",
+    "category": "Abs",
+    "bodyRegion": "Core",
+    "primaryMuscle": "Rectus Abdominis",
+    "region": "Upper Abs",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Core Flexion",
+    "mechanic": "Isolation",
+    "force": "Static",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "D",
+    "tierRank": 3,
+    "aliases": [],
+    "image": "/images/exercises/plank.webp"
+  },
+  {
+    "id": 103,
+    "slug": "russian-twist",
+    "name": "Russian Twist",
+    "category": "Abs",
+    "bodyRegion": "Core",
+    "primaryMuscle": "Rectus Abdominis",
+    "region": "Obliques",
+    "secondaryMuscles": [
+      "Erector Spinae"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Core Flexion",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "D",
+    "tierRank": 3,
+    "aliases": [],
+    "image": "/images/exercises/russian-twist.webp"
+  },
+  {
+    "id": 104,
+    "slug": "machine-crunch",
+    "name": "Machine Crunch",
+    "category": "Abs",
+    "bodyRegion": "Core",
+    "primaryMuscle": "Rectus Abdominis",
+    "region": "Upper Abs",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Core Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [
+      "Crunch",
+      "Mach. Crunch"
+    ],
+    "image": "/images/exercises/machine-crunch.webp"
+  },
+  {
+    "id": 105,
+    "slug": "dragon-flag",
+    "name": "Dragon Flag",
+    "category": "Abs",
+    "bodyRegion": "Core",
+    "primaryMuscle": "Rectus Abdominis",
+    "region": "Upper Abs",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Core Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/dragon-flag.webp"
+  },
+  {
+    "id": 106,
+    "slug": "wrist-curl",
+    "name": "Wrist Curl",
+    "category": "Forearms",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Brachioradialis",
+    "region": "Flexor Forearm",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Wrist Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/wrist-curl.webp"
+  },
+  {
+    "id": 107,
+    "slug": "reverse-wrist-curl",
+    "name": "Reverse Wrist Curl",
+    "category": "Forearms",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Brachioradialis",
+    "region": "Extensor Forearm",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Wrist Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/reverse-wrist-curl.webp"
+  },
+  {
+    "id": 108,
+    "slug": "farmer-carry",
+    "name": "Farmer Carry",
+    "category": "Forearms",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Brachioradialis",
+    "region": "Flexor Forearm",
+    "secondaryMuscles": [
+      "Rectus Abdominis",
+      "Gluteus Maximus",
+      "Biceps Femoris",
+      "Erector Spinae",
+      "Quadriceps Femoris",
+      "Trapezius"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Carry",
+    "mechanic": "Compound",
+    "force": "Static",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/farmer-carry.webp"
+  },
+  {
+    "id": 109,
+    "slug": "hammer-curl-forearms",
+    "name": "Hammer Curl",
+    "category": "Forearms",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Flexor Forearm",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/hammer-curl-forearms.webp"
+  },
+  {
+    "id": 110,
+    "slug": "reverse-curl-forearms",
+    "name": "Reverse Curl",
+    "category": "Forearms",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Extensor Forearm",
+    "secondaryMuscles": [
+      "Brachioradialis"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/reverse-curl-forearms.webp"
+  },
+  {
+    "id": 111,
+    "slug": "barbell-shrug",
+    "name": "Barbell Shrug",
+    "category": "Traps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Trapezius",
+    "region": "Upper Traps",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Scapular Elevation",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "BB Shrug",
+      "Shrug"
+    ],
+    "image": "/images/exercises/barbell-shrug.webp"
+  },
+  {
+    "id": 112,
+    "slug": "db-shrug",
+    "name": "DB Shrug",
+    "category": "Traps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Trapezius",
+    "region": "Upper Traps",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Scapular Elevation",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/db-shrug.webp"
+  },
+  {
+    "id": 113,
+    "slug": "face-pull-traps",
+    "name": "Face Pull",
+    "category": "Traps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Deltoid",
+    "region": "Middle Traps",
+    "secondaryMuscles": [
+      "Rhomboids"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/face-pull-traps.webp"
+  },
+  {
+    "id": 114,
+    "slug": "high-pull",
+    "name": "High Pull",
+    "category": "Traps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Trapezius",
+    "region": "Middle Traps",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Vertical Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/high-pull.webp"
+  },
+  {
+    "id": 115,
+    "slug": "trap-bar-shrug",
+    "name": "Trap Bar Shrug",
+    "category": "Traps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Trapezius",
+    "region": "Upper Traps",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Scapular Elevation",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/trap-bar-shrug.webp"
+  },
+  {
+    "id": 116,
+    "slug": "machine-adduction",
+    "name": "Machine Adduction",
+    "category": "Adductors",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Adductor Magnus",
+    "region": "Adductor Group",
+    "secondaryMuscles": [
+      "Gluteus Maximus",
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Hip Adduction",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "Adduction",
+      "Mach. Adduction"
+    ],
+    "image": "/images/exercises/machine-adduction.webp"
+  },
+  {
+    "id": 117,
+    "slug": "copenhagen-plank",
+    "name": "Copenhagen Plank",
+    "category": "Adductors",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Adductor Magnus",
+    "region": "Adductor Group",
+    "secondaryMuscles": [],
+    "equipment": [
+      "EZ Bar"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Hip Adduction",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/copenhagen-plank.webp"
+  },
+  {
+    "id": 118,
+    "slug": "side-lunge",
+    "name": "Side Lunge",
+    "category": "Adductors",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Adductor Magnus",
+    "region": "Adductor Group",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Smith Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Hip Adduction",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": true,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/side-lunge.webp"
+  },
+  {
+    "id": 119,
+    "slug": "machine-abduction",
+    "name": "Machine Abduction",
+    "category": "Abductors",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gluteus Medius",
+    "region": "Glute Medius",
+    "secondaryMuscles": [
+      "Gluteus Maximus"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Hip Abduction",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [
+      "Abduction",
+      "Mach. Abduction"
+    ],
+    "image": "/images/exercises/machine-abduction.webp"
+  },
+  {
+    "id": 120,
+    "slug": "band-walk",
+    "name": "Band Walk",
+    "category": "Abductors",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gluteus Medius",
+    "region": "Glute Medius",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Resistance Band"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Hip Abduction",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/band-walk.webp"
+  },
+  {
+    "id": 121,
+    "slug": "cable-abduction",
+    "name": "Cable Abduction",
+    "category": "Abductors",
+    "bodyRegion": "Lower Body",
+    "primaryMuscle": "Gluteus Medius",
+    "region": "Glute Medius",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Hip Abduction",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "Abduction"
+    ],
+    "image": "/images/exercises/cable-abduction.webp"
+  },
+  {
+    "id": 122,
+    "slug": "neutral-grip-dumbbell-bench-press",
+    "name": "Neutral-Grip Dumbbell Bench Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "Neutral-Grip Bench Press",
+      "Neutral-Grip DB Bench Press"
+    ],
+    "image": "/images/exercises/neutral-grip-dumbbell-bench-press.webp"
+  },
+  {
+    "id": 123,
+    "slug": "incline-cable-chest-press",
+    "name": "Incline Cable Chest Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Upper Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [
+      "Incline Chest Press"
+    ],
+    "image": "/images/exercises/incline-cable-chest-press.webp"
+  },
+  {
+    "id": 124,
+    "slug": "decline-machine-chest-press",
+    "name": "Decline Machine Chest Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Lower Chest",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [
+      "Decline Chest Press",
+      "Decline Mach. Chest Press"
+    ],
+    "image": "/images/exercises/decline-machine-chest-press.webp"
+  },
+  {
+    "id": 125,
+    "slug": "diamond-push-up",
+    "name": "Diamond Push-Up",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [
+      "Diamond Pushup"
+    ],
+    "image": "/images/exercises/diamond-push-up.webp"
+  },
+  {
+    "id": 126,
+    "slug": "barbell-guillotine-bench-press",
+    "name": "Barbell Guillotine Bench Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [
+      "BB Guillotine Bench Press",
+      "Guillotine Bench Press"
+    ],
+    "image": "/images/exercises/barbell-guillotine-bench-press.webp"
+  },
+  {
+    "id": 127,
+    "slug": "smith-machine-incline-press",
+    "name": "Smith Machine Incline Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Upper Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "Smith Incline Press",
+      "Smith Mach. Incline Press"
+    ],
+    "image": "/images/exercises/smith-machine-incline-press.webp"
+  },
+  {
+    "id": 128,
+    "slug": "weighted-dip",
+    "name": "Weighted Dip",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Triceps Brachii",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Pectoralis Major",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Other"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/weighted-dip.webp"
+  },
+  {
+    "id": 129,
+    "slug": "dumbbell-push-up",
+    "name": "Dumbbell Push-Up",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Advanced",
+    "compound": false,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [
+      "DB Push-Up",
+      "Dumbbell Pushup",
+      "Push-Up"
+    ],
+    "image": "/images/exercises/dumbbell-push-up.webp"
+  },
+  {
+    "id": 130,
+    "slug": "low-to-high-cable-fly",
+    "name": "Low-to-High Cable Fly",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Inner Chest",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Isolation",
+    "force": "Push",
+    "difficulty": "Intermediate",
+    "compound": false,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [
+      "Low-to-High Fly"
+    ],
+    "image": "/images/exercises/low-to-high-cable-fly.webp"
+  },
+  {
+    "id": 131,
+    "slug": "machine-chest-press-iso-lateral",
+    "name": "Machine Chest Press (Iso-Lateral)",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [
+      "Chest Press (Iso-Lateral)",
+      "Mach. Chest Press (Iso-Lateral)"
+    ],
+    "image": "/images/exercises/machine-chest-press-iso-lateral.webp"
+  },
+  {
+    "id": 132,
+    "slug": "decline-push-up",
+    "name": "Decline Push-Up",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Lower Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "Decline Pushup"
+    ],
+    "image": "/images/exercises/decline-push-up.webp"
+  },
+  {
+    "id": 133,
+    "slug": "svend-press",
+    "name": "Svend Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Brachioradialis",
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Other"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/svend-press.webp"
+  },
+  {
+    "id": 134,
+    "slug": "smith-machine-floor-press",
+    "name": "Smith Machine Floor Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [
+      "Smith Floor Press",
+      "Smith Mach. Floor Press"
+    ],
+    "image": "/images/exercises/smith-machine-floor-press.webp"
+  },
+  {
+    "id": 135,
+    "slug": "barbell-pullover",
+    "name": "Barbell Pullover",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Pectoralis Major",
+      "Latissimus Dorsi",
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Shoulder Extension",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [
+      "BB Pullover",
+      "Pullover"
+    ],
+    "image": "/images/exercises/barbell-pullover.webp"
+  },
+  {
+    "id": 136,
+    "slug": "single-arm-dumbbell-bench-press",
+    "name": "Single-Arm Dumbbell Bench Press",
+    "category": "Chest",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Pectoralis Major",
+    "region": "Middle Chest",
+    "secondaryMuscles": [
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Push",
+    "mechanic": "Compound",
+    "force": "Push",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [
+      "Single-Arm Bench Press",
+      "Single-Arm DB Bench Press"
+    ],
+    "image": "/images/exercises/single-arm-dumbbell-bench-press.webp"
+  },
+  {
+    "id": 137,
+    "slug": "close-grip-lat-pulldown",
+    "name": "Close-Grip Lat Pulldown",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Lats",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Rhomboids",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Vertical Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/close-grip-lat-pulldown.webp"
+  },
+  {
+    "id": 138,
+    "slug": "assisted-chin-up-machine",
+    "name": "Assisted Chin-Up (Machine)",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Lats",
+    "secondaryMuscles": [
+      "Rectus Abdominis",
+      "Brachioradialis",
+      "Rhomboids"
+    ],
+    "equipment": [
+      "Other"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Vertical Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [
+      "Assisted Chin-Up (Mach.)",
+      "Assisted Chinup (Machine)"
+    ],
+    "image": "/images/exercises/assisted-chin-up-machine.webp"
+  },
+  {
+    "id": 139,
+    "slug": "inverted-row",
+    "name": "Inverted Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Rhomboids",
+    "region": "Mid Back",
+    "secondaryMuscles": [
+      "Latissimus Dorsi"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/inverted-row.webp"
+  },
+  {
+    "id": 140,
+    "slug": "ez-bar-bent-over-row",
+    "name": "EZ Bar Bent-Over Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Rhomboids",
+    "region": "Mid Back",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Latissimus Dorsi",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/ez-bar-bent-over-row.webp"
+  },
+  {
+    "id": 141,
+    "slug": "smith-machine-bent-over-row",
+    "name": "Smith Machine Bent-Over Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Rhomboids",
+    "region": "Lats",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Latissimus Dorsi",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [
+      "Smith Bent-Over Row",
+      "Smith Mach. Bent-Over Row"
+    ],
+    "image": "/images/exercises/smith-machine-bent-over-row.webp"
+  },
+  {
+    "id": 142,
+    "slug": "pendlay-row",
+    "name": "Pendlay Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Mid Back",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/pendlay-row.webp"
+  },
+  {
+    "id": 143,
+    "slug": "kroc-row",
+    "name": "Kroc Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Mid Back",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/kroc-row.webp"
+  },
+  {
+    "id": 144,
+    "slug": "single-arm-cable-row",
+    "name": "Single-Arm Cable Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Mid Back",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Advanced",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [
+      "Single-Arm Row"
+    ],
+    "image": "/images/exercises/single-arm-cable-row.webp"
+  },
+  {
+    "id": 145,
+    "slug": "machine-row-iso-lateral",
+    "name": "Machine Row (Iso-Lateral)",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Lats",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": true,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [
+      "Mach. Row (Iso-Lateral)",
+      "Row (Iso-Lateral)"
+    ],
+    "image": "/images/exercises/machine-row-iso-lateral.webp"
+  },
+  {
+    "id": 146,
+    "slug": "superman",
+    "name": "Superman",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Erector Spinae",
+    "region": "Lower Back",
+    "secondaryMuscles": [
+      "Gluteus Maximus",
+      "Biceps Femoris"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Back Extension",
+    "mechanic": "Compound",
+    "force": "Static",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [],
+    "image": "/images/exercises/superman.webp"
+  },
+  {
+    "id": 147,
+    "slug": "ez-bar-pullover",
+    "name": "EZ Bar Pullover",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Mid Back",
+    "secondaryMuscles": [
+      "Pectoralis Major",
+      "Latissimus Dorsi",
+      "Deltoid",
+      "Triceps Brachii"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Shoulder Extension",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [],
+    "image": "/images/exercises/ez-bar-pullover.webp"
+  },
+  {
+    "id": 148,
+    "slug": "smith-machine-upright-row",
+    "name": "Smith Machine Upright Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Trapezius",
+    "region": "Lats",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Rhomboids",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [
+      "Smith Mach. Upright Row",
+      "Smith Upright Row"
+    ],
+    "image": "/images/exercises/smith-machine-upright-row.webp"
+  },
+  {
+    "id": 149,
+    "slug": "yates-row",
+    "name": "Yates Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Mid Back",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": true,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/yates-row.webp"
+  },
+  {
+    "id": 150,
+    "slug": "chest-supported-dumbbell-row",
+    "name": "Chest-Supported Dumbbell Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Rhomboids",
+    "region": "Mid Back",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Latissimus Dorsi",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [
+      "Chest-Supported DB Row",
+      "Chest-Supported Row"
+    ],
+    "image": "/images/exercises/chest-supported-dumbbell-row.webp"
+  },
+  {
+    "id": 151,
+    "slug": "wide-grip-cable-row",
+    "name": "Wide-Grip Cable Row",
+    "category": "Back",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Latissimus Dorsi",
+    "region": "Mid Back",
+    "secondaryMuscles": [
+      "Biceps Brachii",
+      "Rhomboids",
+      "Deltoid"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Compound",
+    "movementPattern": "Horizontal Pull",
+    "mechanic": "Compound",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": true,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [
+      "Wide-Grip Row"
+    ],
+    "image": "/images/exercises/wide-grip-cable-row.webp"
+  },
+  {
+    "id": 152,
+    "slug": "machine-bicep-curl",
+    "name": "Machine Bicep Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S",
+    "tierRank": 7,
+    "aliases": [
+      "Bicep Curl",
+      "Mach. Bicep Curl"
+    ],
+    "image": "/images/exercises/machine-bicep-curl.webp"
+  },
+  {
+    "id": 153,
+    "slug": "suspension-trainer-bicep-curl",
+    "name": "Suspension Trainer Bicep Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Advanced",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [],
+    "image": "/images/exercises/suspension-trainer-bicep-curl.webp"
+  },
+  {
+    "id": 154,
+    "slug": "ez-bar-preacher-curl",
+    "name": "EZ Bar Preacher Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Short Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [],
+    "image": "/images/exercises/ez-bar-preacher-curl.webp"
+  },
+  {
+    "id": 155,
+    "slug": "smith-machine-drag-curl",
+    "name": "Smith Machine Drag Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Smith Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Intermediate",
+    "compound": false,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [
+      "Smith Drag Curl",
+      "Smith Mach. Drag Curl"
+    ],
+    "image": "/images/exercises/smith-machine-drag-curl.webp"
+  },
+  {
+    "id": 156,
+    "slug": "wide-grip-standing-barbell-curl",
+    "name": "Wide-Grip Standing Barbell Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "S+",
+    "tierRank": 8,
+    "aliases": [
+      "Wide-Grip Standing BB Curl",
+      "Wide-Grip Standing Curl"
+    ],
+    "image": "/images/exercises/wide-grip-standing-barbell-curl.webp"
+  },
+  {
+    "id": 157,
+    "slug": "dumbbell-waiter-curl",
+    "name": "Dumbbell Waiter Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "F",
+    "tierRank": 2,
+    "aliases": [
+      "DB Waiter Curl",
+      "Waiter Curl"
+    ],
+    "image": "/images/exercises/dumbbell-waiter-curl.webp"
+  },
+  {
+    "id": 158,
+    "slug": "cable-preacher-curl",
+    "name": "Cable Preacher Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Short Head",
+    "secondaryMuscles": [
+      "Brachioradialis"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "A",
+    "tierRank": 6,
+    "aliases": [
+      "Preacher Curl"
+    ],
+    "image": "/images/exercises/cable-preacher-curl.webp"
+  },
+  {
+    "id": 159,
+    "slug": "plate-loaded-machine-curl",
+    "name": "Plate-Loaded Machine Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Long Head",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Advanced",
+    "compound": false,
+    "unilateral": false,
+    "tier": "B",
+    "tierRank": 5,
+    "aliases": [
+      "Plate-Loaded Curl",
+      "Plate-Loaded Mach. Curl"
+    ],
+    "image": "/images/exercises/plate-loaded-machine-curl.webp"
+  },
+  {
+    "id": 160,
+    "slug": "suspension-trainer-hammer-curl",
+    "name": "Suspension Trainer Hammer Curl",
+    "category": "Biceps",
+    "bodyRegion": "Upper Body",
+    "primaryMuscle": "Biceps Brachii",
+    "region": "Brachialis",
+    "secondaryMuscles": [],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "exerciseType": "Isolation",
+    "movementPattern": "Elbow Flexion",
+    "mechanic": "Isolation",
+    "force": "Pull",
+    "difficulty": "Beginner",
+    "compound": false,
+    "unilateral": false,
+    "tier": "C",
+    "tierRank": 4,
+    "aliases": [],
+    "image": "/images/exercises/suspension-trainer-hammer-curl.webp"
+  }
+]

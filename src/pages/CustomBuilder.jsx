@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TopBar from '../components/TopBar';
 import DayPicker from '../components/DayPicker';
+import ExercisePicker from '../components/ExercisePicker';
 
 const DAY_LABELS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
@@ -132,7 +133,7 @@ function Step2({
   orderedSelectedDays, activeDay, setActiveDay, exercisesByDay,
   addExercise, removeExercise, allDaysHaveExercise, onBack, onContinue,
 }) {
-  const [name, setName] = useState('');
+  const [chosen, setChosen] = useState(null); // { name, exerciseId }
   const [sets, setSets] = useState('3');
   const [repsMin, setRepsMin] = useState('8');
   const [repsMax, setRepsMax] = useState('12');
@@ -141,14 +142,18 @@ function Step2({
 
   function handleAdd(e) {
     e.preventDefault();
-    if (!name.trim()) return;
+    if (!chosen) return;
     addExercise(activeDay, {
-      name: name.trim(),
+      name: chosen.name,
+      exerciseId: chosen.exerciseId,
       sets: Number(sets) || 1,
       repsMin: Number(repsMin) || 1,
       repsMax: Number(repsMax) || Number(repsMin) || 1,
     });
-    setName('');
+    setChosen(null);
+    setSets('3');
+    setRepsMin('8');
+    setRepsMax('12');
   }
 
   return (
@@ -207,50 +212,56 @@ function Step2({
         </div>
       )}
 
-      <form onSubmit={handleAdd} className="bg-surface-2 border border-border rounded-card p-4">
+      <div className="bg-surface-2 border border-border rounded-card p-4">
         <p className="font-mono text-[10px] font-semibold tracking-[2px] uppercase text-text-3 mb-3">
           Add an exercise
         </p>
-        <input
-          className="w-full h-11 rounded-field border-[1.5px] border-border-2 bg-surface px-3.5
-                     text-sm text-text mb-3 focus:border-accent focus:outline-none"
-          placeholder="Exercise name (e.g. Barbell Bench Press)"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <p className="text-[11px] text-text-3 mb-3">
-          Searching the real exercise library is coming soon — type a name for now.
-        </p>
-        <div className="grid grid-cols-3 gap-2 mb-3.5">
-          <Field label="Sets">
-            <input
-              type="number" min="1" value={sets}
-              onChange={(e) => setSets(e.target.value)}
-              className="w-full h-11 rounded-field border-[1.5px] border-border-2 bg-surface px-2
-                         text-sm text-center text-text focus:border-accent focus:outline-none"
-            />
-          </Field>
-          <Field label="Min reps">
-            <input
-              type="number" min="1" value={repsMin}
-              onChange={(e) => setRepsMin(e.target.value)}
-              className="w-full h-11 rounded-field border-[1.5px] border-border-2 bg-surface px-2
-                         text-sm text-center text-text focus:border-accent focus:outline-none"
-            />
-          </Field>
-          <Field label="Max reps">
-            <input
-              type="number" min="1" value={repsMax}
-              onChange={(e) => setRepsMax(e.target.value)}
-              className="w-full h-11 rounded-field border-[1.5px] border-border-2 bg-surface px-2
-                         text-sm text-center text-text focus:border-accent focus:outline-none"
-            />
-          </Field>
-        </div>
-        <button type="submit" className="btn btn-secondary" disabled={!name.trim()}>
-          Add exercise
-        </button>
-      </form>
+
+        {!chosen ? (
+          <ExercisePicker
+            onSelect={setChosen}
+            excludeIds={dayExercises.map((e) => e.exerciseId).filter(Boolean)}
+          />
+        ) : (
+          <form onSubmit={handleAdd}>
+            <div className="flex items-center justify-between bg-surface border border-border-2 rounded-field px-3.5 h-11 mb-3.5">
+              <span className="text-sm text-text font-medium truncate">{chosen.name}</span>
+              <button type="button" className="text-xs font-medium text-accent shrink-0 ml-2" onClick={() => setChosen(null)}>
+                Change
+              </button>
+            </div>
+            <div className="grid grid-cols-3 gap-2 mb-3.5">
+              <Field label="Sets">
+                <input
+                  type="number" min="1" value={sets}
+                  onChange={(e) => setSets(e.target.value)}
+                  className="w-full h-11 rounded-field border-[1.5px] border-border-2 bg-surface px-2
+                             text-sm text-center text-text focus:border-accent focus:outline-none"
+                />
+              </Field>
+              <Field label="Min reps">
+                <input
+                  type="number" min="1" value={repsMin}
+                  onChange={(e) => setRepsMin(e.target.value)}
+                  className="w-full h-11 rounded-field border-[1.5px] border-border-2 bg-surface px-2
+                             text-sm text-center text-text focus:border-accent focus:outline-none"
+                />
+              </Field>
+              <Field label="Max reps">
+                <input
+                  type="number" min="1" value={repsMax}
+                  onChange={(e) => setRepsMax(e.target.value)}
+                  className="w-full h-11 rounded-field border-[1.5px] border-border-2 bg-surface px-2
+                             text-sm text-center text-text focus:border-accent focus:outline-none"
+                />
+              </Field>
+            </div>
+            <button type="submit" className="btn btn-secondary">
+              Add exercise
+            </button>
+          </form>
+        )}
+      </div>
 
       {!allDaysHaveExercise && (
         <p className="text-[12px] text-text-3 mt-4 text-center">
