@@ -3,8 +3,35 @@ import { useNavigate } from 'react-router-dom';
 import TopBar from '../components/TopBar';
 import DayPicker from '../components/DayPicker';
 import ExercisePicker from '../components/ExercisePicker';
+import EXERCISES from '../data/exercises.json';
 
 const DAY_LABELS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const EXERCISE_BY_ID = new Map(EXERCISES.map((e) => [e.id, e]));
+
+// Looks at the bodyRegion (Upper Body / Lower Body / Core) of whatever's
+// been added to a day and infers a label for it. Custom-typed exercises
+// (no exerciseId) have no region data, so they're skipped rather than
+// guessed at. Core alone doesn't force "Full Body" — it's common accessory
+// work on either an Upper or a Lower day.
+function classifyDay(exercises) {
+  let hasUpper = false;
+  let hasLower = false;
+  let hasCore = false;
+
+  for (const ex of exercises) {
+    const meta = ex.exerciseId != null ? EXERCISE_BY_ID.get(ex.exerciseId) : null;
+    if (!meta) continue;
+    if (meta.bodyRegion === 'Upper Body') hasUpper = true;
+    else if (meta.bodyRegion === 'Lower Body') hasLower = true;
+    else if (meta.bodyRegion === 'Core') hasCore = true;
+  }
+
+  if (hasUpper && hasLower) return 'Full Body';
+  if (hasUpper) return 'Upper';
+  if (hasLower) return 'Lower';
+  if (hasCore) return 'Core';
+  return null;
+}
 
 export default function CustomBuilder() {
   const navigate = useNavigate();
@@ -55,6 +82,7 @@ export default function CustomBuilder() {
       name: programName.trim() || 'Custom Program',
       days: orderedSelectedDays.map((d) => ({
         day: DAY_LABELS[d],
+        dayType: classifyDay(exercisesByDay[d] || []),
         exercises: (exercisesByDay[d] || []).map(({ id, ...rest }) => rest),
       })),
     };
@@ -320,17 +348,28 @@ function Step3({ programName, setProgramName, orderedSelectedDays, exercisesByDa
         Summary
       </div>
       <div className="flex flex-col gap-2 mb-8">
-        {orderedSelectedDays.map((d) => (
-          <div
-            key={d}
-            className="flex items-center justify-between bg-surface border border-border rounded-card px-4 py-3"
-          >
-            <span className="font-display text-base font-bold uppercase">{DAY_SHORT(d)}</span>
-            <span className="font-mono text-[11px] text-text-3">
-              {(exercisesByDay[d] || []).length} exercises
-            </span>
-          </div>
-        ))}
+        {orderedSelectedDays.map((d) => {
+          const dayType = classifyDay(exercisesByDay[d] || []);
+          return (
+            <div
+              key={d}
+              className="flex items-center justify-between bg-surface border border-border rounded-card px-4 py-3"
+            >
+              <div className="flex items-center gap-2">
+                <span className="font-display text-base font-bold uppercase">{DAY_SHORT(d)}</span>
+                {dayType && (
+                  <span className="font-mono text-[10px] font-semibold uppercase tracking-wide
+                                    text-accent bg-accent-dim px-1.5 py-0.5 rounded">
+                    {dayType}
+                  </span>
+                )}
+              </div>
+              <span className="font-mono text-[11px] text-text-3">
+                {(exercisesByDay[d] || []).length} exercises
+              </span>
+            </div>
+          );
+        })}
       </div>
 
       <div className="flex gap-3">
