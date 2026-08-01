@@ -7,6 +7,7 @@ const TEMPLATES = [
     id: 'upper-lower',
     name: 'Upper / Lower Split',
     meta: '4 days / week · 8 weeks',
+    durationWeeks: 8,
     blurb: 'Alternating upper and lower body days, twice through each per week. A solid default if you\'re not sure where to start.',
   },
 ];
@@ -18,7 +19,7 @@ export default function CreateProgram() {
   function selectTemplate(t) {
     localStorage.setItem(
       'overload.activeProgram',
-      JSON.stringify({ type: 'template', id: t.id, name: t.name })
+      JSON.stringify({ type: 'template', id: t.id, name: t.name, durationWeeks: t.durationWeeks })
     );
     setConfirmed(t.name);
   }

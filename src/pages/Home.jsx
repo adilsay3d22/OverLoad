@@ -79,10 +79,19 @@ function LoggedOutHero() {
 function Dashboard() {
   const navigate = useNavigate();
   const [showReset, setShowReset] = useState(false);
+  const [program, setProgram] = useState(() => {
+    try {
+      const raw = localStorage.getItem('overload.activeProgram');
+      return raw ? JSON.parse(raw) : null;
+    } catch {
+      return null;
+    }
+  });
 
   function confirmReset() {
     localStorage.removeItem('overload.activeProgram');
     localStorage.removeItem('overload.log');
+    setProgram(null);
     setShowReset(false);
   }
 
@@ -92,16 +101,27 @@ function Dashboard() {
 
       <div className="flex-1 flex flex-col justify-center p-6 max-w-[420px] w-full mx-auto">
         <p className="font-mono text-[10px] font-semibold tracking-[3px] uppercase text-text-3">
-          Ready when you are
+          {program ? 'Current program' : 'Ready when you are'}
         </p>
         <h1 className="font-display text-[44px] font-black uppercase tracking-[-1px] leading-[0.95] mt-1.5 mb-8">
-          Let's train
+          {program ? program.name : "Let's train"}
         </h1>
 
         <div className="flex flex-col gap-3">
-          <button className="btn btn-primary" onClick={() => navigate('/create-program')}>
-            Create Program
-          </button>
+          {program ? (
+            <>
+              <button className="btn btn-primary" onClick={() => navigate('/program')}>
+                View Program
+              </button>
+              <button className="btn btn-secondary" onClick={() => navigate('/create-program')}>
+                Start New Program
+              </button>
+            </>
+          ) : (
+            <button className="btn btn-primary" onClick={() => navigate('/create-program')}>
+              Create Program
+            </button>
+          )}
           <button className="btn btn-secondary" onClick={() => navigate('/progress')}>
             Progress
           </button>
