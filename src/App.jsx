@@ -4,8 +4,7 @@ import CreateProgram from './pages/CreateProgram';
 import CustomBuilder from './pages/CustomBuilder';
 import Program from './pages/Program';
 import WeeksGrid from './pages/WeeksGrid';
-import SessionsForWeek from './pages/SessionsForWeek';
-import SessionDetail from './pages/SessionDetail';
+import WeekEditor from './pages/WeekEditor';
 import Progress from './pages/Progress';
 import RequireAuth from './components/RequireAuth';
 
@@ -49,23 +48,7 @@ export default function App() {
         path="/program/week/:weekNumber"
         element={
           <RequireAuth>
-            <SessionsForWeek />
-          </RequireAuth>
-        }
-      />
-      <Route
-        path="/program/sessions"
-        element={
-          <RequireAuth>
-            <SessionsForWeek />
-          </RequireAuth>
-        }
-      />
-      <Route
-        path="/program/session/:phaseIndex/:sessionIndex"
-        element={
-          <RequireAuth>
-            <SessionDetail />
+            <WeekEditor />
           </RequireAuth>
         }
       />
