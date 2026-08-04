@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
-export default function TopBar({ back }) {
+export default function TopBar({ back, onBack }) {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
@@ -11,7 +11,7 @@ export default function TopBar({ back }) {
         <button
           className="w-9 h-9 rounded-[10px] bg-surface border border-border text-text-2
                      text-base flex items-center justify-center"
-          onClick={() => navigate(back)}
+          onClick={() => (onBack ? onBack() : navigate(back))}
           aria-label="Go back"
         >
           ←

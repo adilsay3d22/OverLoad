@@ -5,6 +5,7 @@ import CustomBuilder from './pages/CustomBuilder';
 import Program from './pages/Program';
 import WeeksGrid from './pages/WeeksGrid';
 import WeekEditor from './pages/WeekEditor';
+import SessionEditor from './pages/SessionEditor';
 import Progress from './pages/Progress';
 import RequireAuth from './components/RequireAuth';
 
@@ -49,6 +50,14 @@ export default function App() {
         element={
           <RequireAuth>
             <WeekEditor />
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/program/week/:weekNumber/session/:day"
+        element={
+          <RequireAuth>
+            <SessionEditor />
           </RequireAuth>
         }
       />
