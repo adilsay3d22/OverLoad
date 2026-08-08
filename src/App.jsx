@@ -7,6 +7,7 @@ import Program from './pages/Program';
 import WeeksGrid from './pages/WeeksGrid';
 import WeekEditor from './pages/WeekEditor';
 import SessionEditor from './pages/SessionEditor';
+import LogSession from './pages/LogSession';
 import Progress from './pages/Progress';
 import RequireAuth from './components/RequireAuth';
 
@@ -67,6 +68,14 @@ export default function App() {
         element={
           <RequireAuth>
             <SessionEditor />
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/program/week/:weekNumber/session/:day/log"
+        element={
+          <RequireAuth>
+            <LogSession />
           </RequireAuth>
         }
       />

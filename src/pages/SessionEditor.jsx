@@ -201,6 +201,15 @@ export default function SessionEditor() {
         {!type && <div className="mb-6" />}
 
         {session.exercises.length > 0 && (
+          <button
+            className="btn btn-primary mb-6"
+            onClick={() => navigate(`/program/week/${weekNumber || 1}/session/${dayIndex}/log`)}
+          >
+            Start Session
+          </button>
+        )}
+
+        {session.exercises.length > 0 && (
           <div className="flex flex-col gap-2.5 mb-5">
             {session.exercises.map((ex, i) => {
               const meta = ex.exerciseId != null ? EXERCISE_BY_ID.get(ex.exerciseId) : null;
