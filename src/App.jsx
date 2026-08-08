@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import CreateProgram from './pages/CreateProgram';
+import TemplateLibrary from './pages/TemplateLibrary';
 import CustomBuilder from './pages/CustomBuilder';
 import Program from './pages/Program';
 import WeeksGrid from './pages/WeeksGrid';
@@ -18,6 +19,14 @@ export default function App() {
         element={
           <RequireAuth>
             <CreateProgram />
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/create-program/templates"
+        element={
+          <RequireAuth>
+            <TemplateLibrary />
           </RequireAuth>
         }
       />

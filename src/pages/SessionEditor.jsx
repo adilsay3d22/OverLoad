@@ -204,7 +204,8 @@ export default function SessionEditor() {
           <div className="flex flex-col gap-2.5 mb-5">
             {session.exercises.map((ex, i) => {
               const meta = ex.exerciseId != null ? EXERCISE_BY_ID.get(ex.exerciseId) : null;
-              const color = meta ? categoryColor(meta.category) : null;
+              const category = meta?.category || ex.category || null;
+              const color = category ? categoryColor(category) : null;
               return (
                 <div
                   key={ex.id}
@@ -219,18 +220,25 @@ export default function SessionEditor() {
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="font-display text-base font-bold uppercase truncate">{ex.name}</span>
-                      {meta?.category && color && (
+                      {category && color && (
                         <span
                           className="font-mono text-[10px] font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded"
                           style={{ background: color.chipBg, color: color.chipText }}
                         >
-                          {meta.category}
+                          {category}
                         </span>
                       )}
                     </div>
                     <p className="font-mono text-[12px] text-text-3 mt-1">
-                      {ex.sets}&times;{ex.repsMin}-{ex.repsMax} reps
+                      {ex.sets}&times;{ex.repsMin === ex.repsMax ? ex.repsMin : `${ex.repsMin}-${ex.repsMax}`} {ex.repsUnit === 'sec' ? 'sec' : 'reps'}
+                      {ex.rpe != null && ` · RPE ${ex.rpe}`}
+                      {ex.rest && ` · Rest ${ex.rest}`}
                     </p>
+                    {ex.note && (
+                      <p className="text-[12px] text-text-2 mt-1.5 leading-relaxed italic">
+                        {ex.note}
+                      </p>
+                    )}
                   </div>
                   <button
                     className="w-7 h-7 rounded-full bg-bg-2 text-text-2 text-sm flex items-center justify-center shrink-0"
