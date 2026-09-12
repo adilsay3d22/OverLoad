@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { DownloadSimple, SignOut, Warning } from '@phosphor-icons/react';
+import { Barbell, DownloadSimple, SignOut, Trash, Warning } from '@phosphor-icons/react';
 
 import { Screen } from '../components/Screen.jsx';
-import { PillButton, Skeleton, TogglePills } from '../components/ui.jsx';
+import { CategoryTag, PillButton, Skeleton, TogglePills } from '../components/ui.jsx';
 import { Sheet, SheetAction } from '../components/Sheet.jsx';
 import { DeleteButton } from '../components/DeleteButton.jsx';
 import { Label, Rule, SectionRule } from '../components/programs.jsx';
@@ -87,6 +87,9 @@ export default function Profile() {
   const timer = useRestTimer();
   const { data, loading, refresh: refreshStats } = useApi('/progress');
   const [confirmLogout, setConfirmLogout] = useState(false);
+  const [managingExercises, setManagingExercises] = useState(false);
+  const { data: custom, refresh: refreshCustom } = useApi('/catalog/custom');
+  const customExercises = custom?.exercises || [];
   const [exporting, setExporting] = useState(false);
   const [resetError, setResetError] = useState(null);
 
@@ -213,6 +216,16 @@ export default function Profile() {
       <SectionRule className="mt-9">Account</SectionRule>
       <div>
         <ActionRow
+          icon={<Barbell size={18} />}
+          label="Your exercises"
+          description={
+            customExercises.length
+              ? `${customExercises.length} you added yourself`
+              : 'Exercises you add appear here'
+          }
+          onClick={() => setManagingExercises(true)}
+        />
+        <ActionRow
           icon={<DownloadSimple size={18} />}
           label={exporting ? 'Preparing…' : 'Export data'}
           description="Every program and logged set as JSON"
@@ -265,6 +278,62 @@ export default function Profile() {
         </div>
         <div className="h-px w-full bg-danger-line" aria-hidden />
       </div>
+
+      <Sheet
+        open={managingExercises}
+        onClose={() => setManagingExercises(false)}
+        title="Your exercises"
+        subtitle={
+          customExercises.length
+            ? 'Removing one takes it out of search. Plans and logged sets keep it.'
+            : undefined
+        }
+      >
+        <div className="pb-4">
+          {customExercises.length ? (
+            <>
+              {customExercises.map((exercise, index) => (
+                <div key={exercise.id}>
+                  {index ? <Rule /> : null}
+                  <div className="flex items-center gap-3 py-3.5">
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate text-[15px] font-semibold">
+                        {exercise.name}
+                      </span>
+                      <Label className="mt-1.5">
+                        {exercise.equipment.join(' · ') || 'Bodyweight'}
+                      </Label>
+                    </span>
+                    <CategoryTag category={exercise.category} />
+                    <button
+                      type="button"
+                      aria-label={`Remove ${exercise.name}`}
+                      onClick={async () => {
+                        await api.del(`/catalog/custom/${exercise.id}`);
+                        refreshCustom();
+                      }}
+                      className="press flex size-10 shrink-0 items-center justify-center rounded-full text-ink-muted hover:bg-danger-wash hover:text-danger"
+                    >
+                      <Trash size={18} />
+                    </button>
+                  </div>
+                </div>
+              ))}
+              <Rule strong className="mt-1" />
+              <p className="mt-3.5 text-[12px] leading-[1.5] font-medium text-ink-muted">
+                Removing one only takes it out of search. Sessions already using it keep
+                it, and every set you logged against it stays in Progress and PRs — the
+                same rule as deleting a program.
+              </p>
+            </>
+          ) : (
+            <p className="py-2 text-[14px] leading-[1.5] font-medium text-ink-muted">
+              None yet. When the 160-exercise library does not have what your gym does,
+              add it from the search step of any session editor and it will live here.
+            </p>
+          )}
+        </div>
+      </Sheet>
 
       <Sheet
         open={confirmLogout}

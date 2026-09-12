@@ -1,9 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { MagnifyingGlass, CaretLeft, Warning } from '@phosphor-icons/react';
+import { MagnifyingGlass, CaretLeft, CaretRight, Plus, Warning } from '@phosphor-icons/react';
 
 import { Sheet } from './Sheet.jsx';
-import { CategoryTag, PillButton, Skeleton, Stepper, cx } from './ui.jsx';
+import {
+  CategoryTag, ErrorNote, Field, PillButton, Skeleton, Stepper, TogglePills, cx,
+} from './ui.jsx';
+import { Rule } from './programs.jsx';
 import { api } from '../lib/api.js';
 import { MUSCLE_GROUP } from '../lib/tokens.js';
 import { EASE } from '../lib/motion.js';
@@ -21,6 +24,18 @@ const TIER_TONE = {
   D: MUSCLE_GROUP.Chest,
   F: MUSCLE_GROUP.Chest,
 };
+
+/** The counterpart to TierBadge for an exercise the library never rated. */
+function YoursBadge() {
+  return (
+    <span
+      className="shrink-0 rounded-pill bg-ink px-2 py-1 text-[9px] leading-none font-bold text-white uppercase"
+      style={{ letterSpacing: '0.08em' }}
+    >
+      Yours
+    </span>
+  );
+}
 
 const LOW_TIERS = new Set(['C', 'D', 'F']);
 
@@ -56,6 +71,9 @@ export function AddExerciseFlow({ open, onClose, onAdd }) {
   const [reps, setReps] = useState(8);
   const [rpe, setRpe] = useState(7);
   const [busy, setBusy] = useState(false);
+  // The "add your own" form.
+  const [draft, setDraft] = useState({ name: '', category: '', equipment: '' });
+  const [draftErrors, setDraftErrors] = useState({});
 
   useEffect(() => {
     if (!open) return;
@@ -67,6 +85,8 @@ export function AddExerciseFlow({ open, onClose, onAdd }) {
     setReps(8);
     setRpe(7);
     setLoadError(null);
+    setDraft({ name: '', category: '', equipment: '' });
+    setDraftErrors({});
     api
       .get('/catalog/exercises/groups')
       .then(({ groups: g }) => setGroups(g))
@@ -93,12 +113,18 @@ export function AddExerciseFlow({ open, onClose, onAdd }) {
     };
   }, [stage, group, query]);
 
-  const title = { group: 'Add exercise', search: group, sets: picked?.name }[stage];
+  const title = {
+    group: 'Add exercise', search: group, custom: 'Your own exercise', sets: picked?.name,
+  }[stage];
   const subtitle = {
     group: 'Pick the muscle group you are training.',
     search: 'Ranked best-first. Tier reflects how much the exercise gives back.',
+    custom: 'It joins your library and is searchable from then on.',
     sets: 'Set the prescription for this session.',
   }[stage];
+
+  /** The categories inside the group being browsed, for the custom form. */
+  const groupCategories = (groups || []).find((g) => g.name === group)?.categories || [];
 
   const lowTier = picked && LOW_TIERS.has(picked.tier);
 
@@ -106,9 +132,10 @@ export function AddExerciseFlow({ open, onClose, onAdd }) {
     () => ({
       group: null,
       search: () => setStage('group'),
-      sets: () => setStage('search'),
+      custom: () => setStage('search'),
+      sets: () => setStage(picked?.custom ? 'search' : 'search'),
     }),
-    [],
+    [picked],
   );
 
   return (
@@ -198,17 +225,18 @@ export function AddExerciseFlow({ open, onClose, onAdd }) {
                       <span className="min-w-0 flex-1">
                         <span className="flex items-center gap-2">
                           <span className="truncate text-[15px] font-semibold">{exercise.name}</span>
-                          <TierBadge tier={exercise.tier} />
+                          {exercise.custom ? <YoursBadge /> : <TierBadge tier={exercise.tier} />}
                         </span>
                         <span className="mt-0.5 block truncate text-[12px] font-medium text-ink-muted">
-                          {exercise.equipment.join(' · ') || 'Bodyweight'} · {exercise.exerciseType}
+                          {exercise.equipment.join(' · ') || 'Bodyweight'}
+                          {exercise.exerciseType ? ` · ${exercise.exerciseType}` : ''}
                         </span>
                       </span>
                       <CategoryTag category={exercise.category} />
                     </button>
                   ))
                 ) : (
-                  <p className="px-1 py-8 text-center text-[14px] font-medium text-ink-muted">
+                  <p className="px-1 pt-8 pb-2 text-center text-[14px] font-medium text-ink-muted">
                     Nothing matches “{query}”. Try a shorter word, or the equipment name.
                   </p>
                 )
@@ -216,14 +244,135 @@ export function AddExerciseFlow({ open, onClose, onAdd }) {
                 Array.from({ length: 6 }, (_, i) => <Skeleton key={i} className="h-[68px]" />)
               )}
             </div>
+
+            {/* The library is 160 exercises and every gym has something it does
+                not. This sits under the results rather than beside the search
+                box: it is the answer when searching did not work, and reads as
+                one only in that position. */}
+            {results ? (
+              <>
+                <Rule className="mt-4" />
+                <button
+                  type="button"
+                  onClick={() => {
+                    setDraft({
+                      name: query.trim(),
+                      category: groupCategories.length === 1 ? groupCategories[0] : '',
+                      equipment: '',
+                    });
+                    setDraftErrors({});
+                    setStage('custom');
+                  }}
+                  className="press flex w-full items-center gap-3 py-4 text-left"
+                >
+                  <Plus size={18} weight="bold" className="shrink-0 text-ink-muted" />
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-[15px] font-semibold">
+                      {query.trim() ? `Add “${query.trim()}” yourself` : 'Add your own exercise'}
+                    </span>
+                    <span className="mt-0.5 block text-[12px] font-medium text-ink-muted">
+                      Not in the library? Put it in yours.
+                    </span>
+                  </span>
+                  <CaretRight size={16} weight="bold" className="shrink-0 text-ink-muted" />
+                </button>
+              </>
+            ) : null}
+          </motion.div>
+        ) : null}
+
+        {stage === 'custom' ? (
+          <motion.div key="custom" {...step} className="pb-6">
+            <Field
+              label="Name"
+              value={draft.name}
+              maxLength={60}
+              autoFocus
+              error={draftErrors.name}
+              placeholder="Landmine press"
+              onChange={(e) => setDraft((d) => ({ ...d, name: e.target.value }))}
+            />
+
+            <div className="mt-5">
+              <div className="caps mb-2.5">Which muscle does it train?</div>
+              <TogglePills
+                options={groupCategories.map((c) => ({ value: c, label: c }))}
+                value={draft.category}
+                onChange={(category) => setDraft((d) => ({ ...d, category }))}
+              />
+              {draftErrors.category ? (
+                <p role="alert" className="mt-2 text-[12px] font-semibold text-danger">
+                  {draftErrors.category}
+                </p>
+              ) : null}
+            </div>
+
+            <div className="mt-5">
+              <Field
+                label="Equipment"
+                hint="Optional. Comma separated, so you can find it by kit later."
+                value={draft.equipment}
+                maxLength={60}
+                placeholder="Barbell, landmine"
+                onChange={(e) => setDraft((d) => ({ ...d, equipment: e.target.value }))}
+              />
+            </div>
+
+            {draftErrors.form ? (
+              <div className="mt-4">
+                <ErrorNote>{draftErrors.form}</ErrorNote>
+              </div>
+            ) : null}
+
+            <p className="mt-5 text-[12px] leading-[1.5] font-medium text-ink-muted">
+              Your own exercises carry no tier — that rating is a judgement about the
+              library's movements, and inventing one for yours would be making it up.
+              Everything else works the same: it is searchable, and its history is
+              tracked across every program you use it in.
+            </p>
+
+            <PillButton
+              className="mt-5"
+              disabled={busy}
+              onClick={async () => {
+                setBusy(true);
+                setDraftErrors({});
+                try {
+                  const { exercise } = await api.post('/catalog/custom', {
+                    name: draft.name,
+                    category: draft.category,
+                    equipment: draft.equipment
+                      .split(',')
+                      .map((x) => x.trim())
+                      .filter(Boolean),
+                  });
+                  setPicked(exercise);
+                  setStage('sets');
+                } catch (err) {
+                  // A name that already exists — the user's or the library's —
+                  // comes back with the existing one attached, so the answer is
+                  // to use it rather than to try again.
+                  if (err.existing) {
+                    setPicked(err.existing);
+                    setStage('sets');
+                  } else {
+                    setDraftErrors({ ...(err.errors || {}), form: err.errors ? null : err.message });
+                  }
+                } finally {
+                  setBusy(false);
+                }
+              }}
+            >
+              {busy ? 'Saving…' : 'Save and continue'}
+            </PillButton>
           </motion.div>
         ) : null}
 
         {stage === 'sets' && picked ? (
           <motion.div key="sets" {...step} className="pb-6">
-            <div className="flex items-center gap-2.5">
+            <div className="flex flex-wrap items-center gap-2.5">
               <CategoryTag category={picked.category} />
-              <TierBadge tier={picked.tier} />
+              {picked.custom ? <YoursBadge /> : <TierBadge tier={picked.tier} />}
               <span className="text-[12px] font-medium text-ink-muted">
                 {picked.equipment.join(' · ') || 'Bodyweight'}
               </span>
@@ -255,7 +404,14 @@ export function AddExerciseFlow({ open, onClose, onAdd }) {
               onClick={async () => {
                 setBusy(true);
                 try {
-                  await onAdd({ exerciseId: picked.id, sets, reps, rpe });
+                  // A custom exercise has no library id, so it is added by
+                  // name and category — the same path the bundled templates
+                  // take, which also ship without ids.
+                  await onAdd(
+                    picked.custom
+                      ? { name: picked.name, category: picked.category, sets, reps, rpe }
+                      : { exerciseId: picked.id, sets, reps, rpe },
+                  );
                   onClose();
                 } finally {
                   setBusy(false);

@@ -359,3 +359,41 @@ export async function putSet(logId, index, set) {
 }
 
 export const deleteLogSets = (logId) => sql`delete from log_sets where log_id = ${logId}`;
+
+// ---------------------------------------------------------------------------
+// Custom exercises
+// ---------------------------------------------------------------------------
+
+const rowToCustom = (r) => ({
+  // Prefixed so a custom id can never be mistaken for a library id, which is a
+  // plain integer. The two are mixed in one search result list.
+  id: r.id,
+  custom: true,
+  slug: r.slug,
+  name: r.name,
+  category: r.category,
+  equipment: r.equipment || [],
+  createdAt: r.created_at instanceof Date ? r.created_at.toISOString() : r.created_at,
+});
+
+export async function listCustomExercises(userId) {
+  const rows = await sql`
+    select * from custom_exercises where user_id = ${userId} order by name`;
+  return rows.map(rowToCustom);
+}
+
+export async function createCustomExercise(exercise) {
+  const rows = await sql`
+    insert into custom_exercises (id, user_id, slug, name, category, equipment)
+    values (${exercise.id}, ${exercise.userId}, ${exercise.slug}, ${exercise.name},
+            ${exercise.category}, ${JSON.stringify(exercise.equipment || [])}::jsonb)
+    on conflict (user_id, slug) do nothing
+    returning *`;
+  return rows.length ? rowToCustom(rows[0]) : null;
+}
+
+export async function deleteCustomExercise(userId, id) {
+  const rows = await sql`
+    delete from custom_exercises where id = ${id} and user_id = ${userId} returning id`;
+  return rows.length > 0;
+}

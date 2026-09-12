@@ -37,7 +37,9 @@ it does.
 
 Pick one of three bundled 8-week programs or build your own week by week. Each
 session holds ordered exercises drawn from a 160-exercise library, each with sets,
-reps, a target RPE, a rest length and a coaching cue.
+reps, a target RPE, a rest length and a coaching cue. When the library does not
+have what your gym does, add your own — it joins your search results and tracks
+history exactly like a bundled one.
 
 Mid-session you get one screen per exercise: three numbers to fill in, with last
 session's values dimmed in place so the comparison needs no arithmetic. Checking

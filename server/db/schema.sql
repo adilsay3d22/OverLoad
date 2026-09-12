@@ -119,3 +119,28 @@ create table if not exists log_sets (
   at         timestamptz,
   primary key (log_id, idx)
 );
+
+-- Exercises a user added themselves, because a 160-entry library will never
+-- cover everyone's gym. These sit alongside the bundled library everywhere it
+-- is searched, and are otherwise identical to it from the app's point of view.
+--
+-- No `tier`: the library's tier is an editorial judgement about how much an
+-- exercise gives back, and inventing one for a user's own movement would be
+-- fabricating a rating nobody made.
+--
+-- `slug` is the name reduced to its tracking key, and it is what `exerciseKey`
+-- derives from, so a custom exercise accumulates history across programs the
+-- same way a library one does. Unique per user, so the same name cannot be
+-- added twice.
+create table if not exists custom_exercises (
+  id         text primary key,
+  user_id    text not null references users(id) on delete cascade,
+  slug       text not null,
+  name       text not null,
+  category   text not null,
+  equipment  jsonb not null default '[]'::jsonb,
+  created_at timestamptz not null default now(),
+  unique (user_id, slug)
+);
+
+create index if not exists custom_exercises_user_idx on custom_exercises (user_id, category);
