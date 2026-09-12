@@ -1,6 +1,6 @@
 # Overload — implementation notes
 
-A working React + Express build of the Overload design handoff. `README.md` is the
+A working React + Express build of the Overload design handoff. `docs/design-handoff.md` is the
 design specification; this file covers how the app runs, how it is put together,
 and which open questions from `requirements.md` were resolved and how.
 

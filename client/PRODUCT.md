@@ -103,8 +103,8 @@ onboarding that explains RPE or the program model, and internationalisation.
 ## Brand Commitments
 
 - The product is named **Overload**.
-- A high-fidelity design handoff exists at the repository root (`README.md`, with
-  the follow-up design session in `requirements.md`) and 23 screen prototypes in
+- A high-fidelity design handoff exists at `docs/design-handoff.md` (with the
+  follow-up design session in `requirements.md`) and 23 screen prototypes in
   `screens/`. The user supplied these as the binding visual specification; they
   are design authority, not suggestions. Their contents belong in DESIGN.md and
   are deliberately not restated here.
@@ -119,8 +119,9 @@ Real, in the repository:
 - `templates.json` — three complete 8-week Jeff Nippard programs (Full Body,
   Upper/Lower, Body Part Split) with per-exercise sets, reps, RPE, rest and form
   cues.
-- `screens/` — 23 prototype screens; `README.md` and `requirements.md` — the
-  design handoff; `APP.md` — how the implementation resolved it.
+- `screens/` — 23 prototype screens; `docs/design-handoff.md` and
+  `requirements.md` — the design handoff; `APP.md` — how the implementation
+  resolved it.
 - `server/scripts/seed.js` — a developer-only fixture. It exists so the analytics
   screens can be worked on; it is never shipped, and a first-time user must see
   genuine empty states.
