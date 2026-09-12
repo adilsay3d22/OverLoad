@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Outfit', system-ui, sans-serif; }
+  a { color: #14150F; }
+  a:hover { color: #6E8A16; }
+  input { font-family: inherit; }
+  input::placeholder { color: #9A9A92; }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 64px 24px; background: #E8E8E6;">
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+    <div style="height: 100%; box-sizing: border-box; position: relative; display: flex; flex-direction: column; background: #FAFAF7;">
+
+      <div style="flex: 1; min-height: 0; overflow-y: auto; padding: 56px 0 40px; display: flex; flex-direction: column;">
+
+        <div style="flex: none; padding: 0 22px; display: flex; align-items: center; gap: 12px;">
+          <button aria-label="Back" style="cursor: pointer; flex: none; width: 38px; height: 38px; border-radius: 50%; background: #FFFFFF; border: 1px solid #EAEAE4; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(20,21,15,0.05); transition: background 140ms ease;" style-hover="background: #F4F4EE;">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10.6 3.8 L5.4 9 L10.6 14.2" stroke="#14150F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+          <div style="display: flex; align-items: center; gap: 7px;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="0.5" y="7" width="2.5" height="6" rx="1" fill="#14150F"></rect><rect x="4" y="4.5" width="4" height="11" rx="1.5" fill="#14150F"></rect><rect x="8.5" y="8.6" width="3" height="2.8" rx="1.4" fill="#14150F"></rect><rect x="12" y="4.5" width="4" height="11" rx="1.5" fill="#14150F"></rect><rect x="17" y="7" width="2.5" height="6" rx="1" fill="#14150F"></rect></svg>
+            <div style="font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #14150F;">Overload</div>
+          </div>
+        </div>
+
+        <div style="flex: none; margin: 30px 22px 0; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: #8A8A82;">WEEK 3 · MONDAY</div>
+
+        <div style="flex: none; margin: 10px 22px 0; display: flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 22px; background: #F2F2EC; border: 1px solid #E6E6DE;">
+          <input type="text" value="Upper Body #1" readonly="{{ true }}" style="flex: 1; min-width: 0; border: none; outline: none; background: transparent; font-size: 26px; font-weight: 700; letter-spacing: -0.03em; color: #14150F;">
+          <svg width="17" height="17" viewBox="0 0 18 18" fill="none" style="flex: none;"><path d="M11.6 2.6 L15.4 6.4 L6.6 15.2 H2.8 V11.4 Z" stroke="#8A8A82" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        </div>
+        <div style="flex: none; margin: 12px 22px 0;">
+          <span style="display: inline-block; padding: 5px 11px; border-radius: 999px; background: #FBEBE6; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #B8401F;">UPPER</span>
+        </div>
+
+        <button style="flex: none; margin: 22px 22px 0; cursor: pointer; height: 56px; border-radius: 28px; border: none; background: #C6F24A; font-family: inherit; font-size: 16px; font-weight: 700; letter-spacing: -0.01em; color: #14150F; box-shadow: 0 10px 24px rgba(150,196,40,0.42); transition: background 160ms ease;" style-hover="background: #B7E634;">Start Session</button>
+
+        <div style="flex: none; margin: 30px 22px 0; display: flex; flex-direction: column; gap: 11px;">
+
+          <div style="box-sizing: border-box; padding: 15px 14px 15px 16px; border-radius: 22px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #E2593A; box-shadow: 0 6px 18px rgba(20,21,15,0.05); display: flex; align-items: center; gap: 12px;">
+            <div style="flex: none; width: 26px; height: 26px; border-radius: 50%; background: #F4F4EE; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #6E6E66;">1</div>
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Bench Press</div>
+                <div style="flex: none; padding: 4px 8px; border-radius: 999px; background: #FBEBE6; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #B8401F;">CHEST</div>
+              </div>
+              <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #8A8A82;">3 × 8-12 reps</div>
+            </div>
+            <button aria-label="Remove Bench Press" style="cursor: pointer; flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid #EAEAE4; background: #FFFFFF; display: flex; align-items: center; justify-content: center; transition: background 140ms ease;" style-hover="background: #F4F4EE;">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 3 L9 9 M9 3 L3 9" stroke="#8A8A82" stroke-width="1.7" stroke-linecap="round"></path></svg>
+            </button>
+          </div>
+
+          <div style="box-sizing: border-box; padding: 15px 14px 15px 16px; border-radius: 22px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #E2593A; box-shadow: 0 6px 18px rgba(20,21,15,0.05); display: flex; align-items: center; gap: 12px;">
+            <div style="flex: none; width: 26px; height: 26px; border-radius: 50%; background: #F4F4EE; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #6E6E66;">2</div>
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Incline DB Press</div>
+                <div style="flex: none; padding: 4px 8px; border-radius: 999px; background: #FBEBE6; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #B8401F;">CHEST</div>
+              </div>
+              <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #8A8A82;">3 × 10-12 reps</div>
+            </div>
+            <button aria-label="Remove Incline DB Press" style="cursor: pointer; flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid #EAEAE4; background: #FFFFFF; display: flex; align-items: center; justify-content: center; transition: background 140ms ease;" style-hover="background: #F4F4EE;">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 3 L9 9 M9 3 L3 9" stroke="#8A8A82" stroke-width="1.7" stroke-linecap="round"></path></svg>
+            </button>
+          </div>
+
+          <div style="box-sizing: border-box; padding: 15px 14px 15px 16px; border-radius: 22px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #C9452A; box-shadow: 0 6px 18px rgba(20,21,15,0.05); display: flex; align-items: center; gap: 12px;">
+            <div style="flex: none; width: 26px; height: 26px; border-radius: 50%; background: #F4F4EE; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #6E6E66;">3</div>
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Barbell Row</div>
+                <div style="flex: none; padding: 4px 8px; border-radius: 999px; background: #F8E5E1; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #9E3520;">BACK</div>
+              </div>
+              <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #8A8A82;">4 × 6-10 reps</div>
+            </div>
+            <button aria-label="Remove Barbell Row" style="cursor: pointer; flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid #EAEAE4; background: #FFFFFF; display: flex; align-items: center; justify-content: center; transition: background 140ms ease;" style-hover="background: #F4F4EE;">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 3 L9 9 M9 3 L3 9" stroke="#8A8A82" stroke-width="1.7" stroke-linecap="round"></path></svg>
+            </button>
+          </div>
+
+          <div style="box-sizing: border-box; padding: 15px 14px 15px 16px; border-radius: 22px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #D99518; box-shadow: 0 6px 18px rgba(20,21,15,0.05); display: flex; align-items: center; gap: 12px;">
+            <div style="flex: none; width: 26px; height: 26px; border-radius: 50%; background: #F4F4EE; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #6E6E66;">4</div>
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Overhead Press</div>
+                <div style="flex: none; padding: 4px 8px; border-radius: 999px; background: #FAEFD8; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #97650C;">SHOULDERS</div>
+              </div>
+              <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #8A8A82;">3 × 8-10 reps</div>
+            </div>
+            <button aria-label="Remove Overhead Press" style="cursor: pointer; flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid #EAEAE4; background: #FFFFFF; display: flex; align-items: center; justify-content: center; transition: background 140ms ease;" style-hover="background: #F4F4EE;">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 3 L9 9 M9 3 L3 9" stroke="#8A8A82" stroke-width="1.7" stroke-linecap="round"></path></svg>
+            </button>
+          </div>
+
+          <div style="box-sizing: border-box; padding: 15px 14px 15px 16px; border-radius: 22px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #EE8A6E; box-shadow: 0 6px 18px rgba(20,21,15,0.05); display: flex; align-items: center; gap: 12px;">
+            <div style="flex: none; width: 26px; height: 26px; border-radius: 50%; background: #F4F4EE; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #6E6E66;">5</div>
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Cable Curl</div>
+                <div style="flex: none; padding: 4px 8px; border-radius: 999px; background: #FCEDE8; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #B25A3C;">ARMS</div>
+              </div>
+              <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #8A8A82;">3 × 12-15 reps</div>
+            </div>
+            <button aria-label="Remove Cable Curl" style="cursor: pointer; flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid #EAEAE4; background: #FFFFFF; display: flex; align-items: center; justify-content: center; transition: background 140ms ease;" style-hover="background: #F4F4EE;">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 3 L9 9 M9 3 L3 9" stroke="#8A8A82" stroke-width="1.7" stroke-linecap="round"></path></svg>
+            </button>
+          </div>
+
+        </div>
+
+        <button style="flex: none; margin: 22px 22px 0; cursor: pointer; height: 52px; border-radius: 26px; background: transparent; border: 1.5px solid #DCDCD2; font-family: inherit; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: #4C4C46; transition: background 140ms ease;" style-hover="background: #F4F4EE;">Edit Upper Body #1</button>
+
+        <div style="flex: none; margin: 16px 22px 0; padding: 18px; border-radius: 24px; background: #F5F5F0; border: 1px solid #EDEDE7;">
+          <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; color: #A6A69E;">ADD AN EXERCISE</div>
+          <div style="margin-top: 12px; display: flex; align-items: center; gap: 10px; height: 46px; padding: 0 16px; border-radius: 23px; background: #FBFBF7; border: 1px solid #E9E9E1;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex: none;"><circle cx="7" cy="7" r="4.6" stroke="#C0C0B8" stroke-width="1.6"></circle><path d="M10.5 10.5 L13.6 13.6" stroke="#C0C0B8" stroke-width="1.6" stroke-linecap="round"></path></svg>
+            <div style="font-size: 14px; font-weight: 500; color: #B4B4AC;">Search exercises</div>
+          </div>
+          <div style="margin-top: 10px; display: flex; gap: 7px;">
+            <div style="height: 26px; width: 62px; border-radius: 999px; background: #EDEDE6;"></div>
+            <div style="height: 26px; width: 78px; border-radius: 999px; background: #EDEDE6;"></div>
+            <div style="height: 26px; width: 54px; border-radius: 999px; background: #EDEDE6;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:1000}}"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; font-family: 'Outfit', system-ui, sans-serif; }
+  a { color: #14150F; text-decoration: none; }
+  a:hover { color: #6E8A16; }
+  input { font-family: inherit; }
+  input::placeholder { color: #9A9A92; }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 64px 24px; background: #E8E8E6;">
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+    <div style="height: 100%; box-sizing: border-box; overflow: hidden; display: flex; flex-direction: column; padding: 56px 26px 32px; background: #FFFFFF;">
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button aria-label="Back" style="cursor: pointer; width: 40px; height: 40px; flex: none; border-radius: 50%; background: #F4F4F0; border: 1px solid #EAEAE4; display: flex; align-items: center; justify-content: center; transition: background 160ms ease;" style-hover="background: #EBEBE4;">
+          <svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M11 3.5 L5 9 L11 14.5" stroke="#14150F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </button>
+        <div style="display: flex; align-items: center; gap: 7px;">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="0.5" y="7" width="2.5" height="6" rx="1" fill="#14150F" /><rect x="4" y="4.5" width="4" height="11" rx="1.5" fill="#14150F" /><rect x="8.5" y="8.6" width="3" height="2.8" rx="1.4" fill="#14150F" /><rect x="12" y="4.5" width="4" height="11" rx="1.5" fill="#14150F" /><rect x="17" y="7" width="2.5" height="6" rx="1" fill="#14150F" /></svg>
+          <div style="font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #14150F;">Overload</div>
+        </div>
+      </div>
+
+      <div style="padding: 44px 0 34px;">
+        <h1 style="margin: 0 0 10px; font-size: 34px; line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; color: #14150F;">Welcome back</h1>
+        <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4C4C46;">Log in to pick up where you left off.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 11px; height: 58px; padding: 0 20px; border-radius: 29px; background: #F7F7F3; border: 1px solid #EAEAE4;">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="flex: none;"><rect x="2" y="4.5" width="16" height="11" rx="2.5" stroke="#6E6E66" stroke-width="1.6" /><path d="M3 6.5 L10 11 L17 6.5" stroke="#6E6E66" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          <input type="email" placeholder="Email" style="flex: 1; min-width: 0; border: none; outline: none; background: transparent; font-size: 16px; font-weight: 500; color: #14150F;" />
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 11px; height: 58px; padding: 0 20px; border-radius: 29px; background: #F7F7F3; border: 1px solid #EAEAE4;">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="flex: none;"><rect x="3.5" y="8.5" width="13" height="9" rx="2.5" stroke="#6E6E66" stroke-width="1.6" /><path d="M6.5 8.5 V6.2 A3.5 3.5 0 0 1 13.5 6.2 V8.5" stroke="#6E6E66" stroke-width="1.6" stroke-linecap="round" /></svg>
+          <input type="{{ passwordType }}" placeholder="Password" value="{{ passwordValue }}" readonly="{{ true }}" style="flex: 1; min-width: 0; border: none; outline: none; background: transparent; font-size: 16px; font-weight: 500; letter-spacing: 0.06em; color: #14150F;" />
+          <button aria-label="Toggle password visibility" onClick="{{ toggleReveal }}" style="cursor: pointer; flex: none; border: none; background: transparent; padding: 6px; display: flex; align-items: center; justify-content: center;">
+            <sc-if value="{{ revealed }}" hint-placeholder-val="{{ false }}">
+              <svg width="19" height="19" viewBox="0 0 20 20" fill="none"><path d="M1.5 10 C4 5.5 6.8 3.5 10 3.5 C13.2 3.5 16 5.5 18.5 10 C16 14.5 13.2 16.5 10 16.5 C6.8 16.5 4 14.5 1.5 10Z" stroke="#6E6E66" stroke-width="1.6" /><circle cx="10" cy="10" r="2.6" stroke="#6E6E66" stroke-width="1.6" /></svg>
+            </sc-if>
+            <sc-if value="{{ hidden }}" hint-placeholder-val="{{ true }}">
+              <svg width="19" height="19" viewBox="0 0 20 20" fill="none"><path d="M1.5 10 C4 5.5 6.8 3.5 10 3.5 C13.2 3.5 16 5.5 18.5 10 C16 14.5 13.2 16.5 10 16.5 C6.8 16.5 4 14.5 1.5 10Z" stroke="#6E6E66" stroke-width="1.6" /><circle cx="10" cy="10" r="2.6" stroke="#6E6E66" stroke-width="1.6" /><path d="M3.5 16.5 L16.5 3.5" stroke="#6E6E66" stroke-width="1.6" stroke-linecap="round" /></svg>
+            </sc-if>
+          </button>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end;">
+          <a href="#" style="font-size: 13px; font-weight: 500; color: #4C4C46; padding: 4px 2px;">Forgot password?</a>
+        </div>
+      </div>
+
+      <div style="padding-top: 28px;">
+        <button style="width: 100%; border: none; cursor: pointer; font-family: inherit; height: 58px; border-radius: 29px; background: #C6F24A; color: #14150F; font-size: 17px; font-weight: 600; box-shadow: 0 10px 24px rgba(150,196,40,0.38), 0 2px 6px rgba(20,21,15,0.08); transition: background 160ms ease, box-shadow 160ms ease;" style-hover="background: #B7E634; box-shadow: 0 12px 28px rgba(150,196,40,0.46), 0 2px 6px rgba(20,21,15,0.1);">Log in</button>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 14px; padding: 24px 0;">
+        <div style="flex: 1; height: 1px; background: #EAEAE4;"></div>
+        <div style="font-size: 13px; font-weight: 500; color: #8A8A82;">or</div>
+        <div style="flex: 1; height: 1px; background: #EAEAE4;"></div>
+      </div>
+
+      <button style="width: 100%; cursor: pointer; font-family: inherit; height: 58px; border-radius: 29px; background: #FFFFFF; border: 1px solid #DEDED6; color: #14150F; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 4px 14px rgba(20,21,15,0.06); transition: border-color 160ms ease, box-shadow 160ms ease;" style-hover="border-color: #14150F; box-shadow: 0 6px 18px rgba(20,21,15,0.09);">
+        <svg width="19" height="19" viewBox="0 0 18 18"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.62Z" /><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.8.54-1.84.86-3.04.86-2.34 0-4.32-1.58-5.03-3.7H.96v2.34A9 9 0 0 0 9 18Z" /><path fill="#FBBC05" d="M3.97 10.72a5.4 5.4 0 0 1 0-3.44V4.94H.96a9 9 0 0 0 0 8.12l3.01-2.34Z" /><path fill="#EA4335" d="M9 3.58c1.32 0 2.5.46 3.44 1.35l2.58-2.58C13.46.89 11.43 0 9 0A9 9 0 0 0 .96 4.94l3.01 2.34C4.68 5.16 6.66 3.58 9 3.58Z" /></svg>
+        Continue with Google
+      </button>
+
+      <div style="flex: 1; min-height: 16px;"></div>
+
+      <div style="display: flex; align-items: center; justify-content: center; gap: 5px; min-height: 48px; font-size: 14px; font-weight: 400; color: #4C4C46;">Don't have an account? <a href="#" style="font-weight: 700; padding: 6px 4px;">Create one</a></div>
+    </div>
+  </x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:1000},&quot;passwordValue&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;benchpress25&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { revealed: false };
+  renderVals() {
+    const r = this.state.revealed;
+    return {
+      revealed: r,
+      hidden: !r,
+      passwordType: r ? 'text' : 'password',
+      passwordValue: this.props.passwordValue ?? 'benchpress25',
+      toggleReveal: () => this.setState(s => ({ revealed: !s.revealed })),
+      true: true,
+      false: false,
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Outfit', system-ui, sans-serif; }
+  a { color: #14150F; }
+  a:hover { color: #6E8A16; }
+  input { font-family: inherit; }
+  input::placeholder { color: #A6A69E; }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 64px 24px; background: #E8E8E6;">
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+    <div style="height: 100%; box-sizing: border-box; position: relative; display: flex; flex-direction: column; background: #FAFAF7; overflow: hidden;">
+
+      <sc-if value="{{ restActive }}" hint-placeholder-val="{{ true }}">
+      <div style="position: absolute; left: 18px; right: 18px; top: 198px; z-index: 5; padding: 14px 16px; border-radius: 36px; background: #C6F24A; box-shadow: 0 16px 34px rgba(20,21,15,0.2), 0 4px 12px rgba(150,196,40,0.45); display: flex; align-items: center; gap: 12px;">
+        <button aria-label="Subtract 15 seconds" onClick="{{ minus15 }}" style="cursor: pointer; flex: none; width: 44px; height: 44px; border-radius: 50%; border: none; background: #FFFFFF; font-family: inherit; font-size: 11px; font-weight: 700; color: #14150F; box-shadow: 0 2px 6px rgba(20,21,15,0.12); transition: background 140ms ease;" style-hover="background: #F2F7E0;">−15s</button>
+        <div style="flex: 1; min-width: 0; text-align: center; padding: 2px 0;">
+          <div style="font-size: 28px; line-height: 1.1; font-weight: 700; letter-spacing: -0.03em; color: #14150F; font-variant-numeric: tabular-nums;">{{ restLabel }}</div>
+          <div style="padding-top: 4px; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; color: #4E6011;">RESTING</div>
+        </div>
+        <button aria-label="Add 15 seconds" onClick="{{ plus15 }}" style="cursor: pointer; flex: none; width: 44px; height: 44px; border-radius: 50%; border: none; background: #FFFFFF; font-family: inherit; font-size: 11px; font-weight: 700; color: #14150F; box-shadow: 0 2px 6px rgba(20,21,15,0.12); transition: background 140ms ease;" style-hover="background: #F2F7E0;">+15s</button>
+        <div style="flex: none; width: 1px; height: 24px; margin-left: 6px; background: rgba(20,21,15,0.16);"></div>
+        <button onClick="{{ skipRest }}" style="cursor: pointer; flex: none; padding: 0 6px 0 2px; border: none; background: transparent; font-family: inherit; font-size: 12px; font-weight: 700; color: #4E6011; transition: color 140ms ease;" style-hover="color: #14150F;">Skip</button>
+      </div>
+      </sc-if>
+
+      <div style="flex: 1; min-height: 0; overflow-y: auto; padding: 56px 0 40px; display: flex; flex-direction: column;">
+
+        <div style="flex: none; padding: 0 22px; display: flex; align-items: center; gap: 12px;">
+          <button aria-label="Back to session" style="cursor: pointer; flex: none; width: 38px; height: 38px; border-radius: 50%; background: #FFFFFF; border: 1px solid #EAEAE4; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(20,21,15,0.05); transition: background 140ms ease;" style-hover="background: #F4F4EE;">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10.6 3.8 L5.4 9 L10.6 14.2" stroke="#14150F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+          <div style="flex: 1; min-width: 0; text-align: center; font-size: 12px; font-weight: 500; color: #8A8A82;">Exercise 1 of 9</div>
+          <div style="flex: none; width: 38px;"></div>
+        </div>
+
+        <h1 style="margin: 26px 0 0; flex: none; padding: 0 22px; font-size: 30px; line-height: 1.1; letter-spacing: -0.03em; font-weight: 700; color: #14150F;">Barbell Bench Press</h1>
+        <div style="flex: none; margin: 12px 22px 0;">
+          <span style="display: inline-block; padding: 5px 11px; border-radius: 999px; background: #FBEBE6; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #B8401F;">CHEST</span>
+        </div>
+
+        <sc-if value="{{ restActive }}" hint-placeholder-val="{{ true }}">
+        <div style="flex: none; height: 56px;"></div>
+        </sc-if>
+        <div style="flex: none; margin: 22px 22px 0; padding: 18px 18px 16px; border-radius: 26px; background: #FFFFFF; border: 1px solid #EFEFE9; box-shadow: 0 6px 18px rgba(20,21,15,0.05);">
+          <div style="display: flex; gap: 14px;">
+            <div style="flex: 1; min-width: 0;">
+              <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; color: #8A8A82; text-align: center;">FRONT</div>
+              <div style="margin-top: 10px;"><svg viewBox="0 0 100 192" width="100%" style="display: block;">
+              <g fill="#C6F24A">
+                <path d="M49 36.4 C45 34.6 39.4 33.5 35.6 34.6 C33.8 36.5 33.5 39.7 34.6 42.5 C38.2 47.6 43.6 50.6 49 51 C49.4 46 49.4 41 49 36.4 Z"></path>
+                <path d="M51 36.4 C55 34.6 60.6 33.5 64.4 34.6 C66.2 36.5 66.5 39.7 65.4 42.5 C61.8 47.6 56.4 50.6 51 51 C50.6 46 50.6 41 51 36.4 Z"></path>
+                <g fill-opacity="0.45">
+                  <path d="M34.5 31.5 C29 32.5 25.5 35.5 25 40 C28.5 42.5 33 41.5 35.5 38 Z"></path>
+                  <path d="M65.5 31.5 C71 32.5 74.5 35.5 75 40 C71.5 42.5 67 41.5 64.5 38 Z"></path>
+                  <path d="M25 44.5 C21.5 46 20.5 51.5 21.5 57 C22.5 61 26 61.5 28 58 C29 52 28 46.5 25 44.5 Z"></path>
+                  <path d="M75 44.5 C78.5 46 79.5 51.5 78.5 57 C77.5 61 74 61.5 72 58 C71 52 72 46.5 75 44.5 Z"></path>
+                </g>
+                <g fill-opacity="0.16">
+                  <path d="M43 56.6 C41.6 58.6 41.2 63 41.4 68 C41.8 75 43 82 45.4 86.6 C48 88 52 88 54.6 86.6 C57 82 58.2 75 58.6 68 C58.8 63 58.4 58.6 57 56.6 C52.5 55.7 47.5 55.7 43 56.6 Z"></path>
+                </g>
+              </g>
+              <g fill="none" stroke="#14150F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="50" cy="14" r="9"></circle>
+                <path d="M45 22.5 L45 30"></path>
+                <path d="M55 22.5 L55 30"></path>
+                <path d="M34 31 C40 29 60 29 66 31 L69 58 C68 74 66 86 64 95 L36 95 C34 86 32 74 31 58 Z"></path>
+                <path d="M34 31 C27 33 24 36 23 40 L19 66 C18 74 18 82 19 90"></path>
+                <path d="M66 31 C73 33 76 36 77 40 L81 66 C82 74 82 82 81 90"></path>
+                <path d="M36 95 C34 120 34 155 36 184 L46 184 C47 155 48 125 49 96"></path>
+                <path d="M64 95 C66 120 66 155 64 184 L54 184 C53 155 52 125 51 96"></path>
+              </g>
+            </svg></div>
+            </div>
+            <div style="flex: none; width: 1px; background: #F2F2EC;"></div>
+            <div style="flex: 1; min-width: 0;">
+              <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; color: #8A8A82; text-align: center;">BACK</div>
+              <div style="margin-top: 10px;"><svg viewBox="0 0 100 192" width="100%" style="display: block;">
+              <g fill="#C6F24A">
+                <g fill-opacity="0.45">
+                  <path d="M34.5 31.5 C29 32.5 25.5 35.5 25 40 C28.5 42.5 33 41.5 35.5 38 Z"></path>
+                  <path d="M65.5 31.5 C71 32.5 74.5 35.5 75 40 C71.5 42.5 67 41.5 64.5 38 Z"></path>
+                  <path d="M24.5 44 C21 46 20 52 21 58.5 C22 62.5 25.5 63 27.5 59 C28.5 53 27.5 45.5 24.5 44 Z"></path>
+                  <path d="M75.5 44 C79 46 80 52 79 58.5 C78 62.5 74.5 63 72.5 59 C71.5 53 72.5 45.5 75.5 44 Z"></path>
+                </g>
+                <g fill-opacity="0.16">
+                  <path d="M40 31 C46 29 54 29 60 31 C58 38 55 42.5 50 43.5 C45 42.5 42 38 40 31 Z"></path>
+                  <path d="M35.6 45.6 C33.2 52 34.4 63 38 71.6 C41.4 74 44.6 71.4 45.6 66 C46.2 58.6 46 51.6 45.2 46.8 C42 44.6 37.9 44 35.6 45.6 Z"></path>
+                  <path d="M64.4 45.6 C66.8 52 65.6 63 62 71.6 C58.6 74 55.4 71.4 54.4 66 C53.8 58.6 54 51.6 54.8 46.8 C58 44.6 62.1 44 64.4 45.6 Z"></path>
+                </g>
+              </g>
+              <g fill="none" stroke="#14150F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="50" cy="14" r="9"></circle>
+                <path d="M45 22.5 L45 30"></path>
+                <path d="M55 22.5 L55 30"></path>
+                <path d="M34 31 C40 29 60 29 66 31 L69 58 C68 74 66 86 64 95 L36 95 C34 86 32 74 31 58 Z"></path>
+                <path d="M34 31 C27 33 24 36 23 40 L19 66 C18 74 18 82 19 90"></path>
+                <path d="M66 31 C73 33 76 36 77 40 L81 66 C82 74 82 82 81 90"></path>
+                <path d="M36 95 C34 120 34 155 36 184 L46 184 C47 155 48 125 49 96"></path>
+                <path d="M64 95 C66 120 66 155 64 184 L54 184 C53 155 52 125 51 96"></path>
+                <path d="M50 32 L50 94"></path>
+              </g>
+            </svg></div>
+            </div>
+          </div>
+          <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid #F2F2EC; display: flex; justify-content: center; gap: 18px;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <div style="width: 9px; height: 9px; border-radius: 50%; background: #C6F24A;"></div>
+              <div style="font-size: 11px; font-weight: 500; color: #6E6E66;">Primary</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <div style="width: 9px; height: 9px; border-radius: 50%; background: rgba(198,242,74,0.45);"></div>
+              <div style="font-size: 11px; font-weight: 500; color: #6E6E66;">Secondary</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <div style="width: 9px; height: 9px; border-radius: 50%; background: rgba(198,242,74,0.18); border: 1px solid #E4E4DA;"></div>
+              <div style="font-size: 11px; font-weight: 500; color: #6E6E66;">Tertiary</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex: none; margin: 14px 22px 0; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: #8A8A82;">SESSION TARGET</div>
+        <div style="flex: none; margin: 10px 22px 0; padding: 16px; border-radius: 26px; background: #FFFFFF; border: 1px solid #EFEFE9; box-shadow: 0 6px 18px rgba(20,21,15,0.05); display: flex; gap: 10px;">
+            <div style="flex: 1; min-width: 0; padding: 14px 10px; border-radius: 18px; background: #F7F7F3; border: 1px solid #EAEAE2; text-align: center;">
+              <div style="font-size: 24px; font-weight: 700; letter-spacing: -0.03em; color: #14150F;">3</div>
+              <div style="padding-top: 3px; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; color: #6E6E66;">SETS</div>
+            </div>
+            <div style="flex: 1; min-width: 0; padding: 14px 10px; border-radius: 18px; background: #F7F7F3; border: 1px solid #EAEAE2; text-align: center;">
+              <div style="font-size: 24px; font-weight: 700; letter-spacing: -0.03em; color: #14150F;">5</div>
+              <div style="padding-top: 3px; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; color: #6E6E66;">REPS</div>
+            </div>
+            <div style="flex: 1; min-width: 0; padding: 14px 10px; border-radius: 18px; background: #F7F7F3; border: 1px solid #EAEAE2; text-align: center;">
+              <div style="font-size: 24px; font-weight: 700; letter-spacing: -0.03em; color: #14150F;">7</div>
+              <div style="padding-top: 3px; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; color: #6E6E66;">RPE</div>
+            </div>
+        </div>
+
+        <sc-if value="{{ hasCue }}" hint-placeholder-val="{{ true }}">
+        <div style="flex: none; margin: 26px 22px 0; padding: 18px; border-radius: 26px; background: #FFFFFF; border: 1px solid #EFEFE9; box-shadow: 0 6px 18px rgba(20,21,15,0.05);">
+          <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; color: #8A8A82;">COACHING CUE</div>
+          <div style="padding-top: 9px; font-size: 14px; line-height: 1.5; font-weight: 500; color: #14150F; text-wrap: pretty;">Tuck elbows 45°, squeeze shoulder blades, stay firm on bench</div>
+        </div>
+        </sc-if>
+
+        <div style="flex: none; margin: 26px 22px 0; padding: 18px 16px; border-radius: 26px; background: #FFFFFF; border: 1px solid #EFEFE9; box-shadow: 0 6px 18px rgba(20,21,15,0.05);">
+          <div style="display: flex; align-items: center; gap: 8px; padding: 0 0 12px;">
+            <div style="flex: none; width: 22px;"></div>
+            <div style="flex: 1.3; min-width: 0; text-align: center; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; color: #6E6E66;">WEIGHT KG</div>
+            <div style="flex: 1; min-width: 0; text-align: center; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; color: #6E6E66;">REPS</div>
+            <div style="flex: 1; min-width: 0; text-align: center; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; color: #6E6E66;">RPE</div>
+            <div style="flex: none; width: 34px;"></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="flex: none; width: 22px; font-size: 11px; font-weight: 700; color: #6E6E66;">S1</div>
+              <div style="flex: 1.3; min-width: 0; height: 42px; border-radius: 14px; background: #F7F7F3; border: 1px solid #E4E4DA; display: flex; align-items: center; justify-content: center;">
+                <input type="number" value="5" placeholder="Weight" readonly="{{ true }}" style="width: 100%; border: none; outline: none; background: transparent; text-align: center; font-size: 15px; font-weight: 700; color: #14150F;">
+              </div>
+              <div style="flex: 1; min-width: 0; height: 42px; border-radius: 14px; background: #F7F7F3; border: 1px solid #E4E4DA; display: flex; align-items: center; justify-content: center;">
+                <input type="number" value="5" placeholder="Reps" readonly="{{ true }}" style="width: 100%; border: none; outline: none; background: transparent; text-align: center; font-size: 15px; font-weight: 700; color: #14150F;">
+              </div>
+              <div style="flex: 1; min-width: 0; height: 42px; border-radius: 14px; background: #F7F7F3; border: 1px solid #E4E4DA; display: flex; align-items: center; justify-content: center;">
+                <input type="number" value="7" placeholder="RPE" readonly="{{ true }}" style="width: 100%; border: none; outline: none; background: transparent; text-align: center; font-size: 15px; font-weight: 700; color: #14150F;">
+              </div>
+              <button aria-label="Set complete" style="cursor: pointer; flex: none; width: 34px; height: 34px; border-radius: 50%; border: none; background: #C6F24A; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(150,196,40,0.4);"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.4 L6.4 11.3 L12.5 5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="flex: none; width: 22px; font-size: 11px; font-weight: 700; color: #6E6E66;">S2</div>
+              <div style="flex: 1.3; min-width: 0; height: 42px; border-radius: 14px; background: #F7F7F3; border: 1px solid #E4E4DA; display: flex; align-items: center; justify-content: center;">
+                <input type="number" value="5.5" placeholder="Weight" readonly="{{ true }}" style="width: 100%; border: none; outline: none; background: transparent; text-align: center; font-size: 15px; font-weight: 700; color: #14150F;">
+              </div>
+              <div style="flex: 1; min-width: 0; height: 42px; border-radius: 14px; background: #F7F7F3; border: 1px solid #E4E4DA; display: flex; align-items: center; justify-content: center;">
+                <input type="number" value="5" placeholder="Reps" readonly="{{ true }}" style="width: 100%; border: none; outline: none; background: transparent; text-align: center; font-size: 15px; font-weight: 700; color: #14150F;">
+              </div>
+              <div style="flex: 1; min-width: 0; height: 42px; border-radius: 14px; background: #F7F7F3; border: 1px solid #E4E4DA; display: flex; align-items: center; justify-content: center;">
+                <input type="number" value="8" placeholder="RPE" readonly="{{ true }}" style="width: 100%; border: none; outline: none; background: transparent; text-align: center; font-size: 15px; font-weight: 700; color: #14150F;">
+              </div>
+              <button aria-label="Set complete" style="cursor: pointer; flex: none; width: 34px; height: 34px; border-radius: 50%; border: none; background: #C6F24A; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(150,196,40,0.4);"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.4 L6.4 11.3 L12.5 5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="flex: none; width: 22px; font-size: 11px; font-weight: 700; color: #6E6E66;">S3</div>
+              <div style="flex: 1.3; min-width: 0; height: 42px; border-radius: 14px; background: #FCFCF8; border: 1px solid #EAEAE2; display: flex; align-items: center; justify-content: center;">
+                <input type="number" value="" placeholder="Weight" readonly="{{ true }}" style="width: 100%; border: none; outline: none; background: transparent; text-align: center; font-size: 15px; font-weight: 500; color: #14150F;">
+              </div>
+              <div style="flex: 1; min-width: 0; height: 42px; border-radius: 14px; background: #FCFCF8; border: 1px solid #EAEAE2; display: flex; align-items: center; justify-content: center;">
+                <input type="number" value="" placeholder="Reps" readonly="{{ true }}" style="width: 100%; border: none; outline: none; background: transparent; text-align: center; font-size: 15px; font-weight: 500; color: #14150F;">
+              </div>
+              <div style="flex: 1; min-width: 0; height: 42px; border-radius: 14px; background: #FCFCF8; border: 1px solid #EAEAE2; display: flex; align-items: center; justify-content: center;">
+                <input type="number" value="" placeholder="RPE" readonly="{{ true }}" style="width: 100%; border: none; outline: none; background: transparent; text-align: center; font-size: 15px; font-weight: 500; color: #14150F;">
+              </div>
+              <button aria-label="Mark set complete" onClick="{{ startRest }}" style="cursor: pointer; flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #DEDED4; background: #FFFFFF; display: flex; align-items: center; justify-content: center; transition: background 140ms ease;" style-hover="background: #F4F4EE;"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.4 L6.4 11.3 L12.5 5" stroke="#C8C8C0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex: none; margin: 26px 22px 0; padding: 18px 16px 16px; border-radius: 26px; background: #FFFFFF; border: 1px solid #EFEFE9; box-shadow: 0 6px 18px rgba(20,21,15,0.05);">
+          <div style="display: flex; gap: 7px;">
+            <div style="padding: 7px 16px; border-radius: 999px; background: #C6F24A; font-size: 12px; font-weight: 700; color: #14150F; box-shadow: 0 3px 10px rgba(150,196,40,0.32);">Wt</div>
+            <div style="padding: 7px 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E6E6DE; font-size: 12px; font-weight: 600; color: #4C4C46;">Reps</div>
+            <div style="padding: 7px 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E6E6DE; font-size: 12px; font-weight: 600; color: #4C4C46;">Vol</div>
+          </div>
+          <svg viewBox="0 0 300 150" width="100%" style="display: block; margin-top: 14px; overflow: visible;">
+            <defs>
+              <linearGradient id="ovlFocusFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#C6F24A" stop-opacity="0.42"></stop>
+                <stop offset="100%" stop-color="#C6F24A" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+            <line x1="30" y1="24" x2="292" y2="24" stroke="#F2F2EC" stroke-width="1"></line>
+            <line x1="30" y1="62" x2="292" y2="62" stroke="#F2F2EC" stroke-width="1"></line>
+            <line x1="30" y1="100" x2="292" y2="100" stroke="#F2F2EC" stroke-width="1"></line>
+            <line x1="30" y1="122" x2="292" y2="122" stroke="#EDEDE5" stroke-width="1"></line>
+            <text x="24" y="28" text-anchor="end" font-size="9.5" font-weight="600" fill="#A5A59D">6</text>
+            <text x="24" y="66" text-anchor="end" font-size="9.5" font-weight="600" fill="#A5A59D">5</text>
+            <text x="24" y="104" text-anchor="end" font-size="9.5" font-weight="600" fill="#A5A59D">4</text>
+            <path d="M42 104 L88 96 L134 81 L180 74 L226 62 L272 43 L272 122 L42 122 Z" fill="url(#ovlFocusFill)"></path>
+            <path d="M42 104 L88 96 L134 81 L180 74 L226 62 L272 43" stroke="#B9E63F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+            <circle cx="42" cy="104" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="88" cy="96" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="134" cy="81" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="180" cy="74" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="226" cy="62" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="272" cy="43" r="4.6" fill="#B9E63F" stroke="#FFFFFF" stroke-width="2.4"></circle>
+            <text x="42" y="140" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A5A59D">W1</text>
+            <text x="88" y="140" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A5A59D">W2</text>
+            <text x="134" y="140" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A5A59D">W3</text>
+            <text x="180" y="140" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A5A59D">W4</text>
+            <text x="226" y="140" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A5A59D">W5</text>
+            <text x="272" y="140" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A5A59D">W6</text>
+          </svg>
+          <div style="padding-top: 6px; font-size: 12px; font-weight: 500; color: #6E6E66;">Best: 5.5kg · Est. 1RM: ~6kg</div>
+        </div>
+
+        <button style="flex: none; margin: 30px 22px 0; cursor: pointer; height: 58px; border-radius: 29px; border: none; background: #C6F24A; font-family: inherit; font-size: 16px; font-weight: 700; letter-spacing: -0.01em; color: #14150F; box-shadow: 0 10px 24px rgba(150,196,40,0.42); transition: background 160ms ease;" style-hover="background: #B7E634;">{{ ctaLabel }}</button>
+      </div>
+    </div>
+  </x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:1000},&quot;coachingCue&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;lastExercise&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showRestTimer&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Rest timer&quot;},&quot;restSeconds&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:92,&quot;min&quot;:30,&quot;max&quot;:300,&quot;step&quot;:15,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Rest timer&quot;}}">class Component extends DCLogic {
+  state = { remaining: 92, running: true };
+
+  componentDidMount() {
+    this.iv = setInterval(() => {
+      this.setState(s => (s.running && s.remaining > 0 ? { remaining: s.remaining - 1 } : (s.running ? { running: false } : null)));
+    }, 1000);
+  }
+  componentWillUnmount() { clearInterval(this.iv); }
+
+  fmt(t) {
+    const m = Math.floor(t / 60), s = t % 60;
+    return m + ':' + String(s).padStart(2, '0');
+  }
+
+  renderVals() {
+    const target = Number(this.props.restSeconds) || 92;
+    return {
+      hasCue: this.props.coachingCue !== false,
+      ctaLabel: this.props.lastExercise === true ? 'Finish Session' : 'Next Exercise',
+      restActive: this.props.showRestTimer !== false && this.state.running,
+      restLabel: this.fmt(this.state.remaining),
+      minus15: () => this.setState(s => ({ remaining: Math.max(0, s.remaining - 15) })),
+      plus15: () => this.setState(s => ({ remaining: s.remaining + 15 })),
+      skipRest: () => this.setState({ running: false }),
+      startRest: () => this.setState({ remaining: target, running: true })
+    };
+  }
+}</script>
+</body>
+</html>

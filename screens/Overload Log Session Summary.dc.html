@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Outfit', system-ui, sans-serif; }
+  a { color: #14150F; }
+  a:hover { color: #6E8A16; }
+  input { font-family: inherit; }
+  input::placeholder { color: #A6A69E; }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 64px 24px; background: #E8E8E6;">
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+    <div style="height: 100%; box-sizing: border-box; position: relative; display: flex; flex-direction: column; background: #FAFAF7;">
+
+      <div style="flex: 1; min-height: 0; overflow-y: auto; padding: 56px 0 40px; display: flex; flex-direction: column;">
+
+        <div style="flex: none; padding: 0 22px; display: flex; align-items: center; gap: 12px;">
+          <button aria-label="Back" style="cursor: pointer; flex: none; width: 38px; height: 38px; border-radius: 50%; background: #FFFFFF; border: 1px solid #EAEAE4; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(20,21,15,0.05); transition: background 140ms ease;" style-hover="background: #F4F4EE;">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10.6 3.8 L5.4 9 L10.6 14.2" stroke="#14150F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+          <div style="display: flex; align-items: center; gap: 7px;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="0.5" y="7" width="2.5" height="6" rx="1" fill="#14150F"></rect><rect x="4" y="4.5" width="4" height="11" rx="1.5" fill="#14150F"></rect><rect x="8.5" y="8.6" width="3" height="2.8" rx="1.4" fill="#14150F"></rect><rect x="12" y="4.5" width="4" height="11" rx="1.5" fill="#14150F"></rect><rect x="17" y="7" width="2.5" height="6" rx="1" fill="#14150F"></rect></svg>
+            <div style="font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #14150F;">Overload</div>
+          </div>
+        </div>
+
+        <div style="flex: none; margin: 30px 22px 0; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: #8A8A82;">WEEK 3 · LOGGING</div>
+        <div style="flex: none; margin: 6px 22px 0; display: flex; align-items: center; gap: 10px;">
+          <h1 style="margin: 0; font-size: 30px; line-height: 1.1; letter-spacing: -0.03em; font-weight: 700; color: #14150F;">Upper Body #1</h1>
+          <div style="flex: none; padding: 5px 10px; border-radius: 999px; background: #FBEBE6; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #B8401F;">UPPER</div>
+        </div>
+
+        <div style="flex: none; margin: 20px 22px 0; display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 24px; background: #FFFFFF; border: 1px solid #EFEFE9; box-shadow: 0 6px 18px rgba(20,21,15,0.05);">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" style="flex: none; transform: rotate(-90deg);"><circle cx="23" cy="23" r="18" stroke="#F0F0E9" stroke-width="6"></circle><circle cx="23" cy="23" r="18" stroke="#C6F24A" stroke-width="6" stroke-linecap="round" stroke-dasharray="50 113"></circle></svg>
+          <div style="flex: 1; min-width: 0;">
+            <div style="font-size: 22px; font-weight: 700; letter-spacing: -0.025em; color: #14150F;">8/18 sets</div>
+            <div style="padding-top: 3px; font-size: 12px; font-weight: 500; color: #8A8A82;">44% done</div>
+          </div>
+        </div>
+
+        <div style="flex: none; margin: 30px 22px 0; display: flex; flex-direction: column; gap: 11px;">
+          <button style="cursor: pointer; text-align: left; font-family: inherit; box-sizing: border-box; padding: 14px 14px 14px 16px; border-radius: 22px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #E2593A; box-shadow: 0 5px 16px rgba(20,21,15,0.045); display: flex; align-items: center; gap: 11px; transition: background 140ms ease;" style-hover="background: #FCFCF8;">
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Bench Press</div>
+                <div style="flex: none; padding: 4px 8px; border-radius: 999px; background: #FBEBE6; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #B8401F;">CHEST</div>
+              </div>
+              <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #8A8A82;">Target: 8 reps @ RPE 8</div>
+            </div>
+            <div style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: #C6F24A; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(150,196,40,0.35);"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.4 L6.4 11.3 L12.5 5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="flex: none;"><path d="M6 3.5 L10.5 8 L6 12.5" stroke="#B4B4AC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+          <button style="cursor: pointer; text-align: left; font-family: inherit; box-sizing: border-box; padding: 14px 14px 14px 16px; border-radius: 22px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #E2593A; box-shadow: 0 5px 16px rgba(20,21,15,0.045); display: flex; align-items: center; gap: 11px; transition: background 140ms ease;" style-hover="background: #FCFCF8;">
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Incline DB Press</div>
+                <div style="flex: none; padding: 4px 8px; border-radius: 999px; background: #FBEBE6; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #B8401F;">CHEST</div>
+              </div>
+              <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #8A8A82;">Target: 10 reps @ RPE 8</div>
+            </div>
+            <div style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: #C6F24A; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(150,196,40,0.35);"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.4 L6.4 11.3 L12.5 5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="flex: none;"><path d="M6 3.5 L10.5 8 L6 12.5" stroke="#B4B4AC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+          <button style="cursor: pointer; text-align: left; font-family: inherit; box-sizing: border-box; padding: 14px 14px 14px 16px; border-radius: 22px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #C9452A; box-shadow: 0 5px 16px rgba(20,21,15,0.045); display: flex; align-items: center; gap: 11px; transition: background 140ms ease;" style-hover="background: #FCFCF8;">
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Barbell Row</div>
+                <div style="flex: none; padding: 4px 8px; border-radius: 999px; background: #F8E5E1; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #9E3520;">BACK</div>
+              </div>
+              <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #8A8A82;">Target: 8 reps @ RPE 7</div>
+            </div>
+            <div style="flex: none; min-width: 34px; padding: 6px 9px; border-radius: 999px; background: #F2FADF; border: 1px solid #DCEFA8; text-align: center; font-size: 11px; font-weight: 700; letter-spacing: -0.01em; color: #4E6410;">2/3</div>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="flex: none;"><path d="M6 3.5 L10.5 8 L6 12.5" stroke="#B4B4AC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+          <button style="cursor: pointer; text-align: left; font-family: inherit; box-sizing: border-box; padding: 14px 14px 14px 16px; border-radius: 22px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #C9452A; box-shadow: 0 5px 16px rgba(20,21,15,0.045); display: flex; align-items: center; gap: 11px; transition: background 140ms ease;" style-hover="background: #FCFCF8;">
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Lat Pulldown</div>
+                <div style="flex: none; padding: 4px 8px; border-radius: 999px; background: #F8E5E1; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #9E3520;">BACK</div>
+              </div>
+              <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #8A8A82;">Target: 12 reps @ RPE 8</div>
+            </div>
+            <div style="flex: none; min-width: 34px; padding: 6px 9px; border-radius: 999px; background: #F2FADF; border: 1px solid #DCEFA8; text-align: center; font-size: 11px; font-weight: 700; letter-spacing: -0.01em; color: #4E6410;">1/3</div>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="flex: none;"><path d="M6 3.5 L10.5 8 L6 12.5" stroke="#B4B4AC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+          <button style="cursor: pointer; text-align: left; font-family: inherit; box-sizing: border-box; padding: 14px 14px 14px 16px; border-radius: 22px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #D99518; box-shadow: 0 5px 16px rgba(20,21,15,0.045); display: flex; align-items: center; gap: 11px; transition: background 140ms ease;" style-hover="background: #FCFCF8;">
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Overhead Press</div>
+                <div style="flex: none; padding: 4px 8px; border-radius: 999px; background: #FAEFD8; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #97650C;">SHOULDERS</div>
+              </div>
+              <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #8A8A82;">Target: 8 reps @ RPE 8</div>
+            </div>
+            <div style="flex: none; width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid #DEDED4; background: #FFFFFF;"></div>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="flex: none;"><path d="M6 3.5 L10.5 8 L6 12.5" stroke="#B4B4AC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+          <button style="cursor: pointer; text-align: left; font-family: inherit; box-sizing: border-box; padding: 14px 14px 14px 16px; border-radius: 22px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #EE8A6E; box-shadow: 0 5px 16px rgba(20,21,15,0.045); display: flex; align-items: center; gap: 11px; transition: background 140ms ease;" style-hover="background: #FCFCF8;">
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Cable Curl</div>
+                <div style="flex: none; padding: 4px 8px; border-radius: 999px; background: #FCEDE8; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #B25A3C;">ARMS</div>
+              </div>
+              <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #8A8A82;">Target: 12 reps @ RPE 9</div>
+            </div>
+            <div style="flex: none; width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid #DEDED4; background: #FFFFFF;"></div>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="flex: none;"><path d="M6 3.5 L10.5 8 L6 12.5" stroke="#B4B4AC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+          <button style="cursor: pointer; text-align: left; font-family: inherit; box-sizing: border-box; padding: 14px 14px 14px 16px; border-radius: 22px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #7C4DD1; box-shadow: 0 5px 16px rgba(20,21,15,0.045); display: flex; align-items: center; gap: 11px; transition: background 140ms ease;" style-hover="background: #FCFCF8;">
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Cable Crunch</div>
+                <div style="flex: none; padding: 4px 8px; border-radius: 999px; background: #EEE8FA; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #5E36A8;">CORE</div>
+              </div>
+              <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #8A8A82;">Target: 15 reps @ RPE 8</div>
+            </div>
+            <div style="flex: none; width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid #DEDED4; background: #FFFFFF;"></div>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="flex: none;"><path d="M6 3.5 L10.5 8 L6 12.5" stroke="#B4B4AC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </x-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:1000}}"></script>
+</body>
+</html>

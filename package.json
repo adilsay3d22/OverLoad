@@ -1,0 +1,29 @@
+{
+  "name": "overload",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c green,magenta \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "npm --workspace server run dev",
+    "dev:client": "npm --workspace client run dev",
+    "build": "npm --workspace client run build",
+    "start": "npm --workspace server run start",
+    "db:migrate": "node server/scripts/migrate.js",
+    "db:import": "node server/scripts/import-store.js",
+    "db:seed": "node server/scripts/seed.js",
+    "db:check": "node server/scripts/check.js",
+    "db:inspect": "node server/scripts/inspect.js",
+    "db:reset": "node server/scripts/reset.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
+  }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Outfit', system-ui, sans-serif; }
+  a { color: #14150F; }
+  a:hover { color: #6E8A16; }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 64px 24px; background: #E8E8E6;">
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+    <div style="height: 100%; box-sizing: border-box; position: relative; display: flex; flex-direction: column; background: #FAFAF7;">
+
+      <div style="flex: 1; min-height: 0; overflow-y: auto; padding: 56px 22px 40px; display: flex; flex-direction: column;">
+
+        <div style="flex: none; display: flex; align-items: center; justify-content: space-between;">
+          <button aria-label="Back to Progress" style="cursor: pointer; width: 40px; height: 40px; border-radius: 50%; background: #FFFFFF; border: 1px solid #EAEAE4; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(20,21,15,0.05);">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 3.5 L5.5 9 L11 14.5" stroke="#14150F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+          <div style="display: flex; align-items: center; gap: 7px;">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="0.5" y="7" width="2.5" height="6" rx="1" fill="#B4B4AC"></rect><rect x="4" y="4.5" width="4" height="11" rx="1.5" fill="#B4B4AC"></rect><rect x="8.5" y="8.6" width="3" height="2.8" rx="1.4" fill="#B4B4AC"></rect><rect x="12" y="4.5" width="4" height="11" rx="1.5" fill="#B4B4AC"></rect><rect x="17" y="7" width="2.5" height="6" rx="1" fill="#B4B4AC"></rect></svg>
+            <div style="font-size: 14px; font-weight: 600; letter-spacing: -0.01em; color: #B4B4AC;">Overload</div>
+          </div>
+        </div>
+
+        <div style="flex: none; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding-top: 26px;">
+          <h1 style="margin: 0; font-size: 32px; line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; color: #14150F;">Bench Press</h1>
+          <div style="padding: 5px 12px; border-radius: 999px; background: #FFE4DC; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; color: #8C3418;">CHEST</div>
+        </div>
+
+        <div style="flex: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding-top: 20px;">
+          <div style="min-width: 0; background: #FFFFFF; border: 1px solid #EFEFE9; border-radius: 20px; padding: 14px 14px 13px; box-shadow: 0 4px 14px rgba(20,21,15,0.04);">
+            <div style="font-size: 19px; font-weight: 700; letter-spacing: -0.025em; color: #14150F;">50kg × 20</div>
+            <div style="padding-top: 2px; font-size: 11px; font-weight: 500; color: #6E6E66;">Current Best</div>
+          </div>
+          <div style="min-width: 0; background: #FFFFFF; border: 1px solid #EFEFE9; border-radius: 20px; padding: 14px 14px 13px; box-shadow: 0 4px 14px rgba(20,21,15,0.04);">
+            <div style="display: flex; align-items: baseline; gap: 3px;">
+              <div style="font-size: 19px; font-weight: 700; letter-spacing: -0.025em; color: #14150F;">68</div>
+              <div style="font-size: 12px; font-weight: 600; color: #6E6E66;">kg</div>
+            </div>
+            <div style="padding-top: 2px; font-size: 11px; font-weight: 500; color: #6E6E66;">Est. 1RM</div>
+          </div>
+          <div style="min-width: 0; background: #FFFFFF; border: 1px solid #EFEFE9; border-radius: 20px; padding: 14px 14px 13px; box-shadow: 0 4px 14px rgba(20,21,15,0.04);">
+            <div style="font-size: 19px; font-weight: 700; letter-spacing: -0.025em; color: #14150F;">142</div>
+            <div style="padding-top: 2px; font-size: 11px; font-weight: 500; color: #6E6E66;">Total Sets</div>
+          </div>
+          <div style="min-width: 0; background: #FFFFFF; border: 1px solid #EFEFE9; border-radius: 20px; padding: 14px 14px 13px; box-shadow: 0 4px 14px rgba(20,21,15,0.04);">
+            <div style="font-size: 19px; font-weight: 700; letter-spacing: -0.025em; color: #14150F;">2 days</div>
+            <div style="padding-top: 2px; font-size: 11px; font-weight: 500; color: #6E6E66;">Last Trained</div>
+          </div>
+        </div>
+
+        <div style="flex: none; margin-top: 24px; display: flex; gap: 6px; padding: 5px; background: #F1F1EA; border-radius: 999px;">
+          <div style="flex: 1; text-align: center; padding: 9px 0; border-radius: 999px; font-size: 13px; font-weight: 600; color: #6E6E66;">Week</div>
+          <div style="flex: 1; text-align: center; padding: 9px 0; border-radius: 999px; background: #C6F24A; font-size: 13px; font-weight: 600; color: #14150F; box-shadow: 0 3px 10px rgba(150,196,40,0.34);">Month</div>
+          <div style="flex: 1; text-align: center; padding: 9px 0; border-radius: 999px; font-size: 13px; font-weight: 600; color: #6E6E66;">All Time</div>
+        </div>
+
+        <div style="flex: none; margin-top: 26px; background: #FFFFFF; border: 1px solid #EFEFE9; border-radius: 26px; padding: 20px 18px 16px; box-shadow: 0 6px 20px rgba(20,21,15,0.05);">
+          <div style="display: flex; align-items: baseline; justify-content: space-between;">
+            <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Weight Over Time</div>
+            <div style="font-size: 11px; font-weight: 600; color: #6E8A16;">+8kg this month</div>
+          </div>
+          <svg viewBox="0 0 300 160" width="100%" style="display: block; margin-top: 10px; overflow: visible;">
+            <defs>
+              <linearGradient id="ovlWeightFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#C6F24A" stop-opacity="0.42"></stop>
+                <stop offset="100%" stop-color="#C6F24A" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+            <line x1="30" y1="20" x2="292" y2="20" stroke="#F2F2EC" stroke-width="1"></line>
+            <line x1="30" y1="57" x2="292" y2="57" stroke="#F2F2EC" stroke-width="1"></line>
+            <line x1="30" y1="93" x2="292" y2="93" stroke="#F2F2EC" stroke-width="1"></line>
+            <line x1="30" y1="130" x2="292" y2="130" stroke="#EAEAE2" stroke-width="1"></line>
+            <text x="24" y="23" text-anchor="end" font-size="9.5" font-weight="600" fill="#A5A59D">55</text>
+            <text x="24" y="60" text-anchor="end" font-size="9.5" font-weight="600" fill="#A5A59D">50</text>
+            <text x="24" y="96" text-anchor="end" font-size="9.5" font-weight="600" fill="#A5A59D">45</text>
+            <text x="24" y="133" text-anchor="end" font-size="9.5" font-weight="600" fill="#A5A59D">40</text>
+            <path d="M40 101 L79 93 L118 86 L157 71 L196 71 L235 57 L274 42 L274 130 L40 130 Z" fill="url(#ovlWeightFill)"></path>
+            <path d="M40 101 L79 93 L118 86 L157 71 L196 71 L235 57 L274 42" stroke="#B9E63F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+            <circle cx="40" cy="101" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="79" cy="93" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="118" cy="86" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="157" cy="71" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="196" cy="71" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="235" cy="57" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="274" cy="42" r="5.6" fill="#14150F"></circle>
+            <line x1="274" y1="36" x2="274" y2="34" stroke="#C6D2A8" stroke-width="1.2" stroke-dasharray="3 3"></line>
+            <g transform="translate(214, 0)">
+              <rect x="0" y="0" width="76" height="34" rx="12" fill="#14150F"></rect>
+              <text x="12" y="14" font-size="9" font-weight="700" letter-spacing="0.09em" fill="#C6F24A">SEP 6</text>
+              <text x="12" y="27" font-size="13" font-weight="700" letter-spacing="-0.02em" fill="#FFFFFF">52kg</text>
+            </g>
+            <text x="40" y="148" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A5A59D">Aug 12</text>
+            <text x="157" y="148" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A5A59D">Aug 26</text>
+            <text x="274" y="148" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A5A59D">Sep 6</text>
+          </svg>
+        </div>
+
+        <div style="flex: none; margin-top: 14px; background: #FFFFFF; border: 1px solid #EFEFE9; border-radius: 26px; padding: 20px 18px 16px; box-shadow: 0 6px 20px rgba(20,21,15,0.05);">
+          <div style="display: flex; align-items: baseline; justify-content: space-between;">
+            <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Reps Over Time</div>
+            <div style="font-size: 11px; font-weight: 600; color: #6E8A16;">+8 reps at 50kg</div>
+          </div>
+          <svg viewBox="0 0 300 160" width="100%" style="display: block; margin-top: 10px; overflow: visible;">
+            <defs>
+              <linearGradient id="ovlRepsFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#C6F24A" stop-opacity="0.42"></stop>
+                <stop offset="100%" stop-color="#C6F24A" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+            <line x1="30" y1="46" x2="292" y2="46" stroke="#F2F2EC" stroke-width="1"></line>
+            <line x1="30" y1="83" x2="292" y2="83" stroke="#F2F2EC" stroke-width="1"></line>
+            <line x1="30" y1="120" x2="292" y2="120" stroke="#F2F2EC" stroke-width="1"></line>
+            <line x1="30" y1="130" x2="292" y2="130" stroke="#EAEAE2" stroke-width="1"></line>
+            <text x="24" y="49" text-anchor="end" font-size="9.5" font-weight="600" fill="#A5A59D">20</text>
+            <text x="24" y="86" text-anchor="end" font-size="9.5" font-weight="600" fill="#A5A59D">16</text>
+            <text x="24" y="123" text-anchor="end" font-size="9.5" font-weight="600" fill="#A5A59D">12</text>
+            <path d="M40 120 L79 101 L118 92 L157 83 L196 65 L235 56 L274 46 L274 130 L40 130 Z" fill="url(#ovlRepsFill)"></path>
+            <path d="M40 120 L79 101 L118 92 L157 83 L196 65 L235 56 L274 46" stroke="#B9E63F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+            <circle cx="40" cy="120" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="79" cy="101" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="118" cy="92" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="157" cy="83" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="196" cy="65" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="235" cy="56" r="3.4" fill="#FFFFFF" stroke="#B9E63F" stroke-width="2.2"></circle>
+            <circle cx="274" cy="46" r="5.6" fill="#14150F"></circle>
+            <line x1="274" y1="40" x2="274" y2="34" stroke="#C6D2A8" stroke-width="1.2" stroke-dasharray="3 3"></line>
+            <g transform="translate(214, 0)">
+              <rect x="0" y="0" width="76" height="34" rx="12" fill="#14150F"></rect>
+              <text x="12" y="14" font-size="9" font-weight="700" letter-spacing="0.09em" fill="#C6F24A">SEP 6</text>
+              <text x="12" y="27" font-size="13" font-weight="700" letter-spacing="-0.02em" fill="#FFFFFF">20 reps</text>
+            </g>
+            <text x="40" y="148" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A5A59D">Aug 12</text>
+            <text x="157" y="148" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A5A59D">Aug 26</text>
+            <text x="274" y="148" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A5A59D">Sep 6</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:1000}}"></script>
+</body>
+</html>

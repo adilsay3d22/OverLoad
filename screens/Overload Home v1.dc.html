@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; font-family: 'Outfit', system-ui, sans-serif; }
+  a { color: #14150F; text-decoration: none; }
+  a:hover { color: #6E8A16; }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 64px 24px; background: #E8E8E6;">
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+    <div style="height: 100%; box-sizing: border-box; position: relative; display: flex; flex-direction: column; background: #FAFAF7;">
+
+      <div style="flex: 1; min-height: 0; overflow-y: auto; padding: 56px 22px 130px; display: flex; flex-direction: column; gap: 22px;">
+
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 7px;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="0.5" y="7" width="2.5" height="6" rx="1" fill="#14150F" /><rect x="4" y="4.5" width="4" height="11" rx="1.5" fill="#14150F" /><rect x="8.5" y="8.6" width="3" height="2.8" rx="1.4" fill="#14150F" /><rect x="12" y="4.5" width="4" height="11" rx="1.5" fill="#14150F" /><rect x="17" y="7" width="2.5" height="6" rx="1" fill="#14150F" /></svg>
+            <div style="font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #14150F;">Overload</div>
+          </div>
+          <button aria-label="Profile" style="cursor: pointer; width: 38px; height: 38px; border-radius: 50%; background: #FFFFFF; border: 1px solid #EAEAE4; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(20,21,15,0.05);">
+            <svg width="19" height="19" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="6.8" r="3.2" stroke="#14150F" stroke-width="1.6" /><path d="M4 17 C4.6 13.7 7 12 10 12 C13 12 15.4 13.7 16 17" stroke="#14150F" stroke-width="1.6" stroke-linecap="round" /></svg>
+          </button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px;">
+          <sc-for list="{{ days }}" as="d" hint-placeholder-count="7">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 9px 0 10px; border-radius: 18px; background: {{ d.bg }}; border: 1px solid {{ d.border }};">
+              <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.04em; color: {{ d.label }};">{{ d.name }}</div>
+              <div style="font-size: 15px; font-weight: 700; color: {{ d.fg }};">{{ d.num }}</div>
+              <div style="width: 5px; height: 5px; border-radius: 50%; background: {{ d.dot }};"></div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid #EFEFE9; border-radius: 26px; padding: 20px; box-shadow: 0 10px 26px rgba(20,21,15,0.06);">
+          <div style="font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: #8A8A82;">THIS WEEK</div>
+          <div style="display: flex; align-items: center; gap: 9px; padding: 8px 0 18px;">
+            <div style="font-size: 24px; font-weight: 700; letter-spacing: -0.02em; color: #14150F;">Upper Body #1</div>
+            <div style="padding: 4px 10px; border-radius: 999px; background: #E8F9AE; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #46560C;">UPPER</div>
+          </div>
+
+          <div style="position: relative; height: 10px; border-radius: 999px; background: #EFEFE9;">
+            <div style="position: absolute; inset: 0 auto 0 0; width: 44%; border-radius: 999px; background: #14150F;"></div>
+            <div style="position: absolute; left: 44%; top: 50%; width: 22px; height: 22px; margin: -11px 0 0 -11px; border-radius: 50%; background: #C6F24A; border: 3px solid #FFFFFF; box-shadow: 0 3px 10px rgba(20,21,15,0.22);"></div>
+          </div>
+
+          <div style="display: flex; align-items: baseline; justify-content: space-between; padding-top: 14px;">
+            <div>
+              <div style="font-size: 22px; font-weight: 700; color: #14150F;">8</div>
+              <div style="font-size: 12px; font-weight: 500; color: #6E6E66;">Sets logged</div>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-size: 22px; font-weight: 700; color: #14150F;">10</div>
+              <div style="font-size: 12px; font-weight: 500; color: #6E6E66;">Remaining</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+          <div style="background: #FFFFFF; border: 1px solid #EFEFE9; border-radius: 20px; padding: 14px 14px 13px; box-shadow: 0 4px 14px rgba(20,21,15,0.04);">
+            <div style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: #14150F;">3</div>
+            <div style="font-size: 12px; font-weight: 500; color: #6E6E66;">Week</div>
+          </div>
+          <div style="background: #FFFFFF; border: 1px solid #EFEFE9; border-radius: 20px; padding: 14px 14px 13px; box-shadow: 0 4px 14px rgba(20,21,15,0.04);">
+            <div style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: #14150F;">4</div>
+            <div style="font-size: 12px; font-weight: 500; color: #6E6E66;">Sessions</div>
+          </div>
+          <div style="background: #14150F; border-radius: 20px; padding: 14px 14px 13px; box-shadow: 0 4px 14px rgba(20,21,15,0.12);">
+            <div style="display: flex; align-items: center; gap: 5px;">
+              <div style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: #FFFFFF;">12</div>
+              <svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M7 0.8 C8.4 4 11.6 4.6 11.6 9 A4.6 4.6 0 0 1 2.4 9 C2.4 6.6 3.6 5.6 4.4 4.6 C4.9 6 5.8 6.4 6.2 6.4 C6.2 4.4 6.2 2.6 7 0.8Z" fill="#C6F24A" /></svg>
+            </div>
+            <div style="font-size: 12px; font-weight: 500; color: #A8A8A0;">Day streak</div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 11px;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between;">
+            <div style="font-size: 17px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">This Week's Sessions</div>
+            <a href="#" style="font-size: 13px; font-weight: 500; color: #6E6E66;">All</a>
+          </div>
+
+          <sc-for list="{{ sessions }}" as="s" hint-placeholder-count="4">
+            <div style="display: flex; align-items: center; gap: 13px; background: #FFFFFF; border: 1px solid #EFEFE9; border-radius: 20px; padding: 14px 16px; box-shadow: 0 4px 14px rgba(20,21,15,0.04); cursor: pointer;">
+              <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div style="font-size: 15px; font-weight: 600; color: #14150F;">{{ s.name }}</div>
+                  <div style="padding: 3px 9px; border-radius: 999px; background: {{ s.tagBg }}; font-size: 10px; font-weight: 700; letter-spacing: 0.05em; color: {{ s.tagFg }};">{{ s.tag }}</div>
+                </div>
+                <div style="font-size: 12px; font-weight: 500; color: #8A8A82;">{{ s.meta }}</div>
+              </div>
+              <div style="flex: none; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: {{ s.markBg }}; border: 1.5px solid {{ s.markBorder }};">
+                <sc-if value="{{ s.done }}" hint-placeholder-val="{{ true }}">
+                  <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.4 L5.6 10.5 L11.5 4" stroke="#14150F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </sc-if>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="position: absolute; left: 16px; right: 16px; bottom: 22px; height: 66px; border-radius: 33px; background: #FFFFFF; border: 1px solid #EDEDE7; box-shadow: 0 12px 30px rgba(20,21,15,0.12); display: grid; grid-template-columns: 1fr 1fr 78px 1fr 1fr; align-items: center;">
+        <button style="cursor: pointer; border: none; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0;">
+          <svg width="21" height="21" viewBox="0 0 22 22" fill="none"><path d="M3.5 9.4 L11 3.4 L18.5 9.4 V18 A1 1 0 0 1 17.5 19 H4.5 A1 1 0 0 1 3.5 18 Z" stroke="#14150F" stroke-width="1.8" stroke-linejoin="round" /></svg>
+          <div style="font-size: 10px; font-weight: 600; color: #14150F;">Home</div>
+        </button>
+        <button style="cursor: pointer; border: none; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0;">
+          <svg width="21" height="21" viewBox="0 0 22 22" fill="none"><rect x="3.5" y="3.5" width="15" height="15" rx="3" stroke="#9A9A92" stroke-width="1.8" /><path d="M7.5 8.5 H14.5 M7.5 13 H12" stroke="#9A9A92" stroke-width="1.8" stroke-linecap="round" /></svg>
+          <div style="font-size: 10px; font-weight: 500; color: #9A9A92;">Programs</div>
+        </button>
+        <div></div>
+        <button style="cursor: pointer; border: none; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0;">
+          <svg width="21" height="21" viewBox="0 0 22 22" fill="none"><path d="M3.5 15.5 L8 10 L12 13.5 L18.5 5.5" stroke="#9A9A92" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          <div style="font-size: 10px; font-weight: 500; color: #9A9A92;">Progress</div>
+        </button>
+        <button style="cursor: pointer; border: none; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0;">
+          <svg width="21" height="21" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="7.6" r="3.4" stroke="#9A9A92" stroke-width="1.8" /><path d="M4.6 18.4 C5.2 14.9 7.8 13.2 11 13.2 C14.2 13.2 16.8 14.9 17.4 18.4" stroke="#9A9A92" stroke-width="1.8" stroke-linecap="round" /></svg>
+          <div style="font-size: 10px; font-weight: 500; color: #9A9A92;">Profile</div>
+        </button>
+      </div>
+
+      <button aria-label="Start session" style="position: absolute; left: 50%; bottom: 48px; transform: translateX(-50%); cursor: pointer; width: 64px; height: 64px; border-radius: 50%; border: 4px solid #FAFAF7; background: #C6F24A; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 26px rgba(150,196,40,0.5); transition: background 160ms ease;" style-hover="background: #B7E634;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="0.8" y="9" width="2.6" height="6" rx="1.2" fill="#14150F" /><rect x="4.6" y="6" width="4.4" height="12" rx="1.8" fill="#14150F" /><rect x="9.6" y="10.6" width="4.8" height="2.8" rx="1.4" fill="#14150F" /><rect x="15" y="6" width="4.4" height="12" rx="1.8" fill="#14150F" /><rect x="20.6" y="9" width="2.6" height="6" rx="1.2" fill="#14150F" /></svg>
+      </button>
+    </div>
+  </x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:1000}}">
+class Component extends DCLogic {
+  renderVals() {
+    const raw = [
+      { name: 'MON', num: 9, planned: true, done: true },
+      { name: 'TUE', num: 10, planned: false },
+      { name: 'WED', num: 11, planned: true, done: true },
+      { name: 'THU', num: 12, planned: true, today: true },
+      { name: 'FRI', num: 13, planned: false },
+      { name: 'SAT', num: 14, planned: true },
+      { name: 'SUN', num: 15, planned: false },
+    ];
+    const days = raw.map(d => {
+      if (d.today) return { ...d, bg: '#14150F', border: '#14150F', fg: '#FFFFFF', label: '#A8A8A0', dot: '#C6F24A' };
+      if (d.planned) return { ...d, bg: '#FFFFFF', border: '#EAEAE4', fg: '#14150F', label: '#8A8A82', dot: '#C6F24A' };
+      return { ...d, bg: 'transparent', border: 'transparent', fg: '#B4B4AC', label: '#B4B4AC', dot: 'transparent' };
+    });
+
+    const tags = {
+      UPPER: ['#E8F9AE', '#46560C'],
+      LOWER: ['#E4EEFF', '#25457F'],
+      'FULL BODY': ['#FFE9D6', '#7A4212'],
+      CORE: ['#F0E7FF', '#4B2E80'],
+    };
+    const sessions = [
+      { name: 'Upper Body #1', tag: 'UPPER', meta: '6 exercises · 18 sets', done: true },
+      { name: 'Lower Body #1', tag: 'LOWER', meta: '5 exercises · 16 sets', done: true },
+      { name: 'Upper Body #2', tag: 'UPPER', meta: '6 exercises · 18 sets', done: false },
+      { name: 'Core & Carry', tag: 'CORE', meta: '4 exercises · 12 sets', done: false },
+      { name: 'Full Body Flush', tag: 'FULL BODY', meta: '7 exercises · 20 sets', done: false },
+    ].map(s => ({
+      ...s,
+      tagBg: tags[s.tag][0],
+      tagFg: tags[s.tag][1],
+      markBg: s.done ? '#C6F24A' : 'transparent',
+      markBorder: s.done ? '#C6F24A' : '#DCDCD4',
+    }));
+
+    return { days, sessions, true: true };
+  }
+}
+</script>
+</body>
+</html>

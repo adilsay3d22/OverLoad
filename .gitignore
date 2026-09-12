@@ -1,0 +1,18 @@
+node_modules/
+client/dist/
+server/data/
+*.log
+
+# Local environment
+.env
+.env.local
+server/.env
+.vercel
+
+# Impeccable working artefacts. The surface briefs and DESIGN sidecar are kept
+# — they are the design record. Screenshots, caches and answered decision
+# payloads are session scratch and would be ~10MB of churn per round.
+**/.impeccable/review/
+**/.impeccable/live/
+**/.impeccable/questions/
+**/.impeccable/*.cache.json

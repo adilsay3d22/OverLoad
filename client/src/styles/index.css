@@ -1,0 +1,314 @@
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------------
+   Design tokens. These are the canonical values for the whole app — nothing
+   downstream should hardcode a hex.
+   --------------------------------------------------------------------------- */
+@theme {
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-bg: #fafaf7;
+  --color-surface: #ffffff;
+  --color-ink: #14150f;
+  --color-ink-muted: #6e6e66;
+  --color-ink-faint: #8a8a82;
+  --color-line: #efefe9;
+  --color-line-strong: #dcdcd2;
+
+  /* The body diagram's own greys: a muscle at rest, its shading, and its outline. */
+  --color-body-fill: #e9ebe2;
+  --color-body-shade: #e2e5d9;
+  --color-body-line: #a9ae9d;
+  --color-body-frame: #f2f2ec;
+
+  --color-accent: #c6f24a;
+  --color-accent-hover: #b7e634;
+  --color-accent-deep: #4e6011;
+  --color-accent-wash: #f2f7e0;
+  /* Between wash and accent; the pattern's mid-tone stroke. */
+  --color-accent-mid: #e4efc4;
+
+  /* Destructive. Lived as four repeated hex literals across five files before
+     it had names; the values are unchanged. */
+  --color-danger: #b8401f;
+  --color-danger-hover: #9e3419;
+  --color-danger-wash: #fdf1ed;
+  --color-danger-line: #f0d9d2;
+
+  /* The ground behind the phone column on desktop. */
+  --color-page: #e8e8e6;
+
+  --color-dark-bg: #0d0e09;
+  --color-dark-card: #14150f;
+  --color-dark-card-2: #1b1d14;
+  --color-dark-line: #22241a;
+  --color-dark-track: #2a2d22;
+  --color-dark-line-2: #262920;
+  --color-dark-muted: #9da189;
+  --color-dark-faint: #7c8069;
+
+  --radius-pill: 999px;
+  --radius-card: 26px;
+  --radius-row: 22px;
+  --radius-input: 14px;
+  /* The set register's cells and the log table's inputs. DESIGN.md has carried
+     this rung of the radius ladder since the first build; it was only ever
+     written as a literal inside `.set-input`. */
+  --radius-set-input: 12px;
+
+  --shadow-card: 0 2px 8px rgb(20 21 15 / 0.05);
+  --shadow-raised: 0 6px 18px rgb(20 21 15 / 0.07);
+  --shadow-lime: 0 10px 24px rgb(150 196 40 / 0.42);
+  --shadow-float: 0 16px 34px rgb(20 21 15 / 0.2), 0 4px 12px rgb(150 196 40 / 0.45);
+  --shadow-glow: 0 14px 34px rgb(198 242 74 / 0.34);
+
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------------------------------------------------------------------------
+   Base
+   --------------------------------------------------------------------------- */
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    /* Kills the 300ms double-tap-zoom delay on every control. */
+    touch-action: manipulation;
+  }
+
+  html {
+    background: var(--color-page);
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior-y: none;
+  }
+
+  button {
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  input,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    appearance: textfield;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-deep);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  /* The surfaces we did not draw. Left alone these ship the browser's own
+     blue, which belongs to no design system in this app. */
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-ink);
+  }
+
+  input,
+  textarea {
+    caret-color: var(--color-accent-deep);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Utilities that carry design decisions rather than one-off values
+   --------------------------------------------------------------------------- */
+
+/* The 26px grid used on every dark surface. */
+@utility grid-texture {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+  background-size: 26px 26px;
+  background-position: -1px -1px;
+}
+
+/* Timers, weights and stat values never reflow as digits change. */
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Uppercase section label — 11px/600, 0.12em, sitting above its card.
+   Named `caps` rather than `overline`: Tailwind ships an `overline`
+   text-decoration utility that would win the cascade. */
+@utility caps {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  /* ink-muted, not ink-faint: this utility is on form labels, section labels and
+     the body diagram caption, and ink-faint measures 3.33:1 on the ground —
+     below the AA bar this product commits to. ink-muted is 4.92:1. */
+  color: var(--color-ink-muted);
+}
+
+@utility press {
+  transition:
+    transform 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    box-shadow 150ms ease;
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@layer components {
+  .screen-pad {
+    padding-inline: 22px;
+  }
+
+  /* Numeric inputs in the Log Sets table. */
+  .set-input {
+    width: 100%;
+    text-align: center;
+    border-radius: var(--radius-set-input);
+    background: var(--color-bg);
+    border: 1px solid var(--color-line);
+    padding: 9px 4px;
+    font-size: 15px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    transition: border-color 150ms ease, background-color 150ms ease;
+  }
+
+  .set-input::placeholder {
+    color: var(--color-line-strong);
+    font-weight: 500;
+  }
+
+  .set-input:focus-visible {
+    outline: none;
+    border-color: var(--color-accent);
+    background: var(--color-surface);
+    box-shadow: 0 0 0 3px rgb(198 242 74 / 0.45);
+  }
+
+  .set-input:focus:not(:focus-visible) {
+    outline: none;
+    border-color: var(--color-accent);
+    background: var(--color-surface);
+  }
+
+  .shake {
+    animation: shake 380ms cubic-bezier(0.36, 0.07, 0.19, 0.97);
+  }
+
+  /* Welcome's one authored moment: the claim is loaded rather than typeset.
+     Outfit ships as a variable face, so weight is a real animatable channel —
+     the headline thickens from 300 to 800 while its tracking tightens, which is
+     what makes it read as load going on the bar rather than as a fade-in. */
+  .load-weight {
+    font-variation-settings: 'wght' 800;
+    letter-spacing: -0.04em;
+    animation: load-weight 1100ms var(--ease-out-quint) both;
+  }
+}
+
+@keyframes load-weight {
+  from {
+    font-variation-settings: 'wght' 300;
+    letter-spacing: -0.005em;
+  }
+  to {
+    font-variation-settings: 'wght' 800;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .load-weight {
+    animation: none;
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  80% {
+    transform: translateX(3px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-5px);
+  }
+  40%,
+  60% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-line);
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.65), transparent);
+  animation: shimmer 1.4s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Decorative loops stop entirely: they carry no information and they never
+     end on their own. */
+  .skeleton::after {
+    animation: none;
+  }
+
+  /* Movement is removed from feedback that has an alternative reading — the
+     rejected-set shake still changes colour and still fires its haptic. Colour
+     and opacity transitions are left alone deliberately: they are how a control
+     confirms it heard you, and suppressing them makes the app feel broken
+     rather than calm. */
+  .shake {
+    animation: none;
+  }
+
+  .press:active {
+    transform: none;
+  }
+}

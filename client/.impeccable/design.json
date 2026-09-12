@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-11T00:00:00.000Z",
+  "title": "Design System: Overload",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Chalk Ground",
+        "canonical": "oklch(98.1% 0.005 110)",
+        "tonalRamp": ["#1a1a17", "#33332d", "#4d4d44", "#70706a", "#9b9b93", "#c4c4bc", "#e3e3dd", "#fafaf7"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Riser White",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": ["#1c1c1c", "#363636", "#515151", "#747474", "#a0a0a0", "#c9c9c9", "#e8e8e8", "#ffffff"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Board Ink",
+        "canonical": "oklch(17.4% 0.013 118)",
+        "tonalRamp": ["#14150f", "#24261a", "#393c29", "#53573b", "#70754f", "#939877", "#bcbfa5", "#e2e4d4"]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "oklch(48.2% 0.009 110)",
+        "tonalRamp": ["#161615", "#2b2b28", "#43433e", "#5a5a54", "#6e6e66", "#94948c", "#bcbcb5", "#e2e2dd"]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Faint Ink (non-text only)",
+        "canonical": "oklch(59.4% 0.007 110)",
+        "tonalRamp": ["#1b1b19", "#32322f", "#4a4a45", "#63635d", "#8a8a82", "#adada6", "#cfcfca", "#ededea"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(95.1% 0.004 110)",
+        "tonalRamp": ["#1a1a18", "#33332f", "#4d4d47", "#70706a", "#9b9b95", "#c4c4bf", "#efefe9", "#f8f8f4"]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Section Rule",
+        "canonical": "oklch(88.1% 0.006 105)",
+        "tonalRamp": ["#191916", "#31312c", "#4a4a43", "#6d6d64", "#97978c", "#bdbdb2", "#dcdcd2", "#f0f0ea"]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Touch Lime",
+        "canonical": "oklch(90.5% 0.192 121)",
+        "tonalRamp": ["#1f2708", "#35410d", "#4e6011", "#6b8318", "#8cab1f", "#a9cd2c", "#c6f24a", "#e4f9a3"]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Touch Lime Pressed",
+        "canonical": "oklch(87.6% 0.201 122)",
+        "tonalRamp": ["#1d2407", "#313c0b", "#495a0f", "#647a15", "#84a01c", "#9fc026", "#b7e634", "#d9f490"]
+      },
+      "accent-deep": {
+        "role": "primary",
+        "displayName": "Lime As Text",
+        "canonical": "oklch(42.6% 0.113 123)",
+        "tonalRamp": ["#131805", "#20290a", "#2f3b0c", "#3e4e0f", "#4e6011", "#7b961b", "#aecd35", "#d7ee8e"]
+      },
+      "accent-wash": {
+        "role": "primary",
+        "displayName": "Lime Wash",
+        "canonical": "oklch(96.5% 0.041 118)",
+        "tonalRamp": ["#20240f", "#353b1a", "#4d5527", "#6b7638", "#8e9b4f", "#b4c07d", "#d9e0b4", "#f2f7e0"]
+      },
+      "dark-bg": {
+        "role": "neutral",
+        "displayName": "Drafting Black",
+        "canonical": "oklch(13.2% 0.011 118)",
+        "tonalRamp": ["#0d0e09", "#1b1d14", "#2b2e1f", "#3e422c", "#54593b", "#6d744d", "#8a9264", "#adb589"]
+      },
+      "chest-ink": { "role": "accent", "displayName": "Chest", "canonical": "oklch(50.5% 0.163 34)", "tonalRamp": ["#2b0f07", "#48190b", "#661f0f", "#8a2e15", "#b8401f", "#d4704f", "#e8a793", "#fbebe6"] },
+      "back-ink": { "role": "accent", "displayName": "Back", "canonical": "oklch(45.6% 0.121 251)", "tonalRamp": ["#081524", "#0d233c", "#123154", "#17446f", "#1f5c9e", "#4a86c4", "#8fb6de", "#e6f0fb"] },
+      "shoulders-ink": { "role": "accent", "displayName": "Shoulders", "canonical": "oklch(50.2% 0.113 72)", "tonalRamp": ["#231705", "#3b260a", "#54350e", "#744a13", "#9a6410", "#c08f3a", "#dcbb84", "#fdf3e0"] },
+      "arms-ink": { "role": "accent", "displayName": "Arms", "canonical": "oklch(43.4% 0.184 310)", "tonalRamp": ["#1d0b29", "#301243", "#45195e", "#5e2280", "#7a2fa8", "#a061c8", "#c8a0e0", "#f5ebfb"] },
+      "legs-ink": { "role": "accent", "displayName": "Legs", "canonical": "oklch(49.2% 0.129 143)", "tonalRamp": ["#0d2410", "#153a19", "#1e5122", "#266826", "#2e7a2b", "#5aa356", "#96c893", "#eaf6e8"] },
+      "glutes-ink": { "role": "accent", "displayName": "Glutes", "canonical": "oklch(46.9% 0.153 358)", "tonalRamp": ["#2a0a18", "#451028", "#611839", "#85214d", "#a82c63", "#c66290", "#dfa2bd", "#fbeaf2"] },
+      "core-ink": { "role": "accent", "displayName": "Core", "canonical": "oklch(42.1% 0.101 283)", "tonalRamp": ["#13141f", "#1f2133", "#2d2f4a", "#3b3e66", "#464c8a", "#7379af", "#a8acd0", "#edeef6"] }
+    },
+    "typographyMeta": {
+      "numeral": { "displayName": "Numeral", "purpose": "The value the screen exists to show. 64px tabular, Home's target block. Never paired with anything between it and its 10px caption." },
+      "display": { "displayName": "Display", "purpose": "Route-leading headline at 52px. Home's session name, empty-state and block-complete headlines." },
+      "headline": { "displayName": "Headline", "purpose": "Standard screen title at 30px, used by ScreenHeader across the incumbent card routes." },
+      "stat": { "displayName": "Stat", "purpose": "26px tabular figure inside StatBox and the dark stat panels." },
+      "title": { "displayName": "Title", "purpose": "20-22px card and block titles; Home's next-exercise name sits here at 22px." },
+      "subtitle": { "displayName": "Subtitle", "purpose": "15px semibold — row titles and button labels." },
+      "body": { "displayName": "Body", "purpose": "15px medium running text." },
+      "body-small": { "displayName": "Body Small", "purpose": "13px — row values, counts, secondary actions." },
+      "label": { "displayName": "Label", "purpose": "11px/0.12em caps. The shared `.caps` utility. NOTE: `.caps` currently hardcodes ink-faint, which fails AA — see donts." },
+      "label-spine": { "displayName": "Spine Label", "purpose": "10px/0.14em caps with tabular numerals. Home-scoped. A monospace label register translated into Outfit, because a second family is not available to this system." },
+      "tag": { "displayName": "Tag", "purpose": "9px/0.08em caps inside SessionTag and CategoryTag pills." }
+    },
+    "shadows": [
+      { "name": "card", "value": "0 2px 8px rgb(20 21 15 / 0.05)", "purpose": "A card standing alone rather than sitting in a list. Never combined with a border." },
+      { "name": "raised", "value": "0 6px 18px rgb(20 21 15 / 0.07)", "purpose": "The one card on a screen that outranks the others." },
+      { "name": "lime", "value": "0 10px 24px rgb(150 196 40 / 0.42)", "purpose": "Under a lime action, tinted from the accent rather than grey." },
+      { "name": "float", "value": "0 16px 34px rgb(20 21 15 / 0.2), 0 4px 12px rgb(150 196 40 / 0.45)", "purpose": "The persistent session button floating over every route." },
+      { "name": "glow", "value": "0 14px 34px rgb(198 242 74 / 0.34)", "purpose": "Accent halo on the active session control." }
+    ],
+    "motion": [
+      { "name": "ease-out-quint", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "The system's only easing. Everything decelerates on this curve." },
+      { "name": "press", "value": "transform 150ms ease, background-color 150ms ease, border-color 150ms ease, color 150ms ease, box-shadow 150ms ease", "purpose": "The `.press` utility: scale(0.98) on :active. Every tappable element carries it." },
+      { "name": "stagger-item", "value": "240ms cubic-bezier(0.22, 1, 0.36, 1), opacity + 14px rise, 50ms between children", "purpose": "Screen entrance on the incumbent card routes via Stagger/StaggerItem." },
+      { "name": "spine-draw", "value": "620ms cubic-bezier(0.22, 1, 0.36, 1), scaleY 0 to 1 from origin top", "purpose": "Home-scoped, and Home's ONLY motion. The spine draws down and nothing else on the route animates; a per-section stagger here dilutes it." },
+      { "name": "shake", "value": "380ms cubic-bezier(0.36, 0.07, 0.19, 0.97)", "purpose": "Rejected input on the set inputs." }
+    ],
+    "breakpoints": [
+      { "name": "app-column", "value": "390px" },
+      { "name": "desktop-shell", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action (pill)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The incumbent primary action. Lime pill, full width, ink label, lime-tinted shadow.",
+      "html": "<button class=\"ds-btn-primary\">Start Session</button>",
+      "css": ".ds-btn-primary { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; height: 52px; background: var(--color-accent, #c6f24a); color: var(--color-ink, #14150f); font-family: Outfit, ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; letter-spacing: -0.01em; border: none; border-radius: 999px; box-shadow: 0 10px 24px rgb(150 196 40 / 0.42); cursor: pointer; transition: transform 150ms ease, background-color 150ms ease; } .ds-btn-primary:hover { background: var(--color-accent-hover, #b7e634); } .ds-btn-primary:active { transform: scale(0.98); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-accent-deep, #4e6011); outline-offset: 2px; }"
+    },
+    {
+      "name": "Home Action (square)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Home-scoped. Same lime, no radius and no shadow — Home has no rounded or floating surfaces anywhere on the route.",
+      "html": "<button class=\"ds-btn-flat\">Continue session <svg width=\"17\" height=\"17\" viewBox=\"0 0 256 256\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z\"></path></svg></button>",
+      "css": ".ds-btn-flat { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; height: 54px; background: var(--color-accent, #c6f24a); color: var(--color-ink, #14150f); font-family: Outfit, ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; letter-spacing: -0.01em; border: none; border-radius: 0; box-shadow: none; cursor: pointer; transition: transform 150ms ease, background-color 150ms ease; } .ds-btn-flat:hover { background: var(--color-accent-hover, #b7e634); } .ds-btn-flat:active { transform: scale(0.98); } .ds-btn-flat:focus-visible { outline: 2px solid var(--color-accent-deep, #4e6011); outline-offset: 2px; }"
+    },
+    {
+      "name": "Session Tag",
+      "kind": "chip",
+      "refersTo": "session-tag",
+      "description": "Data identity, never an action. Wash background, ink from the same family, 9px tracked caps.",
+      "html": "<span class=\"ds-tag\">Full Body</span>",
+      "css": ".ds-tag { display: inline-block; background: #eaf6e8; color: #2e7a2b; font-family: Outfit, ui-sans-serif, system-ui, sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 9px; border-radius: 999px; }"
+    },
+    {
+      "name": "Bordered Row Card",
+      "kind": "card",
+      "refersTo": "card-bordered",
+      "description": "A card that sits in a list. Bordered, never shadowed.",
+      "html": "<div class=\"ds-card-row\"><div class=\"ds-card-row__title\">Upper Body A</div><div class=\"ds-card-row__meta\">6 exercises &middot; 21 sets</div></div>",
+      "css": ".ds-card-row { background: var(--color-surface, #ffffff); border: 1px solid var(--color-line, #efefe9); border-radius: 22px; padding: 18px; font-family: Outfit, ui-sans-serif, system-ui, sans-serif; transition: background-color 150ms ease; } .ds-card-row:hover { background: var(--color-accent-wash, #f2f7e0); } .ds-card-row__title { font-size: 15px; font-weight: 600; color: var(--color-ink, #14150f); } .ds-card-row__meta { margin-top: 4px; font-size: 13px; font-weight: 500; color: var(--color-ink-muted, #6e6e66); }"
+    },
+    {
+      "name": "Set Input",
+      "kind": "input",
+      "refersTo": "set-input",
+      "description": "The numeric field in the logging table. Tabular, centred, lime focus ring.",
+      "html": "<input class=\"ds-input-set\" value=\"82.5\" inputmode=\"decimal\" aria-label=\"Weight in kilograms\" />",
+      "css": ".ds-input-set { width: 84px; text-align: center; border-radius: 12px; background: var(--color-bg, #fafaf7); border: 1px solid var(--color-line, #efefe9); padding: 9px 4px; font-family: Outfit, ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 600; color: var(--color-ink, #14150f); font-variant-numeric: tabular-nums; caret-color: var(--color-accent-deep, #4e6011); transition: border-color 150ms ease, background-color 150ms ease; } .ds-input-set::placeholder { color: var(--color-line-strong, #dcdcd2); font-weight: 500; } .ds-input-set:focus-visible { outline: none; border-color: var(--color-accent, #c6f24a); background: var(--color-surface, #ffffff); box-shadow: 0 0 0 3px rgb(198 242 74 / 0.45); }"
+    },
+    {
+      "name": "Spine Row",
+      "kind": "custom",
+      "refersTo": "spine-row",
+      "description": "Home signature. A row hanging off the vertical spine, its state marker centred on the rule. Four states differ in shape, not only tint: filled lime square (complete), rotated square in session-type colour (in progress), hollow square (upcoming), hairline dash (missed).",
+      "html": "<div class=\"ds-spine\"><a class=\"ds-spine__row\" href=\"#\"><span class=\"ds-spine__mark ds-spine__mark--active\"></span><span class=\"ds-spine__day\">Mon</span><span class=\"ds-spine__body\"><span class=\"ds-spine__name\">Upper Body A</span><span class=\"ds-spine__meta\">Upper &middot; 6 exercises</span></span><span class=\"ds-spine__value\">3/16</span></a><div class=\"ds-spine__rule\"></div><a class=\"ds-spine__row\" href=\"#\"><span class=\"ds-spine__mark ds-spine__mark--missed\"></span><span class=\"ds-spine__day ds-spine__day--quiet\">Tue</span><span class=\"ds-spine__body\"><span class=\"ds-spine__name ds-spine__name--quiet\">Lower Body A</span><span class=\"ds-spine__meta\">Lower &middot; 6 exercises</span></span><span class=\"ds-spine__missed\">Missed</span></a></div>",
+      "css": ".ds-spine { position: relative; padding-left: 18px; font-family: Outfit, ui-sans-serif, system-ui, sans-serif; } .ds-spine::before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 1px; background: linear-gradient(var(--color-line-strong, #dcdcd2) 0%, var(--color-line-strong, #dcdcd2) calc(100% - 56px), transparent 100%); } .ds-spine__row { position: relative; display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; text-decoration: none; transition: transform 150ms ease, color 150ms ease; } .ds-spine__row:active { transform: scale(0.98); } .ds-spine__row:hover .ds-spine__name { color: var(--color-accent-deep, #4e6011); } .ds-spine__mark { position: absolute; left: -18px; transform: translateX(-50%); } .ds-spine__mark--active { top: 14px; width: 10px; height: 10px; background: #2e7a2b; transform: translateX(-50%) rotate(45deg); } .ds-spine__mark--missed { top: 19px; width: 12px; height: 1px; background: var(--color-line-strong, #dcdcd2); } .ds-spine__day { width: 30px; flex-shrink: 0; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-ink, #14150f); } .ds-spine__day--quiet { color: var(--color-ink-muted, #6e6e66); } .ds-spine__body { flex: 1; min-width: 0; } .ds-spine__name { display: block; font-size: 15px; line-height: 1; font-weight: 600; color: var(--color-ink, #14150f); } .ds-spine__name--quiet { color: var(--color-ink-muted, #6e6e66); } .ds-spine__meta { display: block; margin-top: 6px; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-ink-muted, #6e6e66); } .ds-spine__value { flex-shrink: 0; font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--color-accent-deep, #4e6011); } .ds-spine__missed { flex-shrink: 0; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-ink-muted, #6e6e66); } .ds-spine__rule { height: 1px; background: var(--color-line, #efefe9); }"
+    },
+    {
+      "name": "Target Block",
+      "kind": "custom",
+      "refersTo": "target-block",
+      "description": "Home signature. The 6.4:1 scale jump that carries the route's hierarchy: a 64px tabular value directly above its 10px caption, with nothing between them.",
+      "html": "<div class=\"ds-target\"><div class=\"ds-target__name\">Barbell Bench Press</div><div class=\"ds-target__row\"><div><div class=\"ds-target__value\">3<span class=\"ds-target__x\">&times;</span>5</div><div class=\"ds-target__label\">Sets &times; reps</div></div><div><div class=\"ds-target__value\">7</div><div class=\"ds-target__label\">Target RPE</div></div></div></div>",
+      "css": ".ds-target { font-family: Outfit, ui-sans-serif, system-ui, sans-serif; color: var(--color-ink, #14150f); } .ds-target__name { font-size: 22px; line-height: 1.25; font-weight: 700; letter-spacing: -0.02em; } .ds-target__row { margin-top: 16px; display: flex; align-items: flex-end; gap: 36px; } .ds-target__value { font-size: 64px; line-height: 0.82; font-weight: 800; letter-spacing: -0.045em; font-variant-numeric: tabular-nums; } .ds-target__x { padding: 0 3px; color: var(--color-ink-muted, #6e6e66); } .ds-target__label { margin-top: 10px; font-size: 10px; line-height: 1; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-ink-muted, #6e6e66); }"
+    },
+    {
+      "name": "Pending Values",
+      "kind": "custom",
+      "refersTo": "pending",
+      "description": "Home-scoped loading. Labels and rules that are already known ship at full fidelity; only the unknown values are flat square bars set at the exact metrics of the type they will be replaced by. Not a skeleton screen.",
+      "html": "<div class=\"ds-pending\" aria-busy=\"true\" aria-label=\"Loading\"><div class=\"ds-pending__bar\" style=\"width:54%;height:20px\"></div><div class=\"ds-pending__row\"><div><div class=\"ds-pending__bar\" style=\"width:130px;height:52px\"></div><div class=\"ds-pending__label\">Sets &times; reps</div></div><div><div class=\"ds-pending__bar\" style=\"width:48px;height:52px\"></div><div class=\"ds-pending__label\">Target RPE</div></div></div></div>",
+      "css": ".ds-pending { font-family: Outfit, ui-sans-serif, system-ui, sans-serif; } .ds-pending__bar { background: var(--color-line, #efefe9); border-radius: 0; } .ds-pending__row { margin-top: 16px; display: flex; align-items: flex-end; gap: 36px; } .ds-pending__label { margin-top: 10px; font-size: 10px; line-height: 1; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-ink-muted, #6e6e66); }"
+    },
+    {
+      "name": "Tab Bar",
+      "kind": "nav",
+      "refersTo": "tab-bar",
+      "description": "App chrome on every signed-in route. Rendered once in the shell so navigating never unmounts it; the active indicator is a lime bar above the icon.",
+      "html": "<nav class=\"ds-tabs\"><a class=\"ds-tabs__item ds-tabs__item--active\" href=\"#\"><span class=\"ds-tabs__mark\"></span><svg width=\"22\" height=\"22\" viewBox=\"0 0 256 256\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M218.83,103.77l-80-75.48a16,16,0,0,0-21.67,0l-80,75.48A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77Z\"></path></svg><span class=\"ds-tabs__label\">Home</span></a><a class=\"ds-tabs__item\" href=\"#\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 256 256\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"16\" aria-hidden=\"true\"><rect x=\"40\" y=\"72\" width=\"144\" height=\"120\" rx=\"8\"></rect></svg><span class=\"ds-tabs__label\">Programs</span></a></nav>",
+      "css": ".ds-tabs { display: flex; align-items: stretch; gap: 4px; background: var(--color-surface, #ffffff); border-top: 1px solid var(--color-line, #efefe9); padding: 10px 12px 18px; font-family: Outfit, ui-sans-serif, system-ui, sans-serif; } .ds-tabs__item { position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; gap: 5px; padding-top: 8px; text-decoration: none; color: var(--color-ink-muted, #6e6e66); } .ds-tabs__item--active { color: var(--color-ink, #14150f); } .ds-tabs__mark { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 26px; height: 3px; border-radius: 999px; background: var(--color-accent, #c6f24a); } .ds-tabs__label { font-size: 11px; font-weight: 600; } .ds-tabs__item:focus-visible { outline: 2px solid var(--color-accent-deep, #4e6011); outline-offset: 2px; border-radius: 6px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Gym Chalkboard",
+    "overview": "Overload is a paper-white app with near-black ink and one electric lime. It reads like a plan written on a board in a training hall: the numbers are large enough to catch at arm's length, the labels that name them are small, tracked and uppercase, and the only colour carrying a decision is the lime on the thing you are meant to touch. The ground (#fafaf7) is warm off-white rather than pure white, so white surfaces sit above it without needing a shadow to prove it.\n\nDensity is honest rather than airy. Rows are compact (14px vertical), gutters are a single 22px inset, and the type ramp is steep — a 64px tabular numeral sits directly above a 10px label with nothing between them. Depth is mostly tonal: a border for things in a list, a soft shadow for things standing alone, never both on the same element. Dark surfaces are a distinct material, always carrying a 26px grid texture so black areas read as drafting paper rather than as a hole.\n\nThe system currently runs in two registers. Most screens compose in rounded cards (26px) on the off-white ground. Home was rebuilt to carry hierarchy in scale alone: no card, border, box or shadow on the route, structure held by hairline rules and a single vertical spine. That is Home-scoped. The rest of the app has not adopted it, and that inconsistency is known and accepted, not an oversight — do not migrate other screens toward Home without a decision to do so.",
+    "keyCharacteristics": [
+      "Warm off-white ground, near-black ink, a single lime accent",
+      "One committed typeface (Outfit) doing display, body and label work",
+      "Tabular numerals everywhere a number can change",
+      "Bordered or shadowed, never both",
+      "Dark surfaces always carry the 26px grid texture",
+      "Motion is short, quintic-eased, and always reduced-motion gated"
+    ],
+    "rules": [
+      { "name": "The One Lime Rule", "body": "Lime marks the single thing you are meant to touch. Within a route's content it appears exactly once. The persistent chrome — the raised session button and the active-tab indicator — carries lime as well; that is chrome, and it is precisely why route content may never spend a second lime.", "section": "colors" },
+      { "name": "The Data-Never-Acts Rule", "body": "Muscle and session-type colour identifies data. It never becomes a button, a link or a primary surface. Lime never identifies data.", "section": "colors" },
+      { "name": "The Muted Floor Rule", "body": "ink-muted is the lightest text in the system. Anything lighter is decoration, not text.", "section": "colors" },
+      { "name": "The One Face Rule", "body": "Outfit is the committed face. A second family is not available to this system — if a register needs to feel different, translate it into Outfit through size, weight and tracking, as Home's 10px/0.14em label does.", "section": "typography" },
+      { "name": "The Tabular Rule", "body": "Any number that can change between renders is set in tabular numerals. Weights, reps, RPE, timers, streaks, counters, week indices.", "section": "typography" },
+      { "name": "The Scale-Alone Rule (Home)", "body": "On Home, hierarchy is carried by size, not by containers. The jump from a 64px value to its 10px caption is 6.4:1 and is load-bearing — nothing may be inserted between a value and its label to soften it.", "section": "typography" },
+      { "name": "The Bordered-Or-Shadowed Rule", "body": "A card is bordered when it lives in a list and shadowed when it stands alone. Never both on the same element.", "section": "elevation" },
+      { "name": "The Grid-Texture Rule", "body": "Every dark surface carries the 26px grid texture. A flat black rectangle is not part of this system.", "section": "elevation" },
+      { "name": "The No-Container Rule (Home)", "body": "Home has no card, border, box or shadow anywhere on the route. Anything that would have been a container is a rule instead. Home-scoped.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do take every colour, radius, shadow and easing from the @theme block in src/styles/index.css. Nothing downstream hardcodes a hex.",
+      "Do reserve lime for the single thing the user is meant to touch, and use accent-deep (#4e6011) whenever lime has to be read as text.",
+      "Do set every changeable number in tabular numerals.",
+      "Do give dark surfaces the 26px grid-texture.",
+      "Do choose bordered or shadowed for a card, based on whether it sits in a list or stands alone.",
+      "Do use ink-muted as the lightest text colour on anything new.",
+      "Do gate entrance motion on reduced-motion, and keep it to --ease-out-quint at 240-620ms.",
+      "Do put the section label above the card it names, at 11px/0.12em caps.",
+      "Do keep new routes on the incumbent card composition unless a decision is taken to migrate the app to Home's rule-and-spine structure."
+    ],
+    "donts": [
+      "Don't use ink-faint (#8a8a82) for text. It measures 3.33:1 on the ground and fails the WCAG 2.2 AA bar this product commits to. KNOWN DRIFT: the shared .caps utility still hardcodes it, so every route except Home currently ships label text below the bar.",
+      "Don't add a second typeface. Translate the register into Outfit instead.",
+      "Don't put lime on a passive surface, and don't let a data colour (muscle or session type) become an action.",
+      "Don't put both a border and a shadow on the same card.",
+      "Don't introduce asymmetric or single-corner radii; the ladder is 6 / 12 / 14 / 22 / 26 / 999.",
+      "Don't add a per-section entrance stagger to Home — the spine draw is that route's only motion.",
+      "Don't put a card, border, box or shadow on Home, or a container radius on its action bar.",
+      "Don't carry Home's 10px/0.14em label register or its square spine marks onto other routes; they are Home-scoped until the app migrates deliberately."
+    ]
+  }
+}

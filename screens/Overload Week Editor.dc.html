@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Outfit', system-ui, sans-serif; }
+  a { color: #14150F; }
+  a:hover { color: #6E8A16; }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 64px 24px; background: #E8E8E6;">
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+    <div style="height: 100%; box-sizing: border-box; position: relative; display: flex; flex-direction: column; background: #FAFAF7;">
+
+      <div style="flex: 1; min-height: 0; overflow-y: auto; padding: 56px 0 130px; display: flex; flex-direction: column;">
+
+        <div style="flex: none; padding: 0 22px; display: flex; align-items: center; gap: 12px;">
+          <button aria-label="Back" style="cursor: pointer; flex: none; width: 38px; height: 38px; border-radius: 50%; background: #FFFFFF; border: 1px solid #EAEAE4; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(20,21,15,0.05); transition: background 140ms ease;" style-hover="background: #F4F4EE;">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10.6 3.8 L5.4 9 L10.6 14.2" stroke="#14150F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+          <div style="display: flex; align-items: center; gap: 7px;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="0.5" y="7" width="2.5" height="6" rx="1" fill="#14150F"></rect><rect x="4" y="4.5" width="4" height="11" rx="1.5" fill="#14150F"></rect><rect x="8.5" y="8.6" width="3" height="2.8" rx="1.4" fill="#14150F"></rect><rect x="12" y="4.5" width="4" height="11" rx="1.5" fill="#14150F"></rect><rect x="17" y="7" width="2.5" height="6" rx="1" fill="#14150F"></rect></svg>
+            <div style="font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #14150F;">Overload</div>
+          </div>
+        </div>
+
+        <div style="flex: none; margin: 30px 22px 0; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: #8A8A82;">WEEK 3 OF 8</div>
+        <h1 style="margin: 6px 0 0; flex: none; padding: 0 22px; font-size: 34px; line-height: 1.08; letter-spacing: -0.03em; font-weight: 700; color: #14150F;">Week 3</h1>
+
+        <div style="flex: none; margin: 22px 22px 0; display: flex; gap: 8px;">
+          <button aria-label="Monday" style="cursor: pointer; flex: 1; aspect-ratio: 1; border-radius: 50%; border: none; background: #C6F24A; font-family: inherit; font-size: 14px; font-weight: 700; color: #14150F; box-shadow: 0 4px 12px rgba(150,196,40,0.35); transition: background 160ms ease;" style-hover="background: #BEEC3C;">M</button>
+          <button aria-label="Tuesday" style="cursor: pointer; flex: 1; aspect-ratio: 1; border-radius: 50%; border: 1px solid #E0E0D8; background: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600; color: #9A9A92; transition: background 140ms ease;" style-hover="background: #F4F4EE;">T</button>
+          <button aria-label="Wednesday" style="cursor: pointer; flex: 1; aspect-ratio: 1; border-radius: 50%; border: none; background: #C6F24A; font-family: inherit; font-size: 14px; font-weight: 700; color: #14150F; box-shadow: 0 4px 12px rgba(150,196,40,0.35); transition: background 160ms ease;" style-hover="background: #BEEC3C;">W</button>
+          <button aria-label="Thursday" style="cursor: pointer; flex: 1; aspect-ratio: 1; border-radius: 50%; border: 1px solid #E0E0D8; background: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600; color: #9A9A92; transition: background 140ms ease;" style-hover="background: #F4F4EE;">T</button>
+          <button aria-label="Friday" style="cursor: pointer; flex: 1; aspect-ratio: 1; border-radius: 50%; border: none; background: #C6F24A; font-family: inherit; font-size: 14px; font-weight: 700; color: #14150F; box-shadow: 0 4px 12px rgba(150,196,40,0.35); transition: background 160ms ease;" style-hover="background: #BEEC3C;">F</button>
+          <button aria-label="Saturday" style="cursor: pointer; flex: 1; aspect-ratio: 1; border-radius: 50%; border: 1px solid #E0E0D8; background: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600; color: #9A9A92; transition: background 140ms ease;" style-hover="background: #F4F4EE;">S</button>
+          <button aria-label="Sunday" style="cursor: pointer; flex: 1; aspect-ratio: 1; border-radius: 50%; border: 1px solid #E0E0D8; background: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600; color: #9A9A92; transition: background 140ms ease;" style-hover="background: #F4F4EE;">S</button>
+        </div>
+        <div style="flex: none; margin: 12px 22px 0; font-size: 12px; font-weight: 500; color: #8A8A82;">Training: Mon, Wed, Fri</div>
+
+        <div style="flex: none; margin: 40px 22px 0; font-size: 19px; font-weight: 700; letter-spacing: -0.02em; color: #14150F;">Choose Your Session</div>
+
+        <div style="flex: none; margin: 14px 22px 0; display: flex; flex-direction: column; gap: 12px;">
+
+          <button style="cursor: pointer; text-align: left; font-family: inherit; box-sizing: border-box; padding: 18px 18px 18px 20px; border-radius: 24px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #E2593A; box-shadow: 0 6px 18px rgba(20,21,15,0.05); display: flex; align-items: center; gap: 12px; transition: background 140ms ease;" style-hover="background: #FCFCF8;">
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 9px;">
+                <div style="font-size: 17px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Upper Body #1</div>
+                <div style="flex: none; padding: 4px 9px; border-radius: 999px; background: #FBEBE6; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #B8401F;">UPPER</div>
+              </div>
+              <div style="padding-top: 6px; font-size: 12px; font-weight: 500; color: #8A8A82;">6 exercises · 18 sets</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex: none;"><path d="M6 3.5 L10.5 8 L6 12.5" stroke="#B4B4AC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+
+          <button style="cursor: pointer; text-align: left; font-family: inherit; box-sizing: border-box; padding: 18px 18px 18px 20px; border-radius: 24px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #1F9187; box-shadow: 0 6px 18px rgba(20,21,15,0.05); display: flex; align-items: center; gap: 12px; transition: background 140ms ease;" style-hover="background: #FCFCF8;">
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 9px;">
+                <div style="font-size: 17px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Wednesday</div>
+                <div style="flex: none; padding: 4px 9px; border-radius: 999px; background: #E3F3F1; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #196E67;">LOWER</div>
+              </div>
+              <div style="padding-top: 6px; font-size: 12px; font-weight: 500; color: #8A8A82;">No exercises yet</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex: none;"><path d="M6 3.5 L10.5 8 L6 12.5" stroke="#B4B4AC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+
+          <button style="cursor: pointer; text-align: left; font-family: inherit; box-sizing: border-box; padding: 18px 18px 18px 20px; border-radius: 24px; background: #FFFFFF; border: 1px solid #EFEFE9; border-left: 6px solid #7C4DD1; box-shadow: 0 6px 18px rgba(20,21,15,0.05); display: flex; align-items: center; gap: 12px; transition: background 140ms ease;" style-hover="background: #FCFCF8;">
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 9px;">
+                <div style="font-size: 17px; font-weight: 700; letter-spacing: -0.015em; color: #14150F;">Friday</div>
+                <div style="flex: none; padding: 4px 9px; border-radius: 999px; background: #EEE8FA; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; color: #5E36A8;">FULL BODY</div>
+              </div>
+              <div style="padding-top: 6px; font-size: 12px; font-weight: 500; color: #8A8A82;">4 exercises · 12 sets</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex: none;"><path d="M6 3.5 L10.5 8 L6 12.5" stroke="#B4B4AC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+
+        </div>
+      </div>
+
+      <div style="position: absolute; left: 16px; right: 16px; bottom: 22px; height: 66px; border-radius: 33px; background: #FFFFFF; border: 1px solid #EDEDE7; box-shadow: 0 12px 30px rgba(20,21,15,0.12); display: grid; grid-template-columns: 1fr 1fr 78px 1fr 1fr; align-items: center;">
+        <button style="cursor: pointer; border: none; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0;">
+          <svg width="21" height="21" viewBox="0 0 22 22" fill="none"><path d="M3.5 9.4 L11 3.4 L18.5 9.4 V18 A1 1 0 0 1 17.5 19 H4.5 A1 1 0 0 1 3.5 18 Z" stroke="#9A9A92" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+          <div style="font-size: 10px; font-weight: 500; color: #9A9A92;">Home</div>
+        </button>
+        <button style="cursor: pointer; border: none; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0;">
+          <svg width="21" height="21" viewBox="0 0 22 22" fill="none"><rect x="3.5" y="3.5" width="15" height="15" rx="3" stroke="#14150F" stroke-width="1.8"></rect><path d="M7.5 8.5 H14.5 M7.5 13 H12" stroke="#14150F" stroke-width="1.8" stroke-linecap="round"></path></svg>
+          <div style="font-size: 10px; font-weight: 600; color: #14150F;">Programs</div>
+        </button>
+        <div></div>
+        <button style="cursor: pointer; border: none; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0;">
+          <svg width="21" height="21" viewBox="0 0 22 22" fill="none"><path d="M3.5 15.5 L8 10 L12 13.5 L18.5 5.5" stroke="#9A9A92" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <div style="font-size: 10px; font-weight: 500; color: #9A9A92;">Progress</div>
+        </button>
+        <button style="cursor: pointer; border: none; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0;">
+          <svg width="21" height="21" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="7.6" r="3.4" stroke="#9A9A92" stroke-width="1.8"></circle><path d="M4.6 18.4 C5.2 14.9 7.8 13.2 11 13.2 C14.2 13.2 16.8 14.9 17.4 18.4" stroke="#9A9A92" stroke-width="1.8" stroke-linecap="round"></path></svg>
+          <div style="font-size: 10px; font-weight: 500; color: #9A9A92;">Profile</div>
+        </button>
+      </div>
+
+      <button aria-label="Start session" style="position: absolute; left: 50%; bottom: 48px; transform: translateX(-50%); cursor: pointer; width: 64px; height: 64px; border-radius: 50%; border: 4px solid #FAFAF7; background: #C6F24A; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 26px rgba(150,196,40,0.5); transition: background 160ms ease;" style-hover="background: #B7E634;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="0.8" y="9" width="2.6" height="6" rx="1.2" fill="#14150F"></rect><rect x="4.6" y="6" width="4.4" height="12" rx="1.8" fill="#14150F"></rect><rect x="9.6" y="10.6" width="4.8" height="2.8" rx="1.4" fill="#14150F"></rect><rect x="15" y="6" width="4.4" height="12" rx="1.8" fill="#14150F"></rect><rect x="20.6" y="9" width="2.6" height="6" rx="1.2" fill="#14150F"></rect></svg>
+      </button>
+    </div>
+  </x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:1000}}"></script>
+</body>
+</html>

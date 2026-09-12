@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; font-family: 'Outfit', system-ui, sans-serif; }
+  a { color: #14150F; text-decoration: none; }
+  a:hover { color: #6E8A16; }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 64px 24px; background: #E8E8E6; position: relative">
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+    <div style="height: 100%; box-sizing: border-box; overflow: hidden; display: flex; flex-direction: column; align-items: center; padding: 56px 26px 32px; background: #FFFFFF;">
+
+      <div style="width: 100%; display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 7px;">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="0.5" y="7" width="2.5" height="6" rx="1" fill="#14150F"></rect><rect x="4" y="4.5" width="4" height="11" rx="1.5" fill="#14150F"></rect><rect x="8.5" y="8.6" width="3" height="2.8" rx="1.4" fill="#14150F"></rect><rect x="12" y="4.5" width="4" height="11" rx="1.5" fill="#14150F"></rect><rect x="17" y="7" width="2.5" height="6" rx="1" fill="#14150F"></rect></svg>
+          <div style="font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #14150F;">Overload</div>
+        </div>
+        <div style="font-size: 12px; font-weight: 500; letter-spacing: 0.08em; color: #A8A8A2;">V. 1.0</div>
+      </div>
+
+      <div style="flex: 1; min-height: 0; width: 100%; position: relative; display: flex; align-items: center; justify-content: center;">
+        <svg width="318" height="318" viewBox="0 0 318 318" fill="none" style="position: absolute; transform: rotate(-90deg);">
+          <circle cx="159" cy="159" r="155" stroke="#EBEBE4" stroke-width="7"></circle>
+          <circle cx="159" cy="159" r="155" stroke="#93C520" stroke-width="7" stroke-dasharray="974" stroke-dashoffset="127" shape-rendering="geometricPrecision"></circle>
+        </svg>
+        <div style="position: absolute; width: 262px; height: 262px; border-radius: 50%; background: #E8F9AE;"></div>
+
+        <svg width="16" height="16" viewBox="0 0 16 16" style="position: absolute; top: 100px; left: 38px;"><path d="M8 0 C8.6 5 11 7.4 16 8 C11 8.6 8.6 11 8 16 C7.4 11 5 8.6 0 8 C5 7.4 7.4 5 8 0Z" fill="#14150F"></path></svg>
+        <svg width="13" height="13" viewBox="0 0 16 16" style="position: absolute; bottom: 100px; right: 38px;"><path d="M8 0 C8.6 5 11 7.4 16 8 C11 8.6 8.6 11 8 16 C7.4 11 5 8.6 0 8 C5 7.4 7.4 5 8 0Z" fill="#14150F"></path></svg>
+
+        <svg width="130" height="220" viewBox="0 0 130 220" fill="none" style="position: absolute; top: 60px; left: 168px;">
+          <path d="M104 4 C86 46 68 108 60 178" stroke="#B9B9B1" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 4"></path>
+          <circle cx="59" cy="182" r="3.5" fill="#14150F"></circle>
+        </svg>
+
+        <div style="position: absolute; top: 30px; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; left: 224px;">
+          
+          
+        </div>
+
+        <svg width="34" height="30" viewBox="0 0 34 30" fill="none" style="position: absolute; left: 22px; top: 196px;">
+          <path d="M2 5 H22 M8 15 H30 M2 25 H18" stroke="#14150F" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <svg width="34" height="30" viewBox="0 0 34 30" fill="none" style="position: absolute; right: 22px; top: 196px;">
+          <path d="M32 5 H12 M26 15 H4 M32 25 H16" stroke="#14150F" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        
+
+        <img src="./assets/lifter.png" alt="Lifter pressing a loaded barbell" style="position: relative; width: 330px; display: block; margin-top: 34px;">
+      </div>
+
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 4px 0 20px;">
+        <h1 style="margin: 0; text-align: center; font-size: 32px; line-height: 1.12; letter-spacing: -0.025em; font-weight: 700; color: #14150F; max-width: 15ch;">{{ headline }}</h1>
+        <p style="margin: 0; text-align: center; font-size: 14px; line-height: 1.6; color: #4C4C46; max-width: 32ch;">{{ subhead }}</p>
+        <div style="display: flex; align-items: center; gap: 7px; padding-top: 4px;">
+          <div style="width: 20px; height: 5px; border-radius: 3px; background: #14150F;"></div>
+          <div style="width: 5px; height: 5px; border-radius: 3px; background: #DCDCD6;"></div>
+          <div style="width: 5px; height: 5px; border-radius: 3px; background: #DCDCD6;"></div>
+        </div>
+      </div>
+
+      <div style="width: 100%; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+        <button style="width: 100%; border: none; cursor: pointer; font-family: inherit; height: 58px; border-radius: 29px; background: #C6F24A; color: #14150F; font-size: 17px; font-weight: 600; box-shadow: 0 10px 24px rgba(150,196,40,0.38), 0 2px 6px rgba(20,21,15,0.08); transition: background 160ms ease, box-shadow 160ms ease;" style-hover="background: #B7E634; box-shadow: 0 12px 28px rgba(150,196,40,0.46), 0 2px 6px rgba(20,21,15,0.1);">Create account</button>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 5px; min-height: 48px; font-size: 14px; font-weight: 400; color: #4C4C46;">I already have an account. <a href="#" style="font-weight: 600; padding: 6px 4px;">Log in</a></div>
+      </div>
+    </div>
+  </x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:1000},&quot;headline&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Lift more than last week&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;subhead&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Log your reps and RPE, follow a program, and let Overload set the next load for you.&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      headline: this.props.headline ?? 'Lift more than last week',
+      subhead: this.props.subhead ?? 'Log your reps and RPE, follow a program, and let Overload set the next load for you.',
+    };
+  }
+}
+</script>
+</body>
+</html>

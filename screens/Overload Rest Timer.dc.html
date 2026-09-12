@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Outfit', system-ui, sans-serif; }
+  a { color: #C6F24A; }
+  a:hover { color: #FFFFFF; }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 64px 24px; background: #E8E8E6;">
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" status-bar-style="light" hint-size="402px,874px">
+    <div style="height: 100%; box-sizing: border-box; position: relative; display: flex; flex-direction: column; background: #0D0E09; overflow: hidden;">
+
+      <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px); background-size: 26px 26px; background-position: -1px -1px;"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(120% 70% at 50% 38%, rgba(198,242,74,0.10) 0%, rgba(13,14,9,0) 62%);"></div>
+
+      <div style="position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: center; padding: 76px 26px 34px;">
+
+        <div style="flex: none; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; color: #9DA189;">UPPER BODY #1 · WEEK 3</div>
+
+        <div style="flex: none; margin-top: 54px; position: relative; width: 262px; height: 262px; display: flex; align-items: center; justify-content: center;">
+          <div style="position: absolute; width: 226px; height: 226px; border-radius: 50%; background: rgba(198,242,74,0.42); filter: blur(38px);"></div>
+          <div style="position: absolute; width: 196px; height: 196px; border-radius: 50%; background: rgba(13,14,9,0.9); filter: blur(18px);"></div>
+          <svg width="262" height="262" viewBox="0 0 262 262" fill="none" style="position: relative; display: block; transform: rotate(-90deg);">
+            <circle cx="131" cy="131" r="112" stroke="#22241A" stroke-width="17"></circle>
+            <circle cx="131" cy="131" r="112" stroke="#C6F24A" stroke-width="17" stroke-linecap="round" stroke-dasharray="{{ ringDash }}"></circle>
+          </svg>
+          <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="font-size: 66px; line-height: 1; font-weight: 700; letter-spacing: -0.045em; color: #FFFFFF; font-variant-numeric: tabular-nums;">{{ timeLabel }}</div>
+            <div style="padding-top: 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.28em; color: #7C8069;">REST</div>
+          </div>
+        </div>
+
+        <div style="flex: none; margin-top: 44px; font-size: 20px; font-weight: 500; letter-spacing: -0.015em; color: #C6F24A; text-align: center;">Barbell Bench Press</div>
+
+        <div style="flex: none; margin-top: 14px; padding: 9px 16px; border-radius: 999px; background: #1B1D14; border: 1px solid #262920; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: #9DA189;">NEXT · SET 2 OF 3</div>
+
+        <div style="flex: 1; min-height: 22px;"></div>
+
+        <div style="flex: none; display: flex; align-items: center; justify-content: center; gap: 20px;">
+          <button aria-label="Subtract 15 seconds" onClick="{{ minus15 }}" style="cursor: pointer; flex: none; width: 62px; height: 62px; border-radius: 50%; border: 1px solid #2A2D22; background: #1B1D14; font-family: inherit; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; transition: background 150ms ease;" style-hover="background: #23261B;">
+            <svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 2.6 A6.4 6.4 0 1 1 3.6 5.6" stroke="#D8DCC6" stroke-width="1.6" stroke-linecap="round"></path><path d="M3.1 2 L3.3 6.1 L7.4 5.6" stroke="#D8DCC6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: -0.01em; color: #D8DCC6;">−15s</div>
+          </button>
+
+          <button onClick="{{ togglePause }}" style="cursor: pointer; flex: none; height: 66px; padding: 0 42px; border-radius: 33px; border: none; background: #C6F24A; font-family: inherit; font-size: 17px; font-weight: 700; letter-spacing: -0.01em; color: #14150F; box-shadow: 0 14px 34px rgba(198,242,74,0.34); display: flex; align-items: center; gap: 11px; transition: background 150ms ease;" style-hover="background: #B7E634;">
+            <sc-if value="{{ isRunning }}" hint-placeholder-val="{{ true }}">
+              <svg width="15" height="17" viewBox="0 0 15 17" fill="none" style="flex: none;"><rect x="1" y="1" width="4.4" height="15" rx="1.6" fill="#14150F"></rect><rect x="9.6" y="1" width="4.4" height="15" rx="1.6" fill="#14150F"></rect></svg>
+            </sc-if>
+            <sc-if value="{{ isPaused }}" hint-placeholder-val="{{ false }}">
+              <svg width="15" height="17" viewBox="0 0 15 17" fill="none" style="flex: none;"><path d="M2 1.6 L13.4 8.5 L2 15.4 Z" fill="#14150F"></path></svg>
+            </sc-if>
+            {{ pauseLabel }}
+          </button>
+
+          <button aria-label="Add 15 seconds" onClick="{{ plus15 }}" style="cursor: pointer; flex: none; width: 62px; height: 62px; border-radius: 50%; border: 1px solid #2A2D22; background: #1B1D14; font-family: inherit; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; transition: background 150ms ease;" style-hover="background: #23261B;">
+            <svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 2.6 A6.4 6.4 0 1 0 14.4 5.6" stroke="#D8DCC6" stroke-width="1.6" stroke-linecap="round"></path><path d="M14.9 2 L14.7 6.1 L10.6 5.6" stroke="#D8DCC6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: -0.01em; color: #D8DCC6;">+15s</div>
+          </button>
+        </div>
+
+        <button style="flex: none; margin-top: 38px; cursor: pointer; padding: 12px 22px; border: none; background: transparent; font-family: inherit; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; color: #7C8069; transition: color 150ms ease;" style-hover="color: #C6C9B4;">SKIP REST</button>
+      </div>
+    </div>
+  </x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:1000},&quot;totalSeconds&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:180,&quot;min&quot;:30,&quot;max&quot;:300,&quot;step&quot;:15,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Timer&quot;},&quot;remainingSeconds&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:179,&quot;min&quot;:1,&quot;max&quot;:300,&quot;step&quot;:1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Timer&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    const total = Number(props.totalSeconds) || 180;
+    this.state = { remaining: Number(props.remainingSeconds) || 179, running: true, total };
+  }
+
+  componentDidMount() {
+    this.iv = setInterval(() => {
+      this.setState(s => (s.running && s.remaining > 0 ? { remaining: s.remaining - 1 } : null));
+    }, 1000);
+  }
+  componentWillUnmount() { clearInterval(this.iv); }
+
+  renderVals() {
+    const { remaining, total, running } = this.state;
+    const m = Math.floor(remaining / 60), s = remaining % 60;
+    const C = 2 * Math.PI * 112;
+    const frac = Math.max(0, Math.min(1, remaining / Math.max(total, 1)));
+    return {
+      isRunning: running,
+      isPaused: !running,
+      timeLabel: m + ':' + String(s).padStart(2, '0'),
+      ringDash: (C * frac).toFixed(1) + ' ' + C.toFixed(1),
+      pauseLabel: running ? 'Pause' : 'Resume',
+      togglePause: () => this.setState(st => ({ running: !st.running })),
+      minus15: () => this.setState(st => ({ remaining: Math.max(0, st.remaining - 15) })),
+      plus15: () => this.setState(st => ({ remaining: st.remaining + 15, total: Math.max(st.total, st.remaining + 15) }))
+    };
+  }
+}
+</script>
+</body>
+</html>

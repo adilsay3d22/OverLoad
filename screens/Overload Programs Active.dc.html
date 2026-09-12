@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Outfit', system-ui, sans-serif; }
+  a { color: #14150F; }
+  a:hover { color: #6E8A16; }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 64px 24px; background: #E8E8E6;">
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="402px,874px">
+    <div style="height: 100%; box-sizing: border-box; position: relative; display: flex; flex-direction: column; background: #FAFAF7;">
+
+      <div style="flex: 1; min-height: 0; overflow-y: auto; padding: 56px 22px 130px; display: flex; flex-direction: column;">
+
+        <div style="display: flex; align-items: center; justify-content: space-between; flex: none;">
+          <div style="display: flex; align-items: center; gap: 7px;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="0.5" y="7" width="2.5" height="6" rx="1" fill="#14150F"></rect><rect x="4" y="4.5" width="4" height="11" rx="1.5" fill="#14150F"></rect><rect x="8.5" y="8.6" width="3" height="2.8" rx="1.4" fill="#14150F"></rect><rect x="12" y="4.5" width="4" height="11" rx="1.5" fill="#14150F"></rect><rect x="17" y="7" width="2.5" height="6" rx="1" fill="#14150F"></rect></svg>
+            <div style="font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #14150F;">Overload</div>
+          </div>
+          <button aria-label="Profile" style="cursor: pointer; width: 38px; height: 38px; border-radius: 50%; background: #FFFFFF; border: 1px solid #EAEAE4; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(20,21,15,0.05);">
+            <svg width="19" height="19" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="6.8" r="3.2" stroke="#14150F" stroke-width="1.6"></circle><path d="M4 17 C4.6 13.7 7 12 10 12 C13 12 15.4 13.7 16 17" stroke="#14150F" stroke-width="1.6" stroke-linecap="round"></path></svg>
+          </button>
+        </div>
+
+        <div style="padding: 34px 0 22px; flex: none;">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: #8A8A82;">CURRENT PROGRAM</div>
+          <div style="padding-top: 5px; font-size: 13px; font-weight: 500; color: #6E6E66;">Template</div>
+          <h1 style="margin: 10px 0 0; font-size: 32px; line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; color: #14150F;">Upper / Lower Split</h1>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 14px;">
+            <div style="padding: 6px 13px; border-radius: 999px; background: #FFFFFF; border: 1px solid #EAEAE4; font-size: 12px; font-weight: 600; color: #4C4C46;">8 weeks</div>
+            <div style="padding: 6px 13px; border-radius: 999px; background: #FFFFFF; border: 1px solid #EAEAE4; font-size: 12px; font-weight: 600; color: #4C4C46;">3 of 8 weeks built</div>
+          </div>
+        </div>
+
+        <div style="flex: none; background: #14150F; border-radius: 30px; padding: 24px 22px 22px; box-shadow: 0 18px 38px rgba(20,21,15,0.22);">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: #C6F24A;">UP NEXT</div>
+          <div style="display: flex; align-items: center; gap: 9px; padding: 12px 0 8px;">
+            <div style="font-size: 26px; font-weight: 700; letter-spacing: -0.02em; color: #FFFFFF;">Lower Body #2</div>
+            <div style="padding: 4px 10px; border-radius: 999px; background: #D9F1EE; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #0E5B54;">LOWER</div>
+          </div>
+          <div style="font-size: 13px; font-weight: 500; color: #A8A8A0;">Week 3 · 5 exercises · 16 sets</div>
+          <button style="width: 100%; margin-top: 22px; border: none; cursor: pointer; font-family: inherit; height: 56px; border-radius: 28px; background: #C6F24A; color: #14150F; font-size: 16px; font-weight: 600; box-shadow: 0 10px 24px rgba(150,196,40,0.34); transition: background 160ms ease;" style-hover="background: #B7E634;">View Session</button>
+        </div>
+
+        <button style="flex: none; width: 100%; margin-top: 14px; cursor: pointer; font-family: inherit; height: 56px; border-radius: 28px; background: #FFFFFF; border: 1px solid #DEDED6; color: #14150F; font-size: 15px; font-weight: 600; box-shadow: 0 4px 14px rgba(20,21,15,0.05); transition: border-color 160ms ease;" style-hover="border-color: #14150F;">View All Weeks</button>
+
+        <div style="flex: none; padding: 26px 0 4px;">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: #8A8A82;">PROGRAM STATS</div>
+          <div style="padding-top: 5px; font-size: 12px; font-weight: 500; color: #6E6E66;">Since you started this program.</div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 14px;">
+            <div style="min-width: 0; background: #FFFFFF; border: 1px solid #EFEFE9; border-radius: 20px; padding: 14px 13px 13px; box-shadow: 0 4px 14px rgba(20,21,15,0.04);">
+              <div style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: #14150F;">12</div>
+              <div style="padding-top: 2px; font-size: 11px; font-weight: 500; line-height: 1.35; color: #6E6E66;">Sessions Completed</div>
+            </div>
+            <div style="min-width: 0; background: #FFFFFF; border: 1px solid #EFEFE9; border-radius: 20px; padding: 14px 13px 13px; box-shadow: 0 4px 14px rgba(20,21,15,0.04);">
+              <div style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: #14150F;">216</div>
+              <div style="padding-top: 2px; font-size: 11px; font-weight: 500; line-height: 1.35; color: #6E6E66;">Sets Logged</div>
+            </div>
+            <div style="position: relative; min-width: 0; background: #F2FBD9; border: 1px solid #DCEFA6; border-radius: 20px; padding: 14px 13px 13px; box-shadow: 0 6px 18px rgba(112,140,20,0.10);">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style="position: absolute; top: 12px; right: 12px;"><path d="M4.4 2.6 H11.6 V6.2 A3.6 3.6 0 0 1 8 9.8 A3.6 3.6 0 0 1 4.4 6.2 Z" stroke="#5E7A0E" stroke-width="1.4" stroke-linejoin="round"></path><path d="M4.4 3.6 H2.6 V4.8 A2.4 2.4 0 0 0 4.9 7.2 M11.6 3.6 H13.4 V4.8 A2.4 2.4 0 0 1 11.1 7.2" stroke="#5E7A0E" stroke-width="1.4" stroke-linecap="round"></path><path d="M8 9.8 V12 M5.6 13.6 H10.4" stroke="#5E7A0E" stroke-width="1.4" stroke-linecap="round"></path></svg>
+              <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: #5E7A0E;">BEST PR</div>
+              <div style="padding-top: 6px; font-size: 11px; font-weight: 700; color: #3F4A18;">Bench Press</div>
+              <div style="padding-top: 3px; font-size: 17px; font-weight: 700; letter-spacing: -0.03em; color: #14150F; white-space: nowrap;">50kg × 20</div>
+              <div style="padding-top: 2px; font-size: 10px; font-weight: 500; line-height: 1.35; color: #6E7355;">Weight × Reps</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex: 1; min-height: 0;"></div>
+
+        <div style="flex: none; display: flex; justify-content: center; min-height: 44px; align-items: center;">
+          <a href="#" style="font-size: 13px; font-weight: 500; color: #6E6E66; text-decoration: underline; text-underline-offset: 3px; padding: 6px 4px;">Start a new program instead</a>
+        </div>
+      </div>
+
+      <div style="position: absolute; left: 16px; right: 16px; bottom: 22px; height: 66px; border-radius: 33px; background: #FFFFFF; border: 1px solid #EDEDE7; box-shadow: 0 12px 30px rgba(20,21,15,0.12); display: grid; grid-template-columns: 1fr 1fr 78px 1fr 1fr; align-items: center;">
+        <button style="cursor: pointer; border: none; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0;">
+          <svg width="21" height="21" viewBox="0 0 22 22" fill="none"><path d="M3.5 9.4 L11 3.4 L18.5 9.4 V18 A1 1 0 0 1 17.5 19 H4.5 A1 1 0 0 1 3.5 18 Z" stroke="#9A9A92" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+          <div style="font-size: 10px; font-weight: 500; color: #9A9A92;">Home</div>
+        </button>
+        <button style="cursor: pointer; border: none; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0;">
+          <svg width="21" height="21" viewBox="0 0 22 22" fill="none"><rect x="3.5" y="3.5" width="15" height="15" rx="3" stroke="#14150F" stroke-width="1.8"></rect><path d="M7.5 8.5 H14.5 M7.5 13 H12" stroke="#14150F" stroke-width="1.8" stroke-linecap="round"></path></svg>
+          <div style="font-size: 10px; font-weight: 600; color: #14150F;">Programs</div>
+        </button>
+        <div></div>
+        <button style="cursor: pointer; border: none; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0;">
+          <svg width="21" height="21" viewBox="0 0 22 22" fill="none"><path d="M3.5 15.5 L8 10 L12 13.5 L18.5 5.5" stroke="#9A9A92" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <div style="font-size: 10px; font-weight: 500; color: #9A9A92;">Progress</div>
+        </button>
+        <button style="cursor: pointer; border: none; background: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0;">
+          <svg width="21" height="21" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="7.6" r="3.4" stroke="#9A9A92" stroke-width="1.8"></circle><path d="M4.6 18.4 C5.2 14.9 7.8 13.2 11 13.2 C14.2 13.2 16.8 14.9 17.4 18.4" stroke="#9A9A92" stroke-width="1.8" stroke-linecap="round"></path></svg>
+          <div style="font-size: 10px; font-weight: 500; color: #9A9A92;">Profile</div>
+        </button>
+      </div>
+
+      <button aria-label="Start session" style="position: absolute; left: 50%; bottom: 48px; transform: translateX(-50%); cursor: pointer; width: 64px; height: 64px; border-radius: 50%; border: 4px solid #FAFAF7; background: #C6F24A; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 26px rgba(150,196,40,0.5); transition: background 160ms ease;" style-hover="background: #B7E634;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="0.8" y="9" width="2.6" height="6" rx="1.2" fill="#14150F"></rect><rect x="4.6" y="6" width="4.4" height="12" rx="1.8" fill="#14150F"></rect><rect x="9.6" y="10.6" width="4.8" height="2.8" rx="1.4" fill="#14150F"></rect><rect x="15" y="6" width="4.4" height="12" rx="1.8" fill="#14150F"></rect><rect x="20.6" y="9" width="2.6" height="6" rx="1.2" fill="#14150F"></rect></svg>
+      </button>
+    </div>
+  </x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:1000}}"></script>
+</body>
+</html>
