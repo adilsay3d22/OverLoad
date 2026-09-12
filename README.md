@@ -145,7 +145,11 @@ someone needs it:
 
 ## Licence
 
-[MIT](LICENSE). Use it, fork it, ship it.
+[MIT, with an attribution requirement](LICENSE). Use it, fork it, ship it —
+commercially if you like. The one condition beyond stock MIT: if you distribute
+something built on this, credit **adilsay3d22** somewhere a user can find it —
+an About or Credits screen in a product, or the README of a source release. A
+link back to this repository is enough.
 
 The bundled `exercises.json` and `templates.json` are data that came with the
 project rather than code, and the training programmes in them are built from

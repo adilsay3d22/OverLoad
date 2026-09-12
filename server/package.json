@@ -2,7 +2,7 @@
   "name": "@overload/server",
   "private": true,
   "version": "1.0.0",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "type": "module",
   "main": "src/index.js",
   "scripts": {

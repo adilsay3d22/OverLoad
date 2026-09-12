@@ -1,4 +1,4 @@
-MIT License
+MIT License, with an attribution requirement
 
 Copyright (c) 2026 adilsay3d22
 
@@ -9,8 +9,19 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+2. ATTRIBUTION. Any distributed work that uses, or is derived from, the
+   Software must credit adilsay3d22 (https://github.com/adilsay3d22) as an
+   original author, somewhere the end user can reasonably find it: an "About",
+   "Credits" or "Acknowledgements" screen in a running product, or the README
+   or equivalent in a source distribution. A visible link to
+   https://github.com/adilsay3d22/OverLoad satisfies this condition.
+
+   This credit may not be removed. It also may not be worded so as to suggest
+   that adilsay3d22 endorses, sponsors, or is otherwise associated with the
+   resulting work.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
