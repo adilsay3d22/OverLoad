@@ -18,12 +18,14 @@ Total setup is about ten minutes, most of it waiting for a build.
 1. Sign up at [neon.tech](https://neon.tech) and create a project. Pick the
    region closest to you — every API request makes a round trip to it.
 
-   **Whichever region you pick, match it in `vercel.json`.** The `regions` key
-   pins the API function to the same place as the database; Vercel otherwise
-   defaults to Washington DC, which would put an ocean between the two on every
-   query. It is currently set to `sin1` (Singapore) to match an AWS Asia
-   Pacific 1 project. Neon's region is shown under Project settings, and
-   Vercel's codes are `sin1`, `iad1`, `fra1`, `syd1` and so on.
+   **Whichever region you pick, match it on Vercel too.** After the first
+   deploy: Vercel → your project → Settings → Functions → **Function Region**,
+   and pick the one nearest your Neon region. Vercel defaults to Washington DC,
+   which would put an ocean between the API and its database on every query —
+   roughly 250ms of round trip that nothing else you do will win back. (This is
+   a project setting rather than a `vercel.json` key, because the `regions`
+   field is Pro-only; the build itself always runs in Vercel's own region and
+   that part does not matter.)
 2. Open **Connection Details** and copy the **pooled** connection string. It has
    `-pooler` in the hostname. This matters: the app talks to Neon over HTTP, and
    the pooled endpoint is the one that serves it.
@@ -99,8 +101,15 @@ DATABASE_URL=$PRODUCTION_DATABASE_URL npm run db:inspect
 Push the repository to GitHub, then:
 
 1. [vercel.com/new](https://vercel.com/new) → import the repository.
-2. Leave the build settings alone. `vercel.json` already sets the build command,
-   the output directory and the rewrites.
+2. Leave the build settings alone. `vercel.json` sets the framework, the build
+   command, the output directory and the rewrites.
+
+   `framework` and `buildCommand` are both load-bearing. Without the framework
+   set, Vercel detects an Express dependency and tries to run the repo as a
+   Node server, looking for a `server.js` in the output directory and failing.
+   And `buildCommand` names the client workspace explicitly, because a bare
+   `npm run build` at the root fans out across every workspace instead of
+   running the root script.
 3. Add two **Environment Variables**, for all three environments:
 
    | Name | Value |
