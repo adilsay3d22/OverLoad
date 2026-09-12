@@ -6,7 +6,8 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "node --watch src/index.js",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "build": "echo \"server: nothing to build\""
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
