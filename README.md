@@ -143,6 +143,14 @@ someone needs it:
 - **No internationalisation.** English and metric-first only.
 - **Set writes queue offline** and replay on reconnect, but nothing else does.
 
+## Licence
+
+[MIT](LICENSE). Use it, fork it, ship it.
+
+The bundled `exercises.json` and `templates.json` are data that came with the
+project rather than code, and the training programmes in them are built from
+publicly published material — see Credits.
+
 ## Credits
 
 The three bundled programs are built from publicly published Jeff Nippard
