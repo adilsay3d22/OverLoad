@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import {
-  ensureLog, findLog, getProgram, listLogs, listPrograms, putSet,
+  getProgram, listLogs, listPrograms, writeSet,
 } from '../lib/repo.js';
 import { requireAuth } from '../lib/auth.js';
 import { uid } from '../lib/catalog.js';
@@ -45,9 +45,15 @@ const blankSet = () => ({ weight: null, reps: null, actualRpe: null, complete: f
 
 /** Plan + logged state for one session, which is what both logging screens read. */
 router.get('/session/:programId/:week/:sessionId', async (req, res) => {
-  const { program, weekIndex, session } = await locate(req.user.id, req.params);
+  // The plan and the history are independent reads, and each one is a round
+  // trip to a database on another continent. Waiting for the first before
+  // starting the second doubled the time this screen takes to open for no
+  // reason: nothing in the log query depends on what the plan query returns.
+  const [{ program, weekIndex, session }, logs] = await Promise.all([
+    locate(req.user.id, req.params),
+    listLogs(req.user.id),
+  ]);
   if (!session) return res.status(404).json({ error: 'Session not found' });
-  const logs = await listLogs(req.user.id);
   const byEntry = new Map(
     logs
       .filter(
@@ -86,7 +92,14 @@ router.get('/session/:programId/:week/:sessionId', async (req, res) => {
 
 /** Persist one set. Called the moment its check button is tapped. */
 router.put('/session/:programId/:week/:sessionId/:entryId/sets/:setIndex', async (req, res) => {
-  const { program, weekIndex, session } = await locate(req.user.id, req.params);
+  // Both reads this route needs, at once. The history is wanted anyway to
+  // report progress back, and it already contains the log row for this
+  // exercise, so looking that row up separately was a third round trip
+  // fetching something we were about to have in hand.
+  const [{ program, weekIndex, session }, logs] = await Promise.all([
+    locate(req.user.id, req.params),
+    listLogs(req.user.id),
+  ]);
   if (!session) return res.status(404).json({ error: 'Session not found' });
   const entry = session.exercises.find((e) => e.id === req.params.entryId);
   if (!entry) return res.status(404).json({ error: 'Exercise not found' });
@@ -106,11 +119,12 @@ router.put('/session/:programId/:week/:sessionId/:entryId/sets/:setIndex', async
     return res.status(400).json({ error: 'Add weight and reps before checking the set off.' });
   }
 
-  const existing = await findLog({
-    userId: req.user.id, programId: program.id, weekIndex, sessionId: session.id, entryId: entry.id,
-  });
-  const log = existing
-    || (await ensureLog(logShell(req.user.id, program, weekIndex, session, entry)));
+  const existing = logs.find(
+    (l) =>
+      l.programId === program.id && l.weekIndex === weekIndex
+      && l.sessionId === session.id && l.entryId === entry.id,
+  );
+  const shell = existing || logShell(req.user.id, program, weekIndex, session, entry);
 
   const saved = {
     weight,
@@ -119,21 +133,28 @@ router.put('/session/:programId/:week/:sessionId/:entryId/sets/:setIndex', async
     complete,
     // Un-checking a set keeps the timestamp of when it was done, so a
     // correction does not rewrite when the work happened.
-    at: complete ? new Date().toISOString() : (log.sets[index]?.at ?? null),
+    at: complete ? new Date().toISOString() : (existing?.sets[index]?.at ?? null),
   };
-  await putSet(log.id, index, saved);
+  await writeSet(shell, index, saved);
+
+  // Progress is reported from the history already read, with this set applied —
+  // which is exactly what a re-read would have returned, one round trip later.
+  if (!existing) logs.push(shell);
+  shell.sets = shell.sets || [];
+  shell.sets[index] = saved;
 
   res.json({
     set: saved,
-    progress: sessionProgress(await listLogs(req.user.id), program, weekIndex, session),
+    progress: sessionProgress(logs, program, weekIndex, session),
     restSeconds: entry.restSeconds,
   });
 });
 
 /** Everything this account has logged, for the Profile screen's export. */
 router.get('/export', async (req, res) => {
-  const logs = await listLogs(req.user.id);
-  const programs = await listPrograms(req.user.id);
+  const [logs, programs] = await Promise.all([
+    listLogs(req.user.id), listPrograms(req.user.id), req.loadUser(),
+  ]);
   res.json({
     exportedAt: new Date().toISOString(),
     account: { name: req.user.name, email: req.user.email, units: req.user.units },

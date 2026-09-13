@@ -38,6 +38,47 @@ const METRICS = [
   { value: 'vol', label: 'Vol' },
 ];
 
+/**
+ * One saved set folded into the session, with the session's progress recounted.
+ *
+ * This is the client's copy of the server's `sessionProgress`, and it has to
+ * stay a copy: the screen now writes optimistically, so these are the figures
+ * the UI acts on — including `complete`, which is what stops the session clock
+ * when the last set of the last exercise goes in. Waiting for the server to
+ * confirm what we just typed would put the round trip back on the one path
+ * that was slowest.
+ */
+function applySet(prev, position, setIndex, set) {
+  if (!prev) return prev;
+  const next = structuredClone(prev);
+  const target = next.exercises[position];
+  if (!target) return prev;
+
+  target.sets[setIndex] = { ...target.sets[setIndex], ...set };
+  target.completedSets = target.sets.filter((x) => x.complete).length;
+
+  let done = 0;
+  let loggedSets = 0;
+  let nextExerciseIndex = -1;
+  next.exercises.forEach((exercise, index) => {
+    const n = exercise.sets.filter((x) => x.complete).length;
+    loggedSets += Math.min(n, exercise.targetSets);
+    if (n >= exercise.targetSets) done += 1;
+    else if (nextExerciseIndex === -1) nextExerciseIndex = index;
+  });
+
+  next.progress = {
+    ...next.progress,
+    exercisesDone: done,
+    exerciseCount: next.exercises.length,
+    nextExerciseIndex: nextExerciseIndex === -1 ? 0 : nextExerciseIndex,
+    loggedSets,
+    complete: next.exercises.length > 0 && done === next.exercises.length,
+    started: loggedSets > 0,
+  };
+  return next;
+}
+
 export default function LogExerciseFocus() {
   const { programId, week, sessionId, index } = useParams();
   const position = Number(index);
@@ -96,24 +137,27 @@ export default function LogExerciseFocus() {
    * countdown — otherwise correcting a typo in set 1 starts a rest you are not
    * taking.
    */
-  async function saveSet(setIndex, body, { rest = false } = {}) {
+  function saveSet(setIndex, body, { rest = false } = {}) {
     setSaveError(null);
     const path = `/logs/session/${programId}/${week}/${sessionId}/${exercise.id}/sets/${setIndex}`;
-    try {
-      const { set } = await api.put(path, body);
-      setData((prev) => {
-        const next = structuredClone(prev);
-        const target = next.exercises[position];
-        target.sets[setIndex] = set;
-        target.completedSets = target.sets.filter((s) => s.complete).length;
-        next.progress.loggedSets = next.exercises.reduce(
-          (n, e) => n + e.sets.filter((s) => s.complete).length,
-          0,
-        );
-        return next;
-      });
 
-      if (body.complete && rest) {
+    // The screen updates first and the write follows.
+    //
+    // Checking a set off used to wait on the server before anything moved: the
+    // row stayed busy and the rest timer did not appear until the round trip
+    // came back. Between every pair of sets, that is the whole app feeling
+    // slow, and the wait bought nothing — the response carries no fact this
+    // screen does not already hold. The set is exactly what was typed, the
+    // rest length comes from the plan, and the progress figures are arithmetic
+    // over sets we can already see.
+    //
+    // Writing optimistically is safe here specifically because the write is
+    // idempotent by set index. A failure is not a lost set: it lands in the
+    // replay queue, which is the same path a set logged with no signal at all
+    // already took.
+    setData((prev) => applySet(prev, position, setIndex, { ...body, at: new Date().toISOString() }));
+
+    if (body.complete && rest) {
         // What comes after this rest. On any set but the last it is another set
         // of the same exercise; on the last set it is the next exercise, which
         // is the one moment the lifter needs its name — they are about to walk
@@ -134,8 +178,10 @@ export default function LogExerciseFocus() {
           lastSet: { weight: body.weight, reps: body.reps, rpe: body.actualRpe },
           nextTarget: upcoming ? { reps: upcoming.reps, rpe: upcoming.rpe } : null,
         });
-      }
-    } catch (err) {
+    }
+
+    // Not awaited: nothing on screen is waiting for it.
+    return api.put(path, body).catch((err) => {
       // Keep the work rather than the error: the set is queued and replayed when
       // the connection comes back, so a dropped write in a basement gym is a
       // delay rather than a lost set.
@@ -143,7 +189,7 @@ export default function LogExerciseFocus() {
       setSaveError(
         `${err.message} — saved on this phone and will sync when you are back online.`,
       );
-    }
+    });
   }
 
   const chart = useMemo(() => {

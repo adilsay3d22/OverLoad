@@ -1,4 +1,6 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import {
+  createContext, useCallback, useContext, useEffect, useMemo, useRef, useState,
+} from 'react';
 import { api } from '../lib/api.js';
 import { useAuth } from './AuthContext.jsx';
 
@@ -16,20 +18,30 @@ export function ProgramProvider({ children }) {
   // anything downstream a single dependency meaning "the plans just changed",
   // which is what the session clock needs in order to notice that the program
   // it is counting against has been deleted.
+  //
+  // It counts changes, not refreshes. Bumping on every refresh meant the
+  // session clock re-validated itself against the server each time any screen
+  // reloaded the active program — several requests for one fact, all of them
+  // answering a question nothing had asked. A refresh that comes back with the
+  // plan it already had is not news.
   const [version, setVersion] = useState(0);
+  const seen = useRef(null);
 
   const refresh = useCallback(async () => {
+    let next = null;
     try {
-      const { program: next } = await api.get('/programs/active');
-      setProgram(next);
-      return next;
+      ({ program: next } = await api.get('/programs/active'));
     } catch {
-      setProgram(null);
-      return null;
-    } finally {
-      setLoading(false);
+      next = null;
+    }
+    setProgram(next);
+    setLoading(false);
+    const signature = next ? JSON.stringify(next) : '';
+    if (signature !== seen.current) {
+      seen.current = signature;
       setVersion((n) => n + 1);
     }
+    return next;
   }, []);
 
   // Lives above the router so the tab bar can read it, so it has to sit out

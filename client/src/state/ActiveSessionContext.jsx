@@ -60,7 +60,7 @@ function readStored() {
 
 export function ActiveSessionProvider({ children }) {
   const { status, user } = useAuth();
-  const { version: programVersion } = useProgram();
+  const { program: activeProgram, loading: programLoading, version: programVersion } = useProgram();
   const [recheck, setRecheck] = useState(0);
   const [session, setSession] = useState(readStored);
   const [elapsed, setElapsed] = useState(() => elapsedOf(readStored()));
@@ -88,9 +88,19 @@ export function ActiveSessionProvider({ children }) {
   }, [status, user?.id]);
 
   // Coming back to the app can mean the plan changed on another device.
+  //
+  // Both events fire on a single return — `focus` and `visibilitychange` — so
+  // without the guard one reappearance asked the server the same question
+  // twice. Returning to the app is also not something that needs re-checking
+  // several times a minute, hence the floor.
   useEffect(() => {
+    let last = 0;
     const onBack = () => {
-      if (document.visibilityState === 'visible') setRecheck((n) => n + 1);
+      if (document.visibilityState !== 'visible') return;
+      const now = Date.now();
+      if (now - last < 30_000) return;
+      last = now;
+      setRecheck((n) => n + 1);
     };
     window.addEventListener('focus', onBack);
     document.addEventListener('visibilitychange', onBack);
@@ -110,16 +120,28 @@ export function ActiveSessionProvider({ children }) {
   // still pointing at the same ids — so without it the check ran once on mount,
   // passed while the program still existed, and never ran again.
   const { active, programId, weekIndex, sessionId } = session;
+  const holds = (program) =>
+    program?.weeks?.find((w) => w.index === weekIndex)?.sessions?.some((x) => x.id === sessionId);
+
   useEffect(() => {
     if (status !== 'authenticated' || !active || !programId) return undefined;
+    // Nearly always, the session being timed belongs to the active program —
+    // which the program context has already loaded and keeps current. Asking
+    // the server for a plan we are holding a copy of was a request per screen
+    // for an answer sitting in memory, so the copy answers it.
+    if (activeProgram?.id === programId) {
+      if (!holds(activeProgram)) setSession(empty);
+      return undefined;
+    }
+    // Still loading, so nothing has been established either way yet.
+    if (programLoading) return undefined;
+    // A session against some other program — the active one changed underneath
+    // it, or there is none. That is the case worth a request.
     let cancelled = false;
     api
       .get(`/programs/${programId}`)
       .then(({ program }) => {
-        if (cancelled) return;
-        const week = program?.weeks?.find((w) => w.index === weekIndex);
-        const stillThere = week?.sessions?.some((x) => x.id === sessionId);
-        if (!stillThere) setSession(empty);
+        if (!cancelled && !holds(program)) setSession(empty);
       })
       .catch((err) => {
         if (!cancelled && err?.status === 404) setSession(empty);
@@ -127,7 +149,11 @@ export function ActiveSessionProvider({ children }) {
     return () => {
       cancelled = true;
     };
-  }, [status, active, programId, weekIndex, sessionId, programVersion, recheck]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [
+    status, active, programId, weekIndex, sessionId,
+    activeProgram, programLoading, programVersion, recheck,
+  ]);
 
   useEffect(() => {
     setElapsed(elapsedOf(session));

@@ -104,54 +104,67 @@ const rowToProgram = (r) => ({
 });
 
 /**
- * Hydrate a set of programs in four queries rather than one per week.
+ * Hydrate a set of programs in one query.
  *
- * The obvious shape — a join across programs, weeks, sessions and entries —
- * multiplies every program row by its entry count and then needs unpicking in
- * JS anyway. Four flat reads keyed by id are less clever and considerably less
- * code, and at one user's scale the difference is noise.
+ * This used to be four flat reads — programs, then weeks, then sessions, then
+ * entries — each one waiting on the ids the previous one returned. That is fine
+ * when the database is next to the process. It is not fine here: the serverless
+ * function and Neon talk over HTTP, so every `await sql` is a network round
+ * trip, and four of them in a row was most of the time it took to open a screen.
+ *
+ * So the nesting happens in Postgres instead, via lateral joins that build the
+ * `weeks[].sessions[].exercises[]` shape as JSON. The rows inside come back in
+ * their raw column form, which is why the same `rowToEntry` mapper still runs
+ * over them: only the number of round trips changed, not the contract.
  */
 async function hydrate(programRows) {
   const programs = programRows.map(rowToProgram);
   if (!programs.length) return programs;
 
   const ids = programs.map((p) => p.id);
-  const weekRows = await sql`
-    select * from weeks where program_id = any(${ids}) order by idx`;
-  if (!weekRows.length) return programs;
+  const rows = await sql`
+    select
+      p.id,
+      coalesce(wk.weeks, '[]'::json) as weeks
+    from programs p
+    left join lateral (
+      select json_agg(
+        json_build_object('index', w.idx, 'sessions', coalesce(se.sessions, '[]'::json))
+        order by w.idx
+      ) as weeks
+      from weeks w
+      left join lateral (
+        select json_agg(
+          json_build_object(
+            'id', s.id, 'name', s.name, 'type', s.type, 'day', s.day,
+            'exercises', coalesce(en.entries, '[]'::json)
+          )
+          order by s.position
+        ) as sessions
+        from sessions s
+        left join lateral (
+          select json_agg(to_json(e) order by e.position) as entries
+          from entries e
+          where e.session_id = s.id
+        ) en on true
+        where s.week_id = w.id
+      ) se on true
+      where w.program_id = p.id
+    ) wk on true
+    where p.id = any(${ids})`;
 
-  const weekIds = weekRows.map((w) => w.id);
-  const sessionRows = await sql`
-    select * from sessions where week_id = any(${weekIds}) order by position`;
-  const sessionIds = sessionRows.map((s) => s.id);
-  const entryRows = sessionIds.length
-    ? await sql`select * from entries where session_id = any(${sessionIds}) order by position`
-    : [];
-
-  const entriesBySession = new Map();
-  for (const row of entryRows) {
-    if (!entriesBySession.has(row.session_id)) entriesBySession.set(row.session_id, []);
-    entriesBySession.get(row.session_id).push(rowToEntry(row));
-  }
-
-  const sessionsByWeek = new Map();
-  for (const row of sessionRows) {
-    if (!sessionsByWeek.has(row.week_id)) sessionsByWeek.set(row.week_id, []);
-    sessionsByWeek.get(row.week_id).push({
-      id: row.id,
-      name: row.name,
-      type: row.type,
-      day: row.day,
-      exercises: entriesBySession.get(row.id) || [],
-    });
-  }
-
-  const byId = new Map(programs.map((p) => [p.id, p]));
-  for (const row of weekRows) {
-    byId.get(row.program_id)?.weeks.push({
-      index: row.idx,
-      sessions: sessionsByWeek.get(row.id) || [],
-    });
+  const weeksById = new Map(rows.map((r) => [r.id, r.weeks || []]));
+  for (const program of programs) {
+    program.weeks = (weeksById.get(program.id) || []).map((week) => ({
+      index: week.index,
+      sessions: (week.sessions || []).map((session) => ({
+        id: session.id,
+        name: session.name,
+        type: session.type,
+        day: session.day,
+        exercises: (session.exercises || []).map(rowToEntry),
+      })),
+    }));
   }
   return programs;
 }
@@ -285,16 +298,41 @@ const rowToLog = (r, sets) => ({
   sets: sets || [],
 });
 
+/**
+ * Sets keyed by their planned index, not their position in the array.
+ *
+ * A lifter can check set 3 off before set 2 — correcting one, or skipping a
+ * warm-up — so the gaps are real and the array has to stay sparse. Packing it
+ * would silently slide every later set one place up the screen.
+ */
+function setsFromJson(json) {
+  const sets = [];
+  for (const row of json || []) sets[row.idx] = rowToSet(row);
+  return sets;
+}
+
+/**
+ * Timestamps arrive as a `Date` from a plain column read and as Postgres' own
+ * `+00:00` text once the row has been through `to_json`. Both mean the same
+ * instant; normalising keeps the shape the client has always been handed.
+ */
+const iso = (v) => {
+  if (v == null) return null;
+  if (v instanceof Date) return v.toISOString();
+  const parsed = new Date(v);
+  return Number.isNaN(parsed.getTime()) ? v : parsed.toISOString();
+};
+
 const rowToSet = (r) => ({
   weight: num(r.weight),
   reps: num(r.reps),
   actualRpe: num(r.actual_rpe),
   complete: r.complete,
-  at: r.at instanceof Date ? r.at.toISOString() : r.at,
+  at: iso(r.at),
 });
 
 /**
- * Every log for a user, sets included.
+ * Every log for a user, sets included, in one query.
  *
  * The progress aggregates — personal records, per-exercise history, muscle
  * balance, streaks — are a page of well-tested JavaScript that runs over this
@@ -302,33 +340,40 @@ const rowToSet = (r) => ({
  * anyone has years of history; at the scale of one lifter's training block it
  * would be rewriting working code for no measurable gain, so the query stays
  * simple and the aggregation stays where it is.
+ *
+ * The sets are gathered by a lateral join rather than by a second read keyed on
+ * the ids the first one returned, for the same reason `hydrate` stopped doing
+ * that: each `await sql` is a round trip to another continent, and this is on
+ * the path of nearly every authenticated request in the app.
  */
 export async function listLogs(userId) {
-  const logRows = await sql`
-    select * from logs where user_id = ${userId} order by logged_at`;
-  if (!logRows.length) return [];
-  const setRows = await sql`
-    select * from log_sets where log_id = any(${logRows.map((l) => l.id)}) order by log_id, idx`;
-
-  const byLog = new Map();
-  for (const row of setRows) {
-    if (!byLog.has(row.log_id)) byLog.set(row.log_id, []);
-    const list = byLog.get(row.log_id);
-    list[row.idx] = rowToSet(row);
-  }
-  return logRows.map((r) => rowToLog(r, [...(byLog.get(r.id) || [])]));
+  const rows = await sql`
+    select l.*, coalesce(ls.sets, '[]'::json) as sets
+    from logs l
+    left join lateral (
+      select json_agg(to_json(x) order by x.idx) as sets
+      from log_sets x
+      where x.log_id = l.id
+    ) ls on true
+    where l.user_id = ${userId}
+    order by l.logged_at`;
+  return rows.map((r) => rowToLog(r, setsFromJson(r.sets)));
 }
 
 export async function findLog({ userId, programId, weekIndex, sessionId, entryId }) {
   const [row] = await sql`
-    select * from logs
-    where user_id = ${userId} and program_id = ${programId}
-      and week_index = ${weekIndex} and session_id = ${sessionId} and entry_id = ${entryId}`;
+    select l.*, coalesce(ls.sets, '[]'::json) as sets
+    from logs l
+    left join lateral (
+      select json_agg(to_json(x) order by x.idx) as sets
+      from log_sets x
+      where x.log_id = l.id
+    ) ls on true
+    where l.user_id = ${userId} and l.program_id = ${programId}
+      and l.week_index = ${weekIndex} and l.session_id = ${sessionId}
+      and l.entry_id = ${entryId}`;
   if (!row) return null;
-  const setRows = await sql`select * from log_sets where log_id = ${row.id} order by idx`;
-  const sets = [];
-  for (const setRow of setRows) sets[setRow.idx] = rowToSet(setRow);
-  return rowToLog(row, sets);
+  return rowToLog(row, setsFromJson(row.sets));
 }
 
 /** Create the log row for an exercise the first time one of its sets is saved. */
@@ -359,6 +404,51 @@ export async function putSet(logId, index, set) {
 }
 
 export const deleteLogSets = (logId) => sql`delete from log_sets where log_id = ${logId}`;
+
+/**
+ * Save one set, creating its parent log row if this is the first set of the
+ * exercise, in a single statement.
+ *
+ * The sequence this replaces was three round trips — look the log up, insert it
+ * if missing, then write the set — on the one request a lifter makes between
+ * every pair of sets. Here the upsert on `logs` is a CTE whose `returning`
+ * feeds the upsert on `log_sets`, so the parent is resolved and the child
+ * written in one trip to the database.
+ *
+ * The `do update` on the log is deliberately a no-op that rewrites `entry_id`
+ * with its own value. `do nothing` would return no row when another request had
+ * already created the log, leaving nothing for the set to hang off; this way
+ * the id comes back whether the insert or the conflict won, and the log's copy
+ * of the program and session names still never changes after it is written.
+ *
+ * Both halves stay idempotent by (log, index), which is what makes the client's
+ * offline replay queue safe to run more than once.
+ */
+export async function writeSet(shell, index, set) {
+  const [row] = await sql`
+    with up as (
+      insert into logs (id, user_id, program_id, program_name, week_index, session_id,
+                        session_name, session_type, entry_id, exercise_id, slug, name,
+                        category, logged_at)
+      values (${shell.id}, ${shell.userId}, ${shell.programId}, ${shell.programName ?? null},
+              ${shell.weekIndex}, ${shell.sessionId}, ${shell.sessionName ?? null},
+              ${shell.sessionType ?? null}, ${shell.entryId}, ${shell.exerciseId ?? null},
+              ${shell.slug ?? null}, ${shell.name}, ${shell.category ?? null},
+              ${shell.date || new Date().toISOString()})
+      on conflict (user_id, program_id, week_index, session_id, entry_id)
+        do update set entry_id = logs.entry_id
+      returning id
+    )
+    insert into log_sets (log_id, idx, weight, reps, actual_rpe, complete, at)
+    select up.id, ${index}, ${set.weight ?? null}, ${set.reps ?? null},
+           ${set.actualRpe ?? null}, ${set.complete ?? false}, ${set.at ?? null}
+    from up
+    on conflict (log_id, idx) do update set
+      weight = excluded.weight, reps = excluded.reps, actual_rpe = excluded.actual_rpe,
+      complete = excluded.complete, at = excluded.at
+    returning log_id`;
+  return row?.log_id ?? shell.id;
+}
 
 // ---------------------------------------------------------------------------
 // Custom exercises

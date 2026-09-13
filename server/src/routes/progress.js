@@ -18,10 +18,10 @@ router.use(requireAuth);
  * top and threading them down is what let `progress.js` drop its own data
  * access entirely.
  */
-const load = async (userId) => ({
-  program: await getActiveProgram(userId),
-  logs: await listLogs(userId),
-});
+const load = async (userId) => {
+  const [program, logs] = await Promise.all([getActiveProgram(userId), listLogs(userId)]);
+  return { program, logs };
+};
 
 /** Everything the Home digest needs in one round trip. */
 router.get('/home', async (req, res) => {

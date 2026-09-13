@@ -52,7 +52,10 @@ router.post('/login', async (req, res) => {
   res.json({ token: signToken(user), user: publicUser(user) });
 });
 
-router.get('/me', requireAuth, (req, res) => {
+// The one route whose whole answer is the stored profile, so it is also the one
+// that still pays for a row read. It runs once at boot, not per interaction.
+router.get('/me', requireAuth, async (req, res) => {
+  if (!(await req.loadUser())) return res.status(401).json({ error: 'Account no longer exists' });
   res.json({
     user: {
       ...publicUser(req.user),
