@@ -67,7 +67,7 @@ const user = {
 };
 await createUser(user);
 
-const template = templates.find((t) => t.id === 'upper-lower-program-nippard');
+const template = templates.find((t) => t.id === 'upper-lower-4-day');
 const program = {
   id: uid('p'),
   userId: user.id,

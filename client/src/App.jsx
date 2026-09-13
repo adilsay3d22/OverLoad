@@ -146,7 +146,7 @@ function Shell({ children }) {
         </p>
         <div className="mt-10 flex items-center gap-2.5 text-[13px] font-semibold text-ink-muted">
           <span className="size-2 rounded-full bg-accent" aria-hidden />
-          160 exercises · 3 Jeff Nippard programs · RPE-aware logging
+          160 exercises · 4 ready-made programs · RPE-aware logging
         </div>
       </aside>
 

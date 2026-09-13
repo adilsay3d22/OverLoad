@@ -23,7 +23,7 @@ import { PillButton } from '../components/ui.jsx';
  * implied a carousel which does not exist, and a "+7.5kg" badge that presented
  * a fabricated training result as real. The three counts below are the only
  * numbers here and each is true of what ships — exercises.json holds 160
- * entries, templates.json holds 3 programs, each 8 weeks long.
+ * entries, templates.json holds 4 programs, each 8 weeks long.
  */
 export default function Welcome() {
   const navigate = useNavigate();
@@ -63,7 +63,7 @@ export default function Welcome() {
             {/* Each fact holds together; only the separators may break. */}
             <span className="whitespace-nowrap">160 exercises</span>
             <span aria-hidden> · </span>
-            <span className="whitespace-nowrap">3 programs</span>
+            <span className="whitespace-nowrap">4 programs</span>
             <span aria-hidden> · </span>
             <span className="whitespace-nowrap">8 weeks each</span>
           </p>

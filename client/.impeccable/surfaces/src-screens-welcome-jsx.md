@@ -13,7 +13,7 @@ Audience: someone deciding whether to make an account. Job: understand the offer
 Both auth paths stay visible — create account and log in — per the user's explicit brief.
 
 Constraints: PRODUCT.md forbids testimonials, ratings, usage numbers, pricing and any claim
-that Jeff Nippard endorses this app. The only usable proof is what is really in the box.
+that any particular coach endorses this app. The only usable proof is what is really in the box.
 The handoff mockups (`screens/Overload Welcome v3.dc.html`, `Overload Welcome Sketch.dc.html`)
 are references the user has explicitly released as non-binding for this screen.
 

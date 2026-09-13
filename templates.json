@@ -1,9 +1,9 @@
 [
   {
     "type": "template",
-    "id": "full-body-program-nippard",
-    "name": "Full Body Program \u2014 Jeff Nippard",
-    "tagline": "Jeff Nippard's Fundamentals program: 3 days/week, 8 weeks across two 4-week phases with RPE, rest, and form cues built in.",
+    "id": "full-body-3-day",
+    "name": "Full Body Basics",
+    "tagline": "A three-day full body block: 8 weeks in two 4-week phases, with RPE, rest and form cues built in.",
     "totalWeeks": 8,
     "weeks": [
       {
@@ -2082,9 +2082,9 @@
   },
   {
     "type": "template",
-    "id": "upper-lower-program-nippard",
-    "name": "Upper / Lower Program \u2014 Jeff Nippard",
-    "tagline": "Jeff Nippard's Fundamentals program: 4 days/week, 8 weeks across two 4-week phases with RPE, rest, and form cues built in.",
+    "id": "upper-lower-4-day",
+    "name": "Upper / Lower Split",
+    "tagline": "A four-day upper/lower block: 8 weeks in two 4-week phases, with RPE, rest and form cues built in.",
     "totalWeeks": 8,
     "weeks": [
       {
@@ -4843,9 +4843,9 @@
   },
   {
     "type": "template",
-    "id": "body-part-split-program-nippard",
-    "name": "Body Part Split Program \u2014 Jeff Nippard",
-    "tagline": "Jeff Nippard's Fundamentals program: 5 days/week, 8 weeks across two 4-week phases with RPE, rest, and form cues built in.",
+    "id": "body-part-split-5-day",
+    "name": "Body Part Split",
+    "tagline": "A five-day body part split: 8 weeks in two 4-week phases, with RPE, rest and form cues built in.",
     "totalWeeks": 8,
     "weeks": [
       {
@@ -8171,6 +8171,3167 @@
                 "rpe": 8.0,
                 "rest": "1\u20132 min",
                 "note": "Neutral grip, prevent your upper arm from moving."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "template",
+    "id": "upper-lower-hypertrophy",
+    "name": "Upper / Lower Hypertrophy",
+    "tagline": "A higher-volume four-day upper/lower block: 8 weeks in two 4-week phases, with RPE, rest and form cues built in.",
+    "totalWeeks": 8,
+    "weeks": [
+      {
+        "sessions": [
+          {
+            "day": 0,
+            "name": "Upper Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Barbell Bench Press",
+                "sets": 3,
+                "repsMin": 5,
+                "repsMax": 5,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Tuck your elbows to about 45 degrees, squeeze your shoulder blades down and back, and keep your feet planted."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Lat Pulldown",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Pull your elbows down to your sides rather than hauling with your hands. Let the bar stretch you at the top."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Machine Shoulder Press",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Set the seat so the handles start at shoulder height. Press up and slightly back, without shrugging."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Pull-Up",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Start from a dead hang and lead with your chest. Add weight once you clear the top rep comfortably."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Hammer Row",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Drive your elbows back along your ribs, pause briefly at the squeeze, and control the stretch out."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Cable Fly",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep a soft, fixed bend in your elbows and bring your upper arms together, not your hands."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Incline Dumbbell Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Let your arms hang behind your torso on the incline. That stretch is the whole reason for the angle."
+              },
+              {
+                "exerciseId": null,
+                "category": "Forearms",
+                "name": "EZ Bar Reverse Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Overhand grip, wrists straight and locked. Lighter than a normal curl by a long way, so start conservative."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Single-Arm Rope Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Pin your elbow to your side and only open the forearm. Turn your palm down as you reach lockout."
+              }
+            ]
+          },
+          {
+            "day": 1,
+            "name": "Lower Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Back Squat",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Sit back and down with about 15 degrees of toe flare, and drive your knees out as you descend."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Romanian Deadlift",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Push your hips back with a neutral spine. Stop when your hamstrings run out of stretch, not when the bar hits the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Leg Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Squeeze your quads to move the weight and pause at the top. This is the one set you take close to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your hips pressed into the pad and curl your heels to your glutes without letting your pelvis lift."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Cable Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Flex your spine and bring your ribs to your pelvis. Your hips should stay still throughout."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Hanging Leg Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Curl your pelvis up rather than just lifting your legs. Control the way down instead of dropping."
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Upper Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Dumbbell Incline Press",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Keep your shoulder blades retracted and depressed against the bench. Around 30 degrees of incline is plenty."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Reverse Grip Lat Pulldown",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Underhand, shoulder-width grip. Pull your elbows down against your sides and keep your chest tall."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Assisted Dip",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Lean your torso forward about 15 degrees and tuck your elbows. Reduce the assistance as the reps get easy."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Barbell Bent Over Row",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Hinge to roughly 45 degrees, double overhand grip, lower back neutral. Do not let your torso rise to move the bar."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Dumbbell Lateral Raise",
+                "sets": 3,
+                "repsMin": 15,
+                "repsMax": 15,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Tilt the dumbbells so your little finger leads, and stop at shoulder height rather than swinging higher."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Rear Delt Fly",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Let your shoulder blades come apart, then sweep your arms out and back. Keep the weight light and the reps honest."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Preacher Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your armpits against the pad and do not bounce out of the bottom. The stretched position is the work."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Hammer Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Neutral grip throughout, elbows still. This one is for the brachialis, so resist swinging for extra reps."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Overhead Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your elbows pointed forward and close together. Get a full stretch behind your head each rep."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Lower Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Deadlift",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Brace your lats, chest tall, hips high. Pull the slack out of the bar before it leaves the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Dumbbell Walking Lunge",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Twelve steps each leg. Take medium strides and let your torso lean forward slightly."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hips down on the pad, heels to glutes, and control the lowering rather than letting the stack drop."
+              },
+              {
+                "exerciseId": null,
+                "category": "Calves",
+                "name": "Standing Calf Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Press all the way up onto your toes and stretch at the bottom. Do not bounce out of the stretch."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Cable Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Flex your spine and bring your ribs towards your pelvis. Keep your hips out of it."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Hanging Leg Raise",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Curl your pelvis up rather than swinging your legs. Fewer reps here, so make each one strict."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sessions": [
+          {
+            "day": 0,
+            "name": "Upper Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Barbell Bench Press",
+                "sets": 3,
+                "repsMin": 5,
+                "repsMax": 5,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Tuck your elbows to about 45 degrees, squeeze your shoulder blades down and back, and keep your feet planted."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Lat Pulldown",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Pull your elbows down to your sides rather than hauling with your hands. Let the bar stretch you at the top."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Machine Shoulder Press",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Set the seat so the handles start at shoulder height. Press up and slightly back, without shrugging."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Pull-Up",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Start from a dead hang and lead with your chest. Add weight once you clear the top rep comfortably."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Hammer Row",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Drive your elbows back along your ribs, pause briefly at the squeeze, and control the stretch out."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Cable Fly",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep a soft, fixed bend in your elbows and bring your upper arms together, not your hands."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Incline Dumbbell Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Let your arms hang behind your torso on the incline. That stretch is the whole reason for the angle."
+              },
+              {
+                "exerciseId": null,
+                "category": "Forearms",
+                "name": "EZ Bar Reverse Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Overhand grip, wrists straight and locked. Lighter than a normal curl by a long way, so start conservative."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Single-Arm Rope Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Pin your elbow to your side and only open the forearm. Turn your palm down as you reach lockout."
+              }
+            ]
+          },
+          {
+            "day": 1,
+            "name": "Lower Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Back Squat",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Sit back and down with about 15 degrees of toe flare, and drive your knees out as you descend."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Romanian Deadlift",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Push your hips back with a neutral spine. Stop when your hamstrings run out of stretch, not when the bar hits the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Leg Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Squeeze your quads to move the weight and pause at the top. This is the one set you take close to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your hips pressed into the pad and curl your heels to your glutes without letting your pelvis lift."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Cable Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Flex your spine and bring your ribs to your pelvis. Your hips should stay still throughout."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Hanging Leg Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Curl your pelvis up rather than just lifting your legs. Control the way down instead of dropping."
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Upper Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Dumbbell Incline Press",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Keep your shoulder blades retracted and depressed against the bench. Around 30 degrees of incline is plenty."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Reverse Grip Lat Pulldown",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Underhand, shoulder-width grip. Pull your elbows down against your sides and keep your chest tall."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Assisted Dip",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Lean your torso forward about 15 degrees and tuck your elbows. Reduce the assistance as the reps get easy."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Barbell Bent Over Row",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Hinge to roughly 45 degrees, double overhand grip, lower back neutral. Do not let your torso rise to move the bar."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Dumbbell Lateral Raise",
+                "sets": 3,
+                "repsMin": 15,
+                "repsMax": 15,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Tilt the dumbbells so your little finger leads, and stop at shoulder height rather than swinging higher."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Rear Delt Fly",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Let your shoulder blades come apart, then sweep your arms out and back. Keep the weight light and the reps honest."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Preacher Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your armpits against the pad and do not bounce out of the bottom. The stretched position is the work."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Hammer Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Neutral grip throughout, elbows still. This one is for the brachialis, so resist swinging for extra reps."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Overhead Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your elbows pointed forward and close together. Get a full stretch behind your head each rep."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Lower Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Deadlift",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Brace your lats, chest tall, hips high. Pull the slack out of the bar before it leaves the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Dumbbell Walking Lunge",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Twelve steps each leg. Take medium strides and let your torso lean forward slightly."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hips down on the pad, heels to glutes, and control the lowering rather than letting the stack drop."
+              },
+              {
+                "exerciseId": null,
+                "category": "Calves",
+                "name": "Standing Calf Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Press all the way up onto your toes and stretch at the bottom. Do not bounce out of the stretch."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Cable Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Flex your spine and bring your ribs towards your pelvis. Keep your hips out of it."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Hanging Leg Raise",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Curl your pelvis up rather than swinging your legs. Fewer reps here, so make each one strict."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sessions": [
+          {
+            "day": 0,
+            "name": "Upper Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Barbell Bench Press",
+                "sets": 3,
+                "repsMin": 5,
+                "repsMax": 5,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Tuck your elbows to about 45 degrees, squeeze your shoulder blades down and back, and keep your feet planted."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Lat Pulldown",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Pull your elbows down to your sides rather than hauling with your hands. Let the bar stretch you at the top."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Machine Shoulder Press",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Set the seat so the handles start at shoulder height. Press up and slightly back, without shrugging."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Pull-Up",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Start from a dead hang and lead with your chest. Add weight once you clear the top rep comfortably."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Hammer Row",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Drive your elbows back along your ribs, pause briefly at the squeeze, and control the stretch out."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Cable Fly",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep a soft, fixed bend in your elbows and bring your upper arms together, not your hands."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Incline Dumbbell Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Let your arms hang behind your torso on the incline. That stretch is the whole reason for the angle."
+              },
+              {
+                "exerciseId": null,
+                "category": "Forearms",
+                "name": "EZ Bar Reverse Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Overhand grip, wrists straight and locked. Lighter than a normal curl by a long way, so start conservative."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Single-Arm Rope Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Pin your elbow to your side and only open the forearm. Turn your palm down as you reach lockout."
+              }
+            ]
+          },
+          {
+            "day": 1,
+            "name": "Lower Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Back Squat",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Sit back and down with about 15 degrees of toe flare, and drive your knees out as you descend."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Romanian Deadlift",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Push your hips back with a neutral spine. Stop when your hamstrings run out of stretch, not when the bar hits the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Leg Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Squeeze your quads to move the weight and pause at the top. This is the one set you take close to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your hips pressed into the pad and curl your heels to your glutes without letting your pelvis lift."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Cable Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Flex your spine and bring your ribs to your pelvis. Your hips should stay still throughout."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Hanging Leg Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Curl your pelvis up rather than just lifting your legs. Control the way down instead of dropping."
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Upper Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Dumbbell Incline Press",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Keep your shoulder blades retracted and depressed against the bench. Around 30 degrees of incline is plenty."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Reverse Grip Lat Pulldown",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Underhand, shoulder-width grip. Pull your elbows down against your sides and keep your chest tall."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Assisted Dip",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Lean your torso forward about 15 degrees and tuck your elbows. Reduce the assistance as the reps get easy."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Barbell Bent Over Row",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Hinge to roughly 45 degrees, double overhand grip, lower back neutral. Do not let your torso rise to move the bar."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Dumbbell Lateral Raise",
+                "sets": 3,
+                "repsMin": 15,
+                "repsMax": 15,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Tilt the dumbbells so your little finger leads, and stop at shoulder height rather than swinging higher."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Rear Delt Fly",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Let your shoulder blades come apart, then sweep your arms out and back. Keep the weight light and the reps honest."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Preacher Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your armpits against the pad and do not bounce out of the bottom. The stretched position is the work."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Hammer Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Neutral grip throughout, elbows still. This one is for the brachialis, so resist swinging for extra reps."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Overhead Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your elbows pointed forward and close together. Get a full stretch behind your head each rep."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Lower Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Deadlift",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Brace your lats, chest tall, hips high. Pull the slack out of the bar before it leaves the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Dumbbell Walking Lunge",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Twelve steps each leg. Take medium strides and let your torso lean forward slightly."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hips down on the pad, heels to glutes, and control the lowering rather than letting the stack drop."
+              },
+              {
+                "exerciseId": null,
+                "category": "Calves",
+                "name": "Standing Calf Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Press all the way up onto your toes and stretch at the bottom. Do not bounce out of the stretch."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Cable Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Flex your spine and bring your ribs towards your pelvis. Keep your hips out of it."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Hanging Leg Raise",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Curl your pelvis up rather than swinging your legs. Fewer reps here, so make each one strict."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sessions": [
+          {
+            "day": 0,
+            "name": "Upper Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Barbell Bench Press",
+                "sets": 3,
+                "repsMin": 5,
+                "repsMax": 5,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Tuck your elbows to about 45 degrees, squeeze your shoulder blades down and back, and keep your feet planted."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Lat Pulldown",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Pull your elbows down to your sides rather than hauling with your hands. Let the bar stretch you at the top."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Machine Shoulder Press",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Set the seat so the handles start at shoulder height. Press up and slightly back, without shrugging."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Pull-Up",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Start from a dead hang and lead with your chest. Add weight once you clear the top rep comfortably."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Hammer Row",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Drive your elbows back along your ribs, pause briefly at the squeeze, and control the stretch out."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Cable Fly",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep a soft, fixed bend in your elbows and bring your upper arms together, not your hands."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Incline Dumbbell Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Let your arms hang behind your torso on the incline. That stretch is the whole reason for the angle."
+              },
+              {
+                "exerciseId": null,
+                "category": "Forearms",
+                "name": "EZ Bar Reverse Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Overhand grip, wrists straight and locked. Lighter than a normal curl by a long way, so start conservative."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Single-Arm Rope Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Pin your elbow to your side and only open the forearm. Turn your palm down as you reach lockout."
+              }
+            ]
+          },
+          {
+            "day": 1,
+            "name": "Lower Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Back Squat",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Sit back and down with about 15 degrees of toe flare, and drive your knees out as you descend."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Romanian Deadlift",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Push your hips back with a neutral spine. Stop when your hamstrings run out of stretch, not when the bar hits the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Leg Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Squeeze your quads to move the weight and pause at the top. This is the one set you take close to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your hips pressed into the pad and curl your heels to your glutes without letting your pelvis lift."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Cable Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Flex your spine and bring your ribs to your pelvis. Your hips should stay still throughout."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Hanging Leg Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Curl your pelvis up rather than just lifting your legs. Control the way down instead of dropping."
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Upper Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Dumbbell Incline Press",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Keep your shoulder blades retracted and depressed against the bench. Around 30 degrees of incline is plenty."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Reverse Grip Lat Pulldown",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Underhand, shoulder-width grip. Pull your elbows down against your sides and keep your chest tall."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Assisted Dip",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Lean your torso forward about 15 degrees and tuck your elbows. Reduce the assistance as the reps get easy."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Barbell Bent Over Row",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Hinge to roughly 45 degrees, double overhand grip, lower back neutral. Do not let your torso rise to move the bar."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Dumbbell Lateral Raise",
+                "sets": 3,
+                "repsMin": 15,
+                "repsMax": 15,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Tilt the dumbbells so your little finger leads, and stop at shoulder height rather than swinging higher."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Rear Delt Fly",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Let your shoulder blades come apart, then sweep your arms out and back. Keep the weight light and the reps honest."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Preacher Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your armpits against the pad and do not bounce out of the bottom. The stretched position is the work."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Hammer Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Neutral grip throughout, elbows still. This one is for the brachialis, so resist swinging for extra reps."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Overhead Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your elbows pointed forward and close together. Get a full stretch behind your head each rep."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Lower Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Deadlift",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Brace your lats, chest tall, hips high. Pull the slack out of the bar before it leaves the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Dumbbell Walking Lunge",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Twelve steps each leg. Take medium strides and let your torso lean forward slightly."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hips down on the pad, heels to glutes, and control the lowering rather than letting the stack drop."
+              },
+              {
+                "exerciseId": null,
+                "category": "Calves",
+                "name": "Standing Calf Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Press all the way up onto your toes and stretch at the bottom. Do not bounce out of the stretch."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Cable Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Flex your spine and bring your ribs towards your pelvis. Keep your hips out of it."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Hanging Leg Raise",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Curl your pelvis up rather than swinging your legs. Fewer reps here, so make each one strict."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sessions": [
+          {
+            "day": 0,
+            "name": "Upper Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Barbell Bench Press",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "3\u20134 min",
+                "note": "Same setup as phase one, two more reps and a higher target effort. Keep the bar path honest as it gets heavy."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Single-Arm Lat Pulldown",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "One arm at a time lets your shoulder blade travel further. Let it rotate up at the top."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Dumbbell Seated Shoulder Press",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Bring the dumbbells all the way down to shoulder level and keep your torso upright against the bench."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Dumbbell Row",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Brace on a bench, pull your elbow back against your side, and keep your shoulders square to the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Assisted Dip",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Heavier and lower rep now. Lean forward, tuck your elbows, and stop short of the point your shoulders complain."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Pec Deck",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your shoulder blades retracted and bring your inner elbows together rather than your hands."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Rear Delt Fly",
+                "sets": 3,
+                "repsMin": 15,
+                "repsMax": 15,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "High reps taken close to failure. Sweep out and back, and do not let your traps take over."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "EZ Bar Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Drive your little finger into the bar harder than your index finger. Elbows stay pinned to your sides."
+              },
+              {
+                "exerciseId": null,
+                "category": "Forearms",
+                "name": "EZ Bar Reverse Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Overhand, wrists locked straight. Much lighter than the curl before it."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Single-Arm Rope Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Elbow pinned, forearm only, palm turning down at lockout."
+              }
+            ]
+          },
+          {
+            "day": 1,
+            "name": "Lower Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Back Squat",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Sit back and down with about 15 degrees of toe flare, and drive your knees out as you descend."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Romanian Deadlift",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Hips back, spine neutral, and stop at the end of your hamstring stretch rather than the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Leg Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Squeeze and pause at the top. This is the set you take closest to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hips pressed down, heels to glutes, controlled on the way out."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Cable Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Flex your spine, ribs to pelvis, hips still."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Hanging Leg Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Curl your pelvis up and lower under control."
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Upper Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Machine Shoulder Press",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "3\u20134 min",
+                "note": "Leading the session now, so treat it like a main lift. Press up and slightly back without shrugging."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Neutral-Grip Lat Pulldown",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "3\u20134 min",
+                "note": "Palms facing each other. Heavy and low rep here, so brace your torso and avoid leaning back for momentum."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Dumbbell Incline Press",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Shoulder blades retracted and depressed, roughly 30 degrees of incline."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Cable Seated Row",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "2\u20133 min",
+                "note": "Taken close to failure. Let your shoulder blades protract on the way out and pull your elbows past your ribs."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Cable Lateral Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Lean away from the machine and raise straight out to your side. The cable keeps tension at the bottom."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Rear Delt Fly",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Sweep out and back, light weight, no trap involvement."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Bayesian Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Face away from the cable with your arm behind your torso, and take this one close to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Forearms",
+                "name": "EZ Bar Reverse Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Overhand grip, wrists straight, strict tempo."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Overhead Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Elbows forward and close together, full stretch behind your head."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Lower Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Deadlift",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Lats braced, chest tall, hips high, slack out of the bar before it moves."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Leg Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Squeeze and pause at the top, close to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Weighted Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hold the weight at your chest and flex your spine. Add load before you add reps."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Dragon Flag",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your body rigid from shoulders to heels and lower as slowly as you can. Bend your knees to regress it."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hips down, heels to glutes, controlled on the way out."
+              },
+              {
+                "exerciseId": null,
+                "category": "Calves",
+                "name": "Standing Calf Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "All the way up onto your toes, full stretch at the bottom, no bouncing."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sessions": [
+          {
+            "day": 0,
+            "name": "Upper Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Barbell Bench Press",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "3\u20134 min",
+                "note": "Same setup as phase one, two more reps and a higher target effort. Keep the bar path honest as it gets heavy."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Single-Arm Lat Pulldown",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "One arm at a time lets your shoulder blade travel further. Let it rotate up at the top."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Dumbbell Seated Shoulder Press",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Bring the dumbbells all the way down to shoulder level and keep your torso upright against the bench."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Dumbbell Row",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Brace on a bench, pull your elbow back against your side, and keep your shoulders square to the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Assisted Dip",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Heavier and lower rep now. Lean forward, tuck your elbows, and stop short of the point your shoulders complain."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Pec Deck",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your shoulder blades retracted and bring your inner elbows together rather than your hands."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Rear Delt Fly",
+                "sets": 3,
+                "repsMin": 15,
+                "repsMax": 15,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "High reps taken close to failure. Sweep out and back, and do not let your traps take over."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "EZ Bar Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Drive your little finger into the bar harder than your index finger. Elbows stay pinned to your sides."
+              },
+              {
+                "exerciseId": null,
+                "category": "Forearms",
+                "name": "EZ Bar Reverse Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Overhand, wrists locked straight. Much lighter than the curl before it."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Single-Arm Rope Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Elbow pinned, forearm only, palm turning down at lockout."
+              }
+            ]
+          },
+          {
+            "day": 1,
+            "name": "Lower Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Back Squat",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Sit back and down with about 15 degrees of toe flare, and drive your knees out as you descend."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Romanian Deadlift",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Hips back, spine neutral, and stop at the end of your hamstring stretch rather than the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Leg Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Squeeze and pause at the top. This is the set you take closest to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hips pressed down, heels to glutes, controlled on the way out."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Cable Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Flex your spine, ribs to pelvis, hips still."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Hanging Leg Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Curl your pelvis up and lower under control."
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Upper Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Machine Shoulder Press",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "3\u20134 min",
+                "note": "Leading the session now, so treat it like a main lift. Press up and slightly back without shrugging."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Neutral-Grip Lat Pulldown",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "3\u20134 min",
+                "note": "Palms facing each other. Heavy and low rep here, so brace your torso and avoid leaning back for momentum."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Dumbbell Incline Press",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Shoulder blades retracted and depressed, roughly 30 degrees of incline."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Cable Seated Row",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "2\u20133 min",
+                "note": "Taken close to failure. Let your shoulder blades protract on the way out and pull your elbows past your ribs."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Cable Lateral Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Lean away from the machine and raise straight out to your side. The cable keeps tension at the bottom."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Rear Delt Fly",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Sweep out and back, light weight, no trap involvement."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Bayesian Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Face away from the cable with your arm behind your torso, and take this one close to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Forearms",
+                "name": "EZ Bar Reverse Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Overhand grip, wrists straight, strict tempo."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Overhead Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Elbows forward and close together, full stretch behind your head."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Lower Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Deadlift",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Lats braced, chest tall, hips high, slack out of the bar before it moves."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Leg Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Squeeze and pause at the top, close to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Weighted Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hold the weight at your chest and flex your spine. Add load before you add reps."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Dragon Flag",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your body rigid from shoulders to heels and lower as slowly as you can. Bend your knees to regress it."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hips down, heels to glutes, controlled on the way out."
+              },
+              {
+                "exerciseId": null,
+                "category": "Calves",
+                "name": "Standing Calf Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "All the way up onto your toes, full stretch at the bottom, no bouncing."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sessions": [
+          {
+            "day": 0,
+            "name": "Upper Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Barbell Bench Press",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "3\u20134 min",
+                "note": "Same setup as phase one, two more reps and a higher target effort. Keep the bar path honest as it gets heavy."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Single-Arm Lat Pulldown",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "One arm at a time lets your shoulder blade travel further. Let it rotate up at the top."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Dumbbell Seated Shoulder Press",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Bring the dumbbells all the way down to shoulder level and keep your torso upright against the bench."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Dumbbell Row",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Brace on a bench, pull your elbow back against your side, and keep your shoulders square to the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Assisted Dip",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Heavier and lower rep now. Lean forward, tuck your elbows, and stop short of the point your shoulders complain."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Pec Deck",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your shoulder blades retracted and bring your inner elbows together rather than your hands."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Rear Delt Fly",
+                "sets": 3,
+                "repsMin": 15,
+                "repsMax": 15,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "High reps taken close to failure. Sweep out and back, and do not let your traps take over."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "EZ Bar Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Drive your little finger into the bar harder than your index finger. Elbows stay pinned to your sides."
+              },
+              {
+                "exerciseId": null,
+                "category": "Forearms",
+                "name": "EZ Bar Reverse Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Overhand, wrists locked straight. Much lighter than the curl before it."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Single-Arm Rope Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Elbow pinned, forearm only, palm turning down at lockout."
+              }
+            ]
+          },
+          {
+            "day": 1,
+            "name": "Lower Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Back Squat",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Sit back and down with about 15 degrees of toe flare, and drive your knees out as you descend."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Romanian Deadlift",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Hips back, spine neutral, and stop at the end of your hamstring stretch rather than the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Leg Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Squeeze and pause at the top. This is the set you take closest to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hips pressed down, heels to glutes, controlled on the way out."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Cable Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Flex your spine, ribs to pelvis, hips still."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Hanging Leg Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Curl your pelvis up and lower under control."
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Upper Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Machine Shoulder Press",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "3\u20134 min",
+                "note": "Leading the session now, so treat it like a main lift. Press up and slightly back without shrugging."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Neutral-Grip Lat Pulldown",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "3\u20134 min",
+                "note": "Palms facing each other. Heavy and low rep here, so brace your torso and avoid leaning back for momentum."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Dumbbell Incline Press",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Shoulder blades retracted and depressed, roughly 30 degrees of incline."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Cable Seated Row",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "2\u20133 min",
+                "note": "Taken close to failure. Let your shoulder blades protract on the way out and pull your elbows past your ribs."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Cable Lateral Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Lean away from the machine and raise straight out to your side. The cable keeps tension at the bottom."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Rear Delt Fly",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Sweep out and back, light weight, no trap involvement."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Bayesian Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Face away from the cable with your arm behind your torso, and take this one close to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Forearms",
+                "name": "EZ Bar Reverse Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Overhand grip, wrists straight, strict tempo."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Overhead Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Elbows forward and close together, full stretch behind your head."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Lower Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Deadlift",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Lats braced, chest tall, hips high, slack out of the bar before it moves."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Leg Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Squeeze and pause at the top, close to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Weighted Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hold the weight at your chest and flex your spine. Add load before you add reps."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Dragon Flag",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your body rigid from shoulders to heels and lower as slowly as you can. Bend your knees to regress it."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hips down, heels to glutes, controlled on the way out."
+              },
+              {
+                "exerciseId": null,
+                "category": "Calves",
+                "name": "Standing Calf Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "All the way up onto your toes, full stretch at the bottom, no bouncing."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sessions": [
+          {
+            "day": 0,
+            "name": "Upper Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Barbell Bench Press",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "3\u20134 min",
+                "note": "Same setup as phase one, two more reps and a higher target effort. Keep the bar path honest as it gets heavy."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Single-Arm Lat Pulldown",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "One arm at a time lets your shoulder blade travel further. Let it rotate up at the top."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Dumbbell Seated Shoulder Press",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Bring the dumbbells all the way down to shoulder level and keep your torso upright against the bench."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Dumbbell Row",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Brace on a bench, pull your elbow back against your side, and keep your shoulders square to the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Assisted Dip",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Heavier and lower rep now. Lean forward, tuck your elbows, and stop short of the point your shoulders complain."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Pec Deck",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your shoulder blades retracted and bring your inner elbows together rather than your hands."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Rear Delt Fly",
+                "sets": 3,
+                "repsMin": 15,
+                "repsMax": 15,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "High reps taken close to failure. Sweep out and back, and do not let your traps take over."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "EZ Bar Curl",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Drive your little finger into the bar harder than your index finger. Elbows stay pinned to your sides."
+              },
+              {
+                "exerciseId": null,
+                "category": "Forearms",
+                "name": "EZ Bar Reverse Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Overhand, wrists locked straight. Much lighter than the curl before it."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Single-Arm Rope Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Elbow pinned, forearm only, palm turning down at lockout."
+              }
+            ]
+          },
+          {
+            "day": 1,
+            "name": "Lower Body #1",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Back Squat",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Sit back and down with about 15 degrees of toe flare, and drive your knees out as you descend."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Romanian Deadlift",
+                "sets": 3,
+                "repsMin": 10,
+                "repsMax": 10,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "2\u20133 min",
+                "note": "Hips back, spine neutral, and stop at the end of your hamstring stretch rather than the floor."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Leg Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Squeeze and pause at the top. This is the set you take closest to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hips pressed down, heels to glutes, controlled on the way out."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Cable Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Flex your spine, ribs to pelvis, hips still."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Hanging Leg Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Curl your pelvis up and lower under control."
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Upper Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Machine Shoulder Press",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "3\u20134 min",
+                "note": "Leading the session now, so treat it like a main lift. Press up and slightly back without shrugging."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Neutral-Grip Lat Pulldown",
+                "sets": 3,
+                "repsMin": 6,
+                "repsMax": 6,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "3\u20134 min",
+                "note": "Palms facing each other. Heavy and low rep here, so brace your torso and avoid leaning back for momentum."
+              },
+              {
+                "exerciseId": null,
+                "category": "Chest",
+                "name": "Dumbbell Incline Press",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "2\u20133 min",
+                "note": "Shoulder blades retracted and depressed, roughly 30 degrees of incline."
+              },
+              {
+                "exerciseId": null,
+                "category": "Back",
+                "name": "Cable Seated Row",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "2\u20133 min",
+                "note": "Taken close to failure. Let your shoulder blades protract on the way out and pull your elbows past your ribs."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Cable Lateral Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Lean away from the machine and raise straight out to your side. The cable keeps tension at the bottom."
+              },
+              {
+                "exerciseId": null,
+                "category": "Shoulders",
+                "name": "Rear Delt Fly",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Sweep out and back, light weight, no trap involvement."
+              },
+              {
+                "exerciseId": null,
+                "category": "Biceps",
+                "name": "Bayesian Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Face away from the cable with your arm behind your torso, and take this one close to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Forearms",
+                "name": "EZ Bar Reverse Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Overhand grip, wrists straight, strict tempo."
+              },
+              {
+                "exerciseId": null,
+                "category": "Triceps",
+                "name": "Overhead Tricep Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "1\u20132 min",
+                "note": "Elbows forward and close together, full stretch behind your head."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Lower Body #2",
+            "exercises": [
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Deadlift",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 7.0,
+                "rest": "3\u20134 min",
+                "note": "Lats braced, chest tall, hips high, slack out of the bar before it moves."
+              },
+              {
+                "exerciseId": null,
+                "category": "Quads",
+                "name": "Leg Extension",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 9.0,
+                "rest": "1\u20132 min",
+                "note": "Squeeze and pause at the top, close to failure."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Weighted Crunch",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hold the weight at your chest and flex your spine. Add load before you add reps."
+              },
+              {
+                "exerciseId": null,
+                "category": "Abs",
+                "name": "Dragon Flag",
+                "sets": 3,
+                "repsMin": 8,
+                "repsMax": 8,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Keep your body rigid from shoulders to heels and lower as slowly as you can. Bend your knees to regress it."
+              },
+              {
+                "exerciseId": null,
+                "category": "Hamstrings",
+                "name": "Lying Leg Curl",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "Hips down, heels to glutes, controlled on the way out."
+              },
+              {
+                "exerciseId": null,
+                "category": "Calves",
+                "name": "Standing Calf Raise",
+                "sets": 3,
+                "repsMin": 12,
+                "repsMax": 12,
+                "repsUnit": "reps",
+                "rpe": 8.0,
+                "rest": "1\u20132 min",
+                "note": "All the way up onto your toes, full stretch at the bottom, no bouncing."
               }
             ]
           }

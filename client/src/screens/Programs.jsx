@@ -212,7 +212,7 @@ export default function Programs() {
           <ChooseTile
             icon={<Stack size={24} weight="fill" />}
             title="Choose from template"
-            body="Three programs, 8 weeks each, with RPE targets and coaching cues."
+            body="Four programs, 8 weeks each, with RPE targets and coaching cues."
             onClick={() => navigate('/programs/templates')}
           />
           <ChooseTile

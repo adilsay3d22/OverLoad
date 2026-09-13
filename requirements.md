@@ -152,7 +152,7 @@ re-skin of the existing `SessionEditor.jsx`.
 This is a genuine schema change, not a label swap:
 - `repsMin`/`repsMax` → a single `reps` field, plus a new `rpe` field
 - This actually makes custom-builder exercises **more consistent** with
-  how template-authored (Nippard) exercises already work — those already
+  how template-authored exercises already work — those already
   use a single fixed rep target + separate RPE, not a range. Worth
   framing to whoever builds this as a consistency fix, not just a UI
   change.
@@ -197,7 +197,7 @@ expanded and visible at once, weight + reps + checkmark per set.
   primary/secondary/tertiary) for the body diagram — this does not exist
   in `exercises.json` today. The library has `primaryMuscle` and
   `secondaryMuscles`, which is a start, but there's no "tertiary" concept
-  and no mapping for template-authored (Nippard) exercises at all, since
+  and no mapping for template-authored exercises at all, since
   those aren't linked to the library (`exerciseId: null`). This needs to
   be authored, not derived automatically.
 

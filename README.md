@@ -37,7 +37,7 @@ it does.
 
 ## How it works
 
-Pick one of three bundled 8-week programs or build your own week by week. Each
+Pick one of four bundled 8-week programs or build your own week by week. Each
 session holds ordered exercises drawn from a 160-exercise library, each with sets,
 reps, a target RPE, a rest length and a coaching cue. When the library does not
 have what your gym does, add your own — it joins your search results and tracks
@@ -152,13 +152,13 @@ an About or Credits screen in a product, or the README of a source release. A
 link back to this repository is enough.
 
 The bundled `exercises.json` and `templates.json` are data that came with the
-project rather than code, and the training programmes in them are built from
-publicly published material — see Credits.
+project rather than code.
 
 ## Credits
 
-The three bundled programs are built from publicly published Jeff Nippard
-training templates. This project is not affiliated with or endorsed by him.
+The four bundled programs are the project's own, written against general
+training principles. They are not affiliated with, endorsed by, or derived from
+any particular coach's published programming.
 
 The interface follows a design specification written before any of it was built,
 preserved at [docs/design-handoff.md](docs/design-handoff.md); the visual system

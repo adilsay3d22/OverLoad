@@ -63,7 +63,7 @@ program ever run.
 Built and confirmed:
 
 - Accounts with email/password; JWT held client-side.
-- Programs from three bundled templates or built custom; weeks can be added and
+- Programs from four bundled templates or built custom; weeks can be added and
   the last week removed; weeks, sessions and whole programs can be duplicated,
   renamed, activated and deleted. Multiple saved programs coexist; one is active.
 - Sessions hold ordered exercises drawn from a 160-exercise library, each with
@@ -116,9 +116,9 @@ Real, in the repository:
 
 - `exercises.json` — 160 exercises with category, primary and secondary muscles,
   equipment, movement pattern, difficulty and a quality tier.
-- `templates.json` — three complete 8-week Jeff Nippard programs (Full Body,
-  Upper/Lower, Body Part Split) with per-exercise sets, reps, RPE, rest and form
-  cues.
+- `templates.json` — four complete 8-week programs (Full Body Basics,
+  Upper / Lower Split, Body Part Split, Upper / Lower Hypertrophy) with
+  per-exercise sets, reps, RPE, rest and form cues.
 - `screens/` — 23 prototype screens; `docs/design-handoff.md` and
   `requirements.md` — the design handoff; `APP.md` — how the implementation
   resolved it.
@@ -128,7 +128,7 @@ Real, in the repository:
 
 Absent, and not to be fabricated: real users, testimonials, reviews, usage
 numbers, pricing, licensing terms, App Store presence, deployment, or any claim
-about Jeff Nippard endorsing or being affiliated with this app.
+that a named coach endorses or is affiliated with this app.
 
 ## Product Principles
 
